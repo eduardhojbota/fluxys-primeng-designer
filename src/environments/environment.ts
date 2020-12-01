@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    editor: 'visual',
+    editor: 'code',
     theme_builder_url: 'https://www.primefaces.org/themegen-ng'
 };
 
