@@ -12,39 +12,39 @@ $buttonIconOnlyPadding: .5rem 0;
 
 /// Background of a button
 /// @group button
-$buttonBg: $primaryColor;
+$buttonBg: $neutralColor700;
 
 /// Text color of a button
 /// @group button
-$buttonTextColor: $primaryTextColor;
+$buttonTextColor: $white;
 
 /// Border of a button
 /// @group button
-$buttonBorder: 1px solid $primaryColor;
+$buttonBorder: 1px solid $neutralColor700;
 
 /// Background of a button in hover state
 /// @group button
-$buttonHoverBg: $primaryDarkColor;
+$buttonHoverBg: $neutralColor900;
 
 /// Text color of a button in hover state
 /// @group button
-$buttonTextHoverColor: $primaryTextColor;
+$buttonTextHoverColor: $white;
 
 /// Border color of a button in hover state
 /// @group button
-$buttonHoverBorderColor: $primaryDarkColor;
+$buttonHoverBorderColor: $neutralColor900;
 
 /// Background of a button in pressed state
 /// @group button
-$buttonActiveBg: $primaryDarkerColor;
+$buttonActiveBg: $neutralColor900;
 
 /// Color of a button in pressed state
 /// @group button
-$buttonTextActiveColor: $primaryTextColor;
+$buttonTextActiveColor: $white;
 
 /// Border color of a button in pressed state
 /// @group button
-$buttonActiveBorderColor: $primaryDarkerColor;
+$buttonActiveBorderColor: $neutralColor900;
 
 /// Shadow of a raised button
 /// @group button
@@ -320,11 +320,11 @@ $dangerButtonFocusShadow: 0 0 0 0.2rem lighten($dangerButtonBg, 35%);
 
 /// Text color of a link button
 /// @group button
-$linkButtonColor:$primaryDarkerColor;
+$linkButtonColor:$neutralColor900;
 
 /// Text color of a link button in hover state
 /// @group button
-$linkButtonHoverColor:$primaryDarkerColor;
+$linkButtonHoverColor:$neutralColor900;
 
 /// Text decoration of a link button in hover state
 /// @group button
@@ -368,32 +368,32 @@ $toggleButtonIconHoverColor: $textSecondaryColor;
 
 /// Background of a toggle button in selected state
 /// @group button
-$toggleButtonActiveBg: $primaryColor;
+$toggleButtonActiveBg: $neutralColor700;
 
 /// Border color of a toggle button in selected state
 /// @group button
-$toggleButtonActiveBorderColor: $primaryColor;
+$toggleButtonActiveBorderColor: $neutralColor700;
 
 /// Text color of a toggle button in selected state
 /// @group button
-$toggleButtonTextActiveColor: $primaryTextColor;
+$toggleButtonTextActiveColor: $white;
 
 /// Icon color of a toggle button in selected state
 /// @group button
-$toggleButtonIconActiveColor: $primaryTextColor;
+$toggleButtonIconActiveColor: $white;
 
 /// Hover background of a toggle button in selected state
 /// @group button
-$toggleButtonActiveHoverBg: $primaryDarkColor;
+$toggleButtonActiveHoverBg: $neutralColor900;
 
 /// Hover border color of a toggle button in selected state
 /// @group button
-$toggleButtonActiveHoverBorderColor: $primaryDarkColor;
+$toggleButtonActiveHoverBorderColor: $neutralColor900;
 
 /// Hover text color of a toggle button in selected state
 /// @group button
-$toggleButtonTextActiveHoverColor: $primaryTextColor;
+$toggleButtonTextActiveHoverColor: $white;
 
 /// Hover icon of a toggle button in selected state
 /// @group button
-$toggleButtonIconActiveHoverColor: $primaryTextColor;
+$toggleButtonIconActiveHoverColor: $white;
