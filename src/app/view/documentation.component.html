@@ -8,7 +8,7 @@
 
             <h5>Overview</h5>
             <p>PrimeNG Designer is a sass based theme api for developing PrimeNG themes. The tool can be used in two ways;
-                first approach is the visual ui theme editor and other one is editing the sass variables directly from the code within your IDE. Designer is provided as an angular-cli application containing the visual editor, 
+                first approach is the visual ui theme editor and other one is editing the sass variables directly from the code within your IDE. Designer is provided as an angular-cli application containing the visual editor,
                 sass api, all pre-built themes and a sample page with various components to test while designing your theme.</p>
 
             <h5>Visual Editor</h5>
@@ -26,7 +26,7 @@ ng serve
             <p>Then navigate to <b>http://localhost:4200</b> to access the application in your local environment, now it is time to create your own theme visually.</p>
 
             <h5>Code Editor</h5>
-            <p>Code editor mode is enabled by changing the <i>editor</i> variable in environment.ts configuration file located in the root folder. The 
+            <p>Code editor mode is enabled by changing the <i>editor</i> variable in environment.ts configuration file located in the root folder. The
                 default value is <i>visual</i> and <i>code</i> should be set instead to design a theme with the sass api directly.</p>
 
 <app-code lang="typescript" ngPreserveWhitespaces>
@@ -36,8 +36,8 @@ export const environment = &#123;
 &#125;
 </app-code>
 
-            <p>A built-in base theme named <i>mytheme</i> is available to get started with your own theme. To begin with
-                navigate to the <i>src/sass/themes/mytheme/</i> folder which includes the following artifacts;
+            <p>A built-in base theme named <i>fluxys</i> is available to get started with your own theme. To begin with
+                navigate to the <i>src/sass/themes/fluxys/</i> folder which includes the following artifacts;
 
             <ul>
                 <li><b>_variables.scss</b>: List of variables to create your own theme.</li>
@@ -2387,7 +2387,7 @@ $progressBarValueBg: $primaryColor;
             <p>SASS API is located inside the <i>src/sass/designer</i> folder and themes import the main <i>_components.scss</i> from this location.
                 In case you need to make extend the API, add these changes to the <i>_extensions.scss</i> file in the theme folder instead of editing the .scss files inside the designer folder to
                 avoid any maintenance issues. Designer is updated periodically for improvements and updating is done by replacing the designer folder only so for seamless updates, never edit
-                the designer folder as <i>src/sass/themes/mytheme/_extensions.scss</i> file is created for this purpose.
+                the designer folder as <i>src/sass/themes/fluxys/_extensions.scss</i> file is created for this purpose.
             </p>
 
             <h5>Optimize Bundle Size</h5>
@@ -2464,13 +2464,13 @@ $fontFamily:"Roboto","Helvetica Neue",sans-serif;
                 helps PrimeNG components to blend-in perfectly within the rest of your application.</p>
 
             <h5>Build</h5>
-            <p>Once the theme is designed and ready for use, it needs to be included in your application. If you have used the visual editor, you may just download it as a css file by clicking the download button. 
+            <p>Once the theme is designed and ready for use, it needs to be included in your application. If you have used the visual editor, you may just download it as a css file by clicking the download button.
                 Second alternative is including the sass api inside your application so that angular-cli can build and include it in your bundle which is
-                exactly the approach used in code editor mode by importing mytheme.scss in main.js. Another alternative would be compiling the sass yourself with the command below
+                exactly the approach used in code editor mode by importing fluxys.scss in main.js. Another alternative would be compiling the sass yourself with the command below
                 and use in your application via a link tag or an import statement e.g. in your main.js entry file to have it bundled. Choice is depending on your requirements.</p>
 
 <app-code ngPreserveWhitespaces>
-sass --update src/assets/mytheme:src/assets/mytheme
+sass --update src/assets/fluxys:src/assets/fluxys
 </app-code>
         </div>
     </div>

@@ -11,7 +11,7 @@ if (environment.production) {
 }
 
 if (environment.editor === 'code') {
-    require("style-loader!./sass/themes/mytheme/theme.scss");
+    require('style-loader!./sass/themes/fluxys/theme.scss');
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)
