@@ -1,8 +1,28 @@
+// Astra Neutral Colors Variables
+$neutralColor50: #f0f4f8;
+$neutralColor100: #d9e2ec;
+$neutralColor200: #bcccdc;
+$neutralColor300: #829ab1;
+$neutralColor400: #627d98;
+$neutralColor500: #486581;
+$neutralColor700: #334e68;
+$neutralColor900: #102a43;
+
+// Astra Gray Colors Variables
+$white: #ffffff;
+$grayColor50: #f7f7f7;
+$grayColor100: #e5e5e5;
+$grayColor300: #d8d8d8;
+$grayColor400: #a4a4a4;
+$grayColor500: #7d7e7f;
+$grayColor700: #666666;
+$grayColor900: #252525;
+
 // Theme Specific Variables
-$primaryColor: #2196F3;
-$primaryDarkColor: #1E88E5;
-$primaryDarkerColor: #1976D2;
-$primaryTextColor: #ffffff;
+$primaryColor: $neutralColor700;
+$primaryDarkColor: $neutralColor900;
+$primaryDarkerColor: $neutralColor900;
+$primaryTextColor: $white;
 
 // Mandatory Designer Variables
 @import './variables/general';

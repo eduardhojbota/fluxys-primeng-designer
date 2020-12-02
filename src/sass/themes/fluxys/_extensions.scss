@@ -1,1 +1,5 @@
-/* Customizations to the designer theme should be defined here */
+// button extensions
+.p-button:disabled {
+  background: $neutralColor200;
+  border-color: $neutralColor200;
+}
