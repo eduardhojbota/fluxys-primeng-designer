@@ -1,5 +1,16 @@
 // button extensions
 .p-button:disabled {
   background: $neutralColor200;
+  color: $white;
+  border-color: $neutralColor200;
+}
+
+.p-button.p-button-secondary:disabled,
+.p-buttonset.p-button-secondary:disabled > .p-button,
+.p-buttonset.p-button-secondary > .p-button:disabled,
+.p-splitbutton.p-button-secondary:disabled > .p-button,
+.p-splitbutton.p-button-secondary > .p-button:disabled {
+  background: $white;
+  color: $neutralColor200;
   border-color: $neutralColor200;
 }
