@@ -56,11 +56,10 @@ $roundedButtonBorderRadius: 2rem;
 
 /// Alpha level of a text button background in hover state
 /// @group button
-$textButtonHoverBgOpacity:.04;
-
+$textButtonHoverBgOpacity: 0;
 /// Alpha level of a text button background in active state
 /// @group button
-$textButtonActiveBgOpacity:.16;
+$textButtonActiveBgOpacity: 0;
 
 /// Border style of a outlined button
 /// @group button
