@@ -1,8 +1,124 @@
 // button extensions
-.p-button:disabled {
-  background: $neutralColor200;
+.p-button {
+  text-transform: uppercase;
+
+  &:disabled {
+    background: $neutralColor200;
+    color: $white;
+    border-color: $neutralColor200;
+  }
+}
+
+.p-button.flx-within-day {
+  background: $wdColor500;
   color: $white;
-  border-color: $neutralColor200;
+  border-color: $wdColor500;
+
+  &:enabled:hover {
+    background: $wdColor700;
+    color: $white;
+    border-color: $wdColor700;
+  }
+
+  &:enabled:active {
+    background: $wdColor700;
+    color: $white;
+    border-color: $wdColor700;
+  }
+
+  &:focus {
+    @include focused();
+  }
+
+  &:disabled {
+    background: $wdColor100;
+    color: $white;
+    border-color: $wdColor100;
+  }
+}
+
+.p-button.flx-day-ahead {
+  background: $daColor500;
+  color: $white;
+  border-color: $daColor500;
+
+  &:enabled:hover {
+    background: $daColor700;
+    color: $white;
+    border-color: $daColor700;
+  }
+
+  &:enabled:active {
+    background: $daColor700;
+    color: $white;
+    border-color: $daColor700;
+  }
+
+  &:focus {
+    @include focused();
+  }
+
+  &:disabled {
+    background: $daColor100;
+    color: $white;
+    border-color: $daColor100;
+  }
+}
+
+.p-button.p-button-secondary.flx-within-day {
+  background: $wdColor50;
+  color: $wdColor900;
+  border-color: $wdColor100;
+
+  &:enabled:hover {
+    background: $wdColor100;
+    color: $wdColor900;
+    border-color: $wdColor300;
+  }
+
+  &:enabled:active {
+    background: $wdColor100;
+    color: $wdColor900;
+    border-color: $wdColor300;
+  }
+
+  &:focus {
+    @include focused();
+  }
+
+  &:disabled {
+    background: $white;
+    color: $wdColor100;
+    border-color: $wdColor100;
+  }
+}
+
+.p-button.p-button-secondary.flx-day-ahead {
+  background: $daColor50;
+  color: $daColor900;
+  border-color: $daColor100;
+
+  &:enabled:hover {
+    background: $daColor100;
+    color: $daColor900;
+    border-color: $daColor300;
+  }
+
+  &:enabled:active {
+    background: $daColor100;
+    color: $daColor900;
+    border-color: $daColor300;
+  }
+
+  &:focus {
+    @include focused();
+  }
+
+  &:disabled {
+    background: $white;
+    color: $daColor100;
+    border-color: $daColor100;
+  }
 }
 
 .p-button.p-button-secondary:disabled,
