@@ -65,15 +65,51 @@
   }
 }
 
+.p-button.p-button-secondary,
+.p-buttonset.p-button-secondary > .p-button,
+.p-splitbutton.p-button-secondary > .p-button {
+  .p-button-icon {
+    color: $neutralColor400;
+  }
+
+  &:enabled:hover {
+    .p-button-icon {
+      color: $neutralColor700;
+    }
+  }
+
+  &:disabled {
+    background: $white;
+    color: $neutralColor200;
+    border-color: $neutralColor200;
+  }
+}
+
+/*.p-button.p-button-secondary:disabled,
+.p-buttonset.p-button-secondary:disabled > .p-button,
+.p-buttonset.p-button-secondary > .p-button:disabled,
+.p-splitbutton.p-button-secondary:disabled > .p-button,
+.p-splitbutton.p-button-secondary > .p-button:disabled {
+  required ???
+}*/
+
 .p-button.p-button-secondary.flx-within-day {
   background: $wdColor50;
   color: $wdColor900;
   border-color: $wdColor100;
 
+  .p-button-icon {
+    color: $wdColor300;
+  }
+
   &:enabled:hover {
     background: $wdColor100;
     color: $wdColor900;
     border-color: $wdColor300;
+
+    .p-button-icon {
+      color: $wdColor400;
+    }
   }
 
   &:enabled:active {
@@ -98,10 +134,18 @@
   color: $daColor900;
   border-color: $daColor100;
 
+  .p-button-icon {
+    color: $daColor300;
+  }
+
   &:enabled:hover {
     background: $daColor100;
     color: $daColor900;
     border-color: $daColor300;
+
+    .p-button-icon {
+      color: $daColor400;
+    }
   }
 
   &:enabled:active {
@@ -187,14 +231,4 @@
       color: $daColor100;
     }
   }
-}
-
-.p-button.p-button-secondary:disabled,
-.p-buttonset.p-button-secondary:disabled > .p-button,
-.p-buttonset.p-button-secondary > .p-button:disabled,
-.p-splitbutton.p-button-secondary:disabled > .p-button,
-.p-splitbutton.p-button-secondary > .p-button:disabled {
-  background: $white;
-  color: $neutralColor200;
-  border-color: $neutralColor200;
 }

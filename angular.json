@@ -33,6 +33,7 @@
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeflex/primeflex.css",
               "node_modules/prismjs/themes/prism-coy.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "src/assets/demo/styles/flags.css",
               "src/styles.scss"
             ],
