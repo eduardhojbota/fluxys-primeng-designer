@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
+import {SplitButtonModule} from 'primeng/splitbutton';
 
 import { AstraRoutingModule } from './astra-routing.module';
 import { AstraComponent } from './astra.component';
@@ -14,7 +15,8 @@ import { ButtonsComponent } from './buttons/buttons.component';
     CommonModule,
     AstraRoutingModule,
     ButtonModule,
-    PanelModule
+    PanelModule,
+    SplitButtonModule,
   ]
 })
 export class AstraModule { }
