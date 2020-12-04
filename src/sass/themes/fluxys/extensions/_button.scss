@@ -21,9 +21,9 @@
   }
 
   &:enabled:active {
-    background: $wdColor700;
+    background: $wdColor500;
     color: $white;
-    border-color: $wdColor700;
+    border-color: $wdColor500;
   }
 
   &:focus {
@@ -49,9 +49,9 @@
   }
 
   &:enabled:active {
-    background: $daColor700;
+    background: $daColor500;
     color: $white;
-    border-color: $daColor700;
+    border-color: $daColor500;
   }
 
   &:focus {
@@ -77,9 +77,9 @@
   }
 
   &:enabled:active {
-    background: $wdColor100;
+    background: $wdColor50;
     color: $wdColor900;
-    border-color: $wdColor300;
+    border-color: $wdColor100;
   }
 
   &:focus {
@@ -105,9 +105,9 @@
   }
 
   &:enabled:active {
-    background: $daColor100;
+    background: $daColor50;
     color: $daColor900;
-    border-color: $daColor300;
+    border-color: $daColor100;
   }
 
   &:focus {
@@ -134,7 +134,7 @@
 
   &:enabled:active {
     background: transparent;
-    color: $neutralColor900;
+    color: $neutralColor700;
     border-color: transparent;
   }
 
@@ -156,7 +156,7 @@
     }
 
     &:enabled:active {
-      color: $wdColor900;
+      color: $wdColor700;
     }
 
     &:focus {
@@ -176,7 +176,7 @@
     }
 
     &:enabled:active {
-      color: $daColor900;
+      color: $daColor700;
     }
 
     &:focus {

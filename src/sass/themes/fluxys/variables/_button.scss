@@ -36,7 +36,7 @@ $buttonHoverBorderColor: $neutralColor900;
 
 /// Background of a button in pressed state
 /// @group button
-$buttonActiveBg: $neutralColor900;
+$buttonActiveBg: $neutralColor700;
 
 /// Color of a button in pressed state
 /// @group button
@@ -44,7 +44,7 @@ $buttonTextActiveColor: $white;
 
 /// Border color of a button in pressed state
 /// @group button
-$buttonActiveBorderColor: $neutralColor900;
+$buttonActiveBorderColor: $neutralColor700;
 
 /// Shadow of a raised button
 /// @group button
@@ -103,7 +103,7 @@ $secondaryButtonHoverBorderColor: $neutralColor300;
 
 /// Background of a secondary button in pressed state
 /// @group button
-$secondaryButtonActiveBg: $neutralColor100;
+$secondaryButtonActiveBg: $neutralColor50;
 
 /// Text color of a secondary button in pressed state
 /// @group button
@@ -111,7 +111,7 @@ $secondaryButtonTextActiveColor: $neutralColor900;
 
 /// Border color of a secondary button in pressed state
 /// @group button
-$secondaryButtonActiveBorderColor: $neutralColor300;
+$secondaryButtonActiveBorderColor: $neutralColor200;
 
 /// Box shadow of a secondary button in focused state
 /// @group button
