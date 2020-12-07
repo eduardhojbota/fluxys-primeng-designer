@@ -2,10 +2,71 @@
 <div class="p-grid">
   <div class="p-col">
     <p-panel header="Confirmation Dialog">
-      <button type="button" pButton label="Normal Confirmation Dialog" class="p-mr-2 p-mb-2" (click)="confirmNormal()"></button>
-      <button type="button" pButton label="Within Day Confirmation Dialog" class="flx-within-day p-mr-2 p-mb-2" (click)="confirmWD()"></button>
-      <button type="button" pButton label="Day Ahead Confirmation Dialog" class="flx-day-ahead p-mr-2 p-mb-2" (click)="confirmDA()"></button>
-      <button type="button" pButton label="Warning Confirmation Dialog" class="p-mr-2 p-mb-2" (click)="confirmWarning()"></button>
+      <h3>Neutral</h3>
+      <button type="button" pButton label="Open" class="p-mr-2 p-mb-2" (click)="confirmNormal()"></button>
+<pre><code>
+<b><u>HTML</u></b>
+&lt;p-confirmDialog #cd header="Confirmation Dialog"&gt;
+  &lt;p-footer&gt;
+    &lt;button type="button" pButton label="Cancel" class="p-button-secondary" (click)="cd.reject()"&gt;&lt;/button&gt;
+    &lt;button type="button" pButton label="Ok" (click)="cd.accept()"&gt;&lt;/button&gt;
+  &lt;/p-footer&gt;
+&lt;/p-confirmDialog&gt;
+
+<b><u>TS</u></b>
+this.confirmationService.confirm(&#123;
+  message: 'Dialog is a container to display content in an overlay window.',
+});
+</code></pre>
+      <h3>WD</h3>
+      <button type="button" pButton label="Open" class="flx-within-day p-mr-2 p-mb-2" (click)="confirmWD()"></button>
+      <pre><code>
+<b><u>HTML</u></b>
+&lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-within-day"&gt;
+  &lt;p-footer&gt;
+    &lt;button type="button" pButton label="Cancel" class="p-button-secondary flx-within-day" (click)="cd.reject()"&gt;&lt;/button&gt;
+    &lt;button type="button" pButton label="Ok" class="flx-within-day" (click)="cd.accept()"&gt;&lt;/button&gt;
+  &lt;/p-footer&gt;
+&lt;/p-confirmDialog&gt;
+
+<b><u>TS</u></b>
+this.confirmationService.confirm(&#123;
+  message: 'Dialog is a container to display content in an overlay window.',
+});
+</code></pre>
+      <h3>DA</h3>
+      <button type="button" pButton label="Open" class="flx-day-ahead p-mr-2 p-mb-2" (click)="confirmDA()"></button>
+      <pre><code>
+<b><u>HTML</u></b>
+&lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-day-ahead"&gt;
+  &lt;p-footer&gt;
+    &lt;button type="button" pButton label="Cancel" class="p-button-secondary flx-day-ahead" (click)="cd.reject()"&gt;&lt;/button&gt;
+    &lt;button type="button" pButton label="Ok" class="flx-day-ahead" (click)="cd.accept()"&gt;&lt;/button&gt;
+  &lt;/p-footer&gt;
+&lt;/p-confirmDialog&gt;
+
+<b><u>TS</u></b>
+this.confirmationService.confirm(&#123;
+  message: 'Dialog is a container to display content in an overlay window.',
+});
+</code></pre>
+      <h3>Warning</h3>
+      <button type="button" pButton label="Open" class="p-mr-2 p-mb-2" (click)="confirmWarning()"></button>
+      <pre><code>
+<b><u>HTML</u></b>
+&lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-warning"&gt;
+  &lt;p-footer&gt;
+    &lt;button type="button" pButton label="Cancel" class="p-button-secondary" (click)="cd.reject()"&gt;&lt;/button&gt;
+    &lt;button type="button" pButton label="Ok" (click)="cd.accept()"&gt;&lt;/button&gt;
+  &lt;/p-footer&gt;
+&lt;/p-confirmDialog&gt;
+
+<b><u>TS</u></b>
+this.confirmationService.confirm(&#123;
+  message: 'Dialog is a container to display content in an overlay window.',
+  icon: 'pi pi-exclamation-circle',
+});
+</code></pre>
     </p-panel>
   </div>
   <div class="p-col">
