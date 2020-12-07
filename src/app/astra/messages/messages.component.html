@@ -1,6 +1,6 @@
 <h1>Messages &amp; Toasts</h1>
 <div class="p-grid">
-  <div class="p-col-7">
+  <div class="p-col-8">
     <p-panel header="Messages">
       <h5>Severities</h5>
       <p-messages [(value)]="msgs1" [enableService]="false"></p-messages>
@@ -50,19 +50,19 @@
   <div class="p-col">
     <p-panel header="Toasts">
       <h5>Severities</h5>
-      <button type="button" pButton pRipple (click)="showSuccess()" label="Success" class="p-button-success"></button>
-      <button type="button" pButton pRipple (click)="showInfo()" label="Info" class="p-button-info"></button>
-      <button type="button" pButton pRipple (click)="showWarn()" label="Warn" class="p-button-warning"></button>
-      <button type="button" pButton pRipple (click)="showError()" label="Error" class="p-button-danger"></button>
+      <button type="button" pButton pRipple (click)="showSuccess()" label="Success" class="p-button-success p-mr-2 p-mb-2"></button>
+      <button type="button" pButton pRipple (click)="showInfo()" label="Info" class="p-button-info p-mr-2 p-mb-2"></button>
+      <button type="button" pButton pRipple (click)="showWarn()" label="Warn" class="p-button-warning p-mr-2 p-mb-2"></button>
+      <button type="button" pButton pRipple (click)="showError()" label="Error" class="p-button-danger p-mr-2 p-mb-2"></button>
 
       <h5>Positions</h5>
-      <button type="button" pButton pRipple (click)="showTopLeft()" label="Top Left"></button>
-      <button type="button" pButton pRipple (click)="showTopCenter()" label="Top Center" class="p-button-warning"></button>
-      <button type="button" pButton pRipple (click)="showBottomCenter()" label="Bottom Center" class="p-button-success"></button>
+      <button type="button" pButton pRipple (click)="showTopLeft()" label="Top Left" class="p-mr-2 p-mb-2"></button>
+      <button type="button" pButton pRipple (click)="showTopCenter()" label="Top Center" class="p-button-warning p-mr-2 p-mb-2"></button>
+      <button type="button" pButton pRipple (click)="showBottomCenter()" label="Bottom Center" class="p-button-success p-mr-2 p-mb-2"></button>
 
       <h5>Multiple</h5>
-      <button type="button" pButton pRipple (click)="showMultiple()" label="Multiple" class="p-button-warning"></button>
-      <button type="button" pButton pRipple (click)="showSticky()" label="Sticky"></button>
+      <button type="button" pButton pRipple (click)="showMultiple()" label="Multiple" class="p-button-warning p-mr-2 p-mb-2"></button>
+      <button type="button" pButton pRipple (click)="showSticky()" label="Sticky" class="p-mr-2 p-mb-2"></button>
 
       <h5>Clear</h5>
       <button type="button" pButton pRipple (click)="clear()" icon="pi pi-times" label="Clear"></button>
