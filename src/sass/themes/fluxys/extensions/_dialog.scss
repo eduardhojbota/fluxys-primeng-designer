@@ -68,5 +68,17 @@
         border-top: 3px solid $daColor400;
       }
     }
+
+    &.flx-warning {
+      .p-dialog-header {
+        color: #870101; // red 900
+      }
+
+      .p-dialog-content {
+        .p-confirm-dialog-icon {
+          color: #c80606; // red 700
+        }
+      }
+    }
   }
 }

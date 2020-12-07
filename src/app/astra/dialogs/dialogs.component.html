@@ -5,6 +5,7 @@
       <button type="button" pButton label="Normal Confirmation Dialog" class="p-mr-2 p-mb-2" (click)="confirmNormal()"></button>
       <button type="button" pButton label="Within Day Confirmation Dialog" class="flx-within-day p-mr-2 p-mb-2" (click)="confirmWD()"></button>
       <button type="button" pButton label="Day Ahead Confirmation Dialog" class="flx-day-ahead p-mr-2 p-mb-2" (click)="confirmDA()"></button>
+      <button type="button" pButton label="Warning Confirmation Dialog" class="p-mr-2 p-mb-2" (click)="confirmWarning()"></button>
     </p-panel>
   </div>
   <div class="p-col">
@@ -34,5 +35,11 @@
   <p-footer>
     <button type="button" pButton label="Cancel" class="p-button-secondary flx-day-ahead" (click)="cd3.reject()"></button>
     <button type="button" pButton label="Ok" class="flx-day-ahead" (click)="cd3.accept()"></button>
+  </p-footer>
+</p-confirmDialog>
+<p-confirmDialog #cd4 key="warningCD" styleClass="flx-warning" header="Warning Dialog">
+  <p-footer>
+    <button type="button" pButton label="Cancel" class="p-button-secondary" (click)="cd4.reject()"></button>
+    <button type="button" pButton label="Ok" (click)="cd4.accept()"></button>
   </p-footer>
 </p-confirmDialog>

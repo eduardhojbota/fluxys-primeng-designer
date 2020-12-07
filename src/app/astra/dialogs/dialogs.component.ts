@@ -13,8 +13,6 @@ export class DialogsComponent {
     this.confirmationService.confirm({
       key: 'normalCD',
       message: 'Dialog is a container to display content in an overlay window.',
-      accept: () => alert('You accepted in the confirmation dialog.'),
-      reject: () => alert('You rejected in the confirmation dialog.'),
     });
   }
 
@@ -22,8 +20,6 @@ export class DialogsComponent {
     this.confirmationService.confirm({
       key: 'withinDayCD',
       message: 'Dialog is a container to display content in an overlay window.',
-      accept: () => alert('You accepted in the confirmation dialog.'),
-      reject: () => alert('You rejected in the confirmation dialog.'),
     });
   }
 
@@ -31,8 +27,14 @@ export class DialogsComponent {
     this.confirmationService.confirm({
       key: 'dayAheadCD',
       message: 'Dialog is a container to display content in an overlay window.',
-      accept: () => alert('You accepted in the confirmation dialog.'),
-      reject: () => alert('You rejected in the confirmation dialog.'),
+    });
+  }
+
+  confirmWarning(): void {
+    this.confirmationService.confirm({
+      key: 'warningCD',
+      message: 'Dialog is a container to display content in an overlay window.',
+      icon: 'pi pi-exclamation-circle'
     });
   }
 }
