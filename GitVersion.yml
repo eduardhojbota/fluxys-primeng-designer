@@ -1,0 +1,9 @@
+branches:
+  master:
+    mode: ContinuousDelivery
+    tag: 'pre'
+    increment: Minor
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+ignore:
+  sha: []
