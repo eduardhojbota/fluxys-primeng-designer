@@ -6,8 +6,7 @@
 trigger:
 - main
 
-pool:
-  vmImage: 'ubuntu-latest'
+pool: FluxysBuild
 
 steps:
 - task: Cake@2
