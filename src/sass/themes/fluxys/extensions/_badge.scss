@@ -1,0 +1,20 @@
+%wd-da-tag {
+  color: $white;
+  padding: 0 0.6rem;
+  font-weight: normal;
+  font-size: 1rem;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+
+.p-tag {
+  &.flx-within-day {
+    @extend %wd-da-tag;
+    background-color: $wdColor400;
+  }
+
+  &.flx-day-ahead {
+    @extend %wd-da-tag;
+    background-color: $daColor400;
+  }
+}
