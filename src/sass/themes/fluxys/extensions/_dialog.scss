@@ -1,0 +1,72 @@
+.p-dialog {
+  .p-dialog-header {
+    .p-dialog-header-icon {
+      color: $neutralColor400;
+
+      &:enabled:hover {
+        color: $neutralColor400;
+        background: $neutralColor50;
+      }
+    }
+  }
+
+  .p-dialog-footer {
+    background: $grayColor50;
+  }
+
+  &.flx-within-day {
+    .p-dialog-header {
+      background: $wdColor50;
+
+      .p-dialog-header-icon {
+        color: $wdColor100;
+
+        &:enabled:hover {
+          color: $wdColor300;
+          background: $wdColor100;
+        }
+      }
+    }
+  }
+
+  &.flx-day-ahead {
+    .p-dialog-header {
+      background: $daColor50;
+
+      .p-dialog-header-icon {
+        color: $daColor100;
+
+        &:enabled:hover {
+          color: $daColor300;
+          background: $daColor100;
+        }
+      }
+    }
+  }
+
+  &.p-confirm-dialog {
+    .p-dialog-header {
+      background: $white;
+    }
+
+    .p-confirm-dialog-icon {
+      margin-right: $inlineSpacing * 2;
+    }
+
+    .p-confirm-dialog-message {
+      margin-left: 0;
+    }
+
+    &.flx-within-day {
+      .p-dialog-header {
+        border-top: 3px solid $wdColor400;
+      }
+    }
+
+    &.flx-day-ahead {
+      .p-dialog-header {
+        border-top: 3px solid $daColor400;
+      }
+    }
+  }
+}

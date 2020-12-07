@@ -1,0 +1,38 @@
+<h1>Dialogs</h1>
+<div class="p-grid">
+  <div class="p-col">
+    <p-panel header="Confirmation Dialog">
+      <button type="button" pButton label="Normal Confirmation Dialog" class="p-mr-2 p-mb-2" (click)="confirmNormal()"></button>
+      <button type="button" pButton label="Within Day Confirmation Dialog" class="flx-within-day p-mr-2 p-mb-2" (click)="confirmWD()"></button>
+      <button type="button" pButton label="Day Ahead Confirmation Dialog" class="flx-day-ahead p-mr-2 p-mb-2" (click)="confirmDA()"></button>
+    </p-panel>
+  </div>
+  <div class="p-col">
+    <p-panel header="Dialog">
+
+    </p-panel>
+  </div>
+  <div class="p-col">
+    <p-panel header="DynamicDialog">
+
+    </p-panel>
+  </div>
+</div>
+<p-confirmDialog #cd1 key="normalCD" header="Confirmation Dialog">
+  <p-footer>
+    <button type="button" pButton label="Cancel" class="p-button-secondary" (click)="cd1.reject()"></button>
+    <button type="button" pButton label="Ok" (click)="cd1.accept()"></button>
+  </p-footer>
+</p-confirmDialog>
+<p-confirmDialog #cd2 key="withinDayCD" styleClass="flx-within-day" header="Confirmation Dialog">
+  <p-footer>
+    <button type="button" pButton label="Cancel" class="p-button-secondary flx-within-day" (click)="cd2.reject()"></button>
+    <button type="button" pButton label="Ok" class="flx-within-day" (click)="cd2.accept()"></button>
+  </p-footer>
+</p-confirmDialog>
+<p-confirmDialog #cd3 key="dayAheadCD" styleClass="flx-day-ahead" header="Confirmation Dialog">
+  <p-footer>
+    <button type="button" pButton label="Cancel" class="p-button-secondary flx-day-ahead" (click)="cd3.reject()"></button>
+    <button type="button" pButton label="Ok" class="flx-day-ahead" (click)="cd3.accept()"></button>
+  </p-footer>
+</p-confirmDialog>
