@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: FluxysBuild
+pool: Default
 
 steps:
 - task: Cake@2
