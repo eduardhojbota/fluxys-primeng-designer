@@ -6,13 +6,13 @@ import { Component } from '@angular/core';
   styles: [`
 :host {
   display: block;
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 153px);
 }
 .p-grid {
   flex-wrap: nowrap;
 }
 nav {
-  max-height: calc(100vh - 225px);
+  max-height: calc(100vh - 170px);
   overflow-y: auto;
 }
 nav ul {

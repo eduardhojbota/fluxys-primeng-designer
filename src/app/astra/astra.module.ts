@@ -11,6 +11,8 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { ToastModule } from 'primeng/toast';
+import { InputTextModule } from 'primeng/inputtext';
+import {RippleModule} from 'primeng/ripple';
 
 import { AstraRoutingModule } from './astra-routing.module';
 import { AstraComponent } from './astra.component';
@@ -35,6 +37,8 @@ import { MessagesComponent } from './messages/messages.component';
     MessagesModule,
     MessageModule,
     ToastModule,
+    InputTextModule,
+    RippleModule,
   ],
   entryComponents: [DynamicDialogContentComponent]
 })
