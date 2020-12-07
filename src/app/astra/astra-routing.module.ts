@@ -6,9 +6,14 @@ import {ButtonsComponent} from './buttons/buttons.component';
 import {DialogsComponent} from './dialogs/dialogs.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', component: AstraComponent },
-  { path: 'buttons', component: ButtonsComponent },
-  { path: 'dialogs', component: DialogsComponent },
+  {
+    path: '',
+    component: AstraComponent,
+    children: [
+      { path: 'buttons', component: ButtonsComponent },
+      { path: 'dialogs', component: DialogsComponent },
+    ]
+  },
 ];
 
 @NgModule({
