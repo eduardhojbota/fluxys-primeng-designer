@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { ConfirmationService } from 'primeng/api';
+import { DialogService } from 'primeng/dynamicdialog';
+import {DynamicDialogContentComponent} from './dynamic-dialog-content/dynamic-dialog-content.component';
+import {take} from 'rxjs/operators';
 
 @Component({
   selector: 'app-dialogs',
@@ -8,14 +11,17 @@ import { ConfirmationService } from 'primeng/api';
     width: 450px;
     height: 250px;
   }`],
-  providers: [ConfirmationService],
+  providers: [ConfirmationService, DialogService],
 })
 export class DialogsComponent {
   neutralDialogVisible = false;
   withinDayDialogVisible = false;
   dayAheadDialogVisible = false;
 
-  constructor(private readonly confirmationService: ConfirmationService) {}
+  constructor(
+    private readonly confirmationService: ConfirmationService,
+    private readonly dialogService: DialogService
+  ) {}
 
   confirmNeutral(): void {
     this.confirmationService.confirm({
@@ -56,6 +62,44 @@ export class DialogsComponent {
 
   showDayAhead(): void {
     this.dayAheadDialogVisible = true;
+  }
+
+  showDynamicNeutral(): void {
+    const ref = this.dialogService.open(DynamicDialogContentComponent, {
+      header: 'Pop-up title',
+      footer: 'Dynamic Dialog Footer',
+      width: '70vw',
+    });
+    ref.onClose.pipe(take(1)).subscribe((res) => {
+      // do something based on res
+      console.log('dynamic dialog result', res);
+    });
+  }
+
+  showDynamicWithinDay(): void {
+    const ref = this.dialogService.open(DynamicDialogContentComponent, {
+      header: 'Pop-up title',
+      footer: 'Dynamic Dialog Footer',
+      width: '70vw',
+      styleClass: 'flx-within-day',
+    });
+    ref.onClose.pipe(take(1)).subscribe((res) => {
+      // do something based on res
+      console.log('dynamic dialog result', res);
+    });
+  }
+
+  showDynamicDayAhead(): void {
+    const ref = this.dialogService.open(DynamicDialogContentComponent, {
+      header: 'Pop-up title',
+      footer: 'Dynamic Dialog Footer',
+      width: '70vw',
+      styleClass: 'flx-day-ahead',
+    });
+    ref.onClose.pipe(take(1)).subscribe((res) => {
+      // do something based on res
+      console.log('dynamic dialog result', res);
+    });
   }
 
   close(): void {
