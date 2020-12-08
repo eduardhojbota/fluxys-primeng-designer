@@ -80,7 +80,7 @@ export class MessagesComponent implements OnInit {
   }
 
   showSticky(): void {
-    this.messageService.add({severity: 'success', summary: 'Sticky', detail: 'Message Content', sticky: true});
+    this.messageService.add({severity: 'info', summary: 'Sticky', detail: 'Message Content', sticky: true});
   }
 
   onConfirm(): void {
