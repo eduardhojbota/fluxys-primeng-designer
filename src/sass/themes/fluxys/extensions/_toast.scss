@@ -1,0 +1,51 @@
+.p-toast {
+  .p-toast-message {
+    &.p-toast-message-info {
+      border-width: 0;
+
+      .p-toast-icon-close {
+        color: $grayColor300;
+
+        &:enabled:hover {
+          color: $neutralColor700;
+        }
+      }
+    }
+
+    &.p-toast-message-success {
+      border-width: 0;
+
+      .p-toast-icon-close {
+        color: $successColor100;
+
+        &:enabled:hover {
+          color: $successColor400;
+        }
+      }
+    }
+
+    &.p-toast-message-warn {
+      border-width: 0;
+
+      .p-toast-icon-close {
+        color: $warningColor100;
+
+        &:enabled:hover {
+          color: $warningColor400;
+        }
+      }
+    }
+
+    &.p-toast-message-error {
+      border-width: 0;
+
+      .p-toast-icon-close {
+        color: $errorColor100;
+
+        &:enabled:hover {
+          color: $errorColor400;
+        }
+      }
+    }
+  }
+}

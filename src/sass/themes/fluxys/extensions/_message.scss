@@ -1,0 +1,41 @@
+.p-message {
+  &.p-message-info {
+    .p-message-close {
+      color: $grayColor300;
+
+      &:enabled:hover {
+        color: $neutralColor700;
+      }
+    }
+  }
+
+  &.p-message-success {
+    .p-message-close {
+      color: $successColor100;
+
+      &:enabled:hover {
+        color: $successColor400;
+      }
+    }
+  }
+
+  &.p-message-warn {
+    .p-message-close {
+      color: $warningColor100;
+
+      &:enabled:hover {
+        color: $warningColor400;
+      }
+    }
+  }
+
+  &.p-message-error {
+    .p-message-close {
+      color: $errorColor100;
+
+      &:enabled:hover {
+        color: $errorColor400;
+      }
+    }
+  }
+}
