@@ -17,14 +17,15 @@ import { MenuModule } from 'primeng/menu';
 
 import { AstraRoutingModule } from './astra-routing.module';
 import { AstraComponent } from './astra.component';
-import { ButtonsComponent } from './buttons/buttons.component';
 import { DialogsComponent } from './dialogs/dialogs.component';
 import { DynamicDialogContentComponent } from './dialogs/dynamic-dialog-content/dynamic-dialog-content.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ToastComponent } from './toast/toast.component';
+import { ButtonComponent } from './button/button.component';
+import { SplitButtonComponent } from './split-button/split-button.component';
 
 @NgModule({
-  declarations: [AstraComponent, ButtonsComponent, DialogsComponent, DynamicDialogContentComponent, MessagesComponent, ToastComponent],
+  declarations: [AstraComponent, DialogsComponent, DynamicDialogContentComponent, MessagesComponent, ToastComponent, ButtonComponent, SplitButtonComponent],
   imports: [
     CommonModule,
     AstraRoutingModule,
