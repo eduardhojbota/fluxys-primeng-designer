@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
 import { SplitButtonModule } from 'primeng/splitbutton';
@@ -25,7 +25,15 @@ import { ButtonComponent } from './button/button.component';
 import { SplitButtonComponent } from './split-button/split-button.component';
 
 @NgModule({
-  declarations: [AstraComponent, DialogsComponent, DynamicDialogContentComponent, MessagesComponent, ToastComponent, ButtonComponent, SplitButtonComponent],
+  declarations: [
+    AstraComponent,
+    DialogsComponent,
+    DynamicDialogContentComponent,
+    MessagesComponent,
+    ToastComponent,
+    ButtonComponent,
+    SplitButtonComponent,
+  ],
   imports: [
     CommonModule,
     AstraRoutingModule,
@@ -44,6 +52,6 @@ import { SplitButtonComponent } from './split-button/split-button.component';
     RippleModule,
     MenuModule,
   ],
-  entryComponents: [DynamicDialogContentComponent]
+  entryComponents: [DynamicDialogContentComponent],
 })
-export class AstraModule { }
+export class AstraModule {}

@@ -1,136 +1,142 @@
-import {Component, EventEmitter, Output, Input, OnInit} from '@angular/core';
+import { Component, EventEmitter, Output, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { EditorService} from './service/editor.service';
+import { EditorService } from './service/editor.service';
 import { MessageService } from 'primeng/api';
 import { environment } from '../environments/environment';
 
 @Component({
-    selector: 'app-editor',
-    templateUrl: './editor.component.html'
+  selector: 'app-editor',
+  templateUrl: './editor.component.html',
 })
 export class EditorComponent implements OnInit {
+  @Input() theme: string;
 
-    @Input() theme: string;
+  @Input() active: boolean;
 
-    @Input() active: boolean;
+  @Input() inputStyle: string;
 
-    @Input() inputStyle: string;
+  @Input() ripple: boolean;
 
-    @Input() ripple: boolean;
+  @Output() inputStyleChange: EventEmitter<any> = new EventEmitter();
 
-    @Output() inputStyleChange: EventEmitter<any> = new EventEmitter();
+  @Output() rippleChange: EventEmitter<any> = new EventEmitter();
 
-    @Output() rippleChange: EventEmitter<any> = new EventEmitter();
+  @Output() compiled: EventEmitter<string> = new EventEmitter();
 
-    @Output() compiled: EventEmitter<string> = new EventEmitter();
+  @Output() restart: EventEmitter<any> = new EventEmitter();
 
-    @Output() restart: EventEmitter<any> = new EventEmitter();
+  constructor(private editorService: EditorService, private http: HttpClient, private messageService: MessageService) {}
 
-    constructor(private editorService: EditorService, private http: HttpClient, private messageService: MessageService) {}
+  restartDialog: boolean;
 
-    restartDialog: boolean;
+  downloadDialog: boolean;
 
-    downloadDialog: boolean;
+  scale = 14;
 
-    scale = 14;
+  scales: number[] = [12, 13, 14, 15, 16];
 
-    scales: number[] = [12,13,14,15,16];
+  categories: any[];
 
-    categories: any[];
+  variables: any = {};
 
-    variables: any = {};
+  downloadLink: HTMLAnchorElement;
 
-    downloadLink: HTMLAnchorElement;
+  ngOnInit(): void {
+    this.editorService.getEditor(this.theme).then((data) => {
+      this.categories = data;
+      this.initVariables();
+      this.compile();
+    });
+  }
 
-    ngOnInit(): void {
-        this.editorService.getEditor(this.theme).then(data => {
-            this.categories = data;
-            this.initVariables();
-            this.compile();
-        });
-    }
-
-    initVariables(): void {
-        if (this.categories) {
-            for (const category of this.categories) {
-                for (const option of category.options) {
-                    this.variables[option.name] = option.value;
-                }
-            }
+  initVariables(): void {
+    if (this.categories) {
+      for (const category of this.categories) {
+        for (const option of category.options) {
+          this.variables[option.name] = option.value;
         }
+      }
     }
+  }
 
-    compile(): void {
-        this.http.post<any>(environment.theme_builder_url + '?theme=' + this.theme, this.variables, {responseType: 'text' as 'json'}).subscribe((response) => {
-            this.compiled.emit(response);
+  compile(): void {
+    this.http
+      .post<any>(environment.theme_builder_url + '?theme=' + this.theme, this.variables, { responseType: 'text' as 'json' })
+      .subscribe(
+        (response) => {
+          this.compiled.emit(response);
         },
-        error => {
-            this.messageService.add({severity: 'Error', summary: 'Something went wrong'});
-        });
-    }
+        (error) => {
+          this.messageService.add({ severity: 'Error', summary: 'Something went wrong' });
+        }
+      );
+  }
 
-    downloadTheme(): void {
-        this.http.post<any>(environment.theme_builder_url + '?theme=' + this.theme, this.variables, {responseType: 'text' as 'json'}).subscribe((response) => {
-            const url = window.URL.createObjectURL(new Blob([response], {type: "text/css; charset=utf-8"}));
-            if (this.downloadLink) {
-                document.body.removeChild(this.downloadLink);
-           }
+  downloadTheme(): void {
+    this.http
+      .post<any>(environment.theme_builder_url + '?theme=' + this.theme, this.variables, { responseType: 'text' as 'json' })
+      .subscribe(
+        (response) => {
+          const url = window.URL.createObjectURL(new Blob([response], { type: 'text/css; charset=utf-8' }));
+          if (this.downloadLink) {
+            document.body.removeChild(this.downloadLink);
+          }
 
-           this.downloadLink = document.createElement('a');
-           this.downloadLink.href = url;
-           this.downloadLink.setAttribute('download', 'theme.css');
-           document.body.appendChild(this.downloadLink);
-           this.downloadLink.click();
+          this.downloadLink = document.createElement('a');
+          this.downloadLink.href = url;
+          this.downloadLink.setAttribute('download', 'theme.css');
+          document.body.appendChild(this.downloadLink);
+          this.downloadLink.click();
         },
-        error => {
-            this.messageService.add({severity: 'Error', summary: 'Something went wrong'});
-        });
-    }
-
-    decrementScale(): void {
-        this.scale--;
-        document.documentElement.style.fontSize = this.scale + 'px';
-    }
-
-    incrementScale(): void {
-        this.scale++;
-        document.documentElement.style.fontSize = this.scale + 'px';
-    }
-
-    onInputStyleChange(value: string): void {
-        this.inputStyleChange.emit(value);
-    }
-
-    onRippleChange(event): void {
-        this.rippleChange.emit(event.checked);
-    }
-
-    showRestartDialog(event: Event): void {
-        this.restartDialog = true;
-        event.preventDefault();
-    }
-
-    restartEditor(): void {
-        this.restartDialog = false;
-        this.restart.emit();
-    }
-
-    download(event: Event): void {
-        if (environment.production) {
-            this.downloadDialog = true;
+        (error) => {
+          this.messageService.add({ severity: 'Error', summary: 'Something went wrong' });
         }
-        else {
-            this.downloadTheme();
-        }
+      );
+  }
 
-        event.preventDefault();
+  decrementScale(): void {
+    this.scale--;
+    document.documentElement.style.fontSize = this.scale + 'px';
+  }
+
+  incrementScale(): void {
+    this.scale++;
+    document.documentElement.style.fontSize = this.scale + 'px';
+  }
+
+  onInputStyleChange(value: string): void {
+    this.inputStyleChange.emit(value);
+  }
+
+  onRippleChange(event): void {
+    this.rippleChange.emit(event.checked);
+  }
+
+  showRestartDialog(event: Event): void {
+    this.restartDialog = true;
+    event.preventDefault();
+  }
+
+  restartEditor(): void {
+    this.restartDialog = false;
+    this.restart.emit();
+  }
+
+  download(event: Event): void {
+    if (environment.production) {
+      this.downloadDialog = true;
+    } else {
+      this.downloadTheme();
     }
 
-    navigateToStore(): void {
-        window.location.href = 'https://www.primefaces.org/store';
-    }
+    event.preventDefault();
+  }
 
-    navigateToDesigner(): void {
-        window.location.href = 'https://www.primefaces.org/designer/primeng';
-    }
+  navigateToStore(): void {
+    window.location.href = 'https://www.primefaces.org/store';
+  }
+
+  navigateToDesigner(): void {
+    window.location.href = 'https://www.primefaces.org/designer/primeng';
+  }
 }

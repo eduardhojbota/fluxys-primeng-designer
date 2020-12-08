@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
 import { ConfirmationService } from 'primeng/api';
 import { DialogService } from 'primeng/dynamicdialog';
-import {DynamicDialogContentComponent} from './dynamic-dialog-content/dynamic-dialog-content.component';
-import {take} from 'rxjs/operators';
+import { DynamicDialogContentComponent } from './dynamic-dialog-content/dynamic-dialog-content.component';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-dialogs',
   templateUrl: './dialogs.component.html',
-  styles: [`.fake-content {
-    width: 450px;
-    height: 250px;
-  }`],
+  styles: [
+    `
+      .fake-content {
+        width: 450px;
+        height: 250px;
+      }
+    `,
+  ],
   providers: [ConfirmationService, DialogService],
 })
 export class DialogsComponent {
@@ -18,10 +22,7 @@ export class DialogsComponent {
   withinDayDialogVisible = false;
   dayAheadDialogVisible = false;
 
-  constructor(
-    private readonly confirmationService: ConfirmationService,
-    private readonly dialogService: DialogService
-  ) {}
+  constructor(private readonly confirmationService: ConfirmationService, private readonly dialogService: DialogService) {}
 
   confirmNeutral(): void {
     this.confirmationService.confirm({
@@ -48,7 +49,7 @@ export class DialogsComponent {
     this.confirmationService.confirm({
       key: 'warningCD',
       message: 'Dialog is a container to display content in an overlay window.',
-      icon: 'pi pi-exclamation-circle'
+      icon: 'pi pi-exclamation-circle',
     });
   }
 

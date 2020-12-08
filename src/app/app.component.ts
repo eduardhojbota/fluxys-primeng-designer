@@ -4,71 +4,64 @@ import { environment } from '../environments/environment';
 import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    animations: [
-        trigger('intro', [
-            transition(':leave', [
-                animate('.3s', style({opacity: 0}))
-            ])
-        ])
-    ]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  animations: [trigger('intro', [transition(':leave', [animate('.3s', style({ opacity: 0 }))])])],
 })
 export class AppComponent implements OnInit {
+  codeEditor: boolean;
 
-    codeEditor: boolean;
+  theme: string;
 
-    theme: string;
+  ripple: boolean;
 
-    ripple: boolean;
+  initialized: boolean;
 
-    initialized: boolean;
+  sidebarActive: boolean;
 
-    sidebarActive: boolean;
+  inputStyle = 'outlined';
 
-    inputStyle = 'outlined';
+  themeStyle: HTMLElement;
 
-    themeStyle: HTMLElement;
+  constructor(private primengConfig: PrimeNGConfig) {}
 
-    constructor(private primengConfig: PrimeNGConfig) {}
+  ngOnInit(): void {
+    this.codeEditor = environment.editor === 'code';
+    this.primengConfig.ripple = true;
+  }
 
-    ngOnInit(): void {
-        this.codeEditor = environment.editor === 'code';
-        this.primengConfig.ripple = true;
+  onMenuButtonClick(): void {
+    this.sidebarActive = true;
+  }
+
+  inputStyleChange(value: string): void {
+    this.inputStyle = value;
+  }
+
+  onCompile(value: string): void {
+    if (!this.initialized) {
+      this.initialized = true;
     }
 
-    onMenuButtonClick(): void {
-        this.sidebarActive = true;
+    const styleElement = document.createElement('style');
+    styleElement.type = 'text/css'; // tslint:disable-line:deprecation
+    styleElement.appendChild(document.createTextNode(value));
+    document.getElementsByTagName('head')[0].appendChild(styleElement);
+
+    if (this.themeStyle) {
+      this.themeStyle.remove();
     }
 
-    inputStyleChange(value: string): void {
-        this.inputStyle = value;
-    }
+    this.themeStyle = styleElement;
+  }
 
-    onCompile(value: string): void {
-        if (!this.initialized) {
-            this.initialized = true;
-        }
+  onThemeSelect(theme: string): void {
+    this.theme = theme;
+  }
 
-        const styleElement = document.createElement('style');
-        styleElement.type = 'text/css'; // tslint:disable-line:deprecation
-        styleElement.appendChild(document.createTextNode(value));
-        document.getElementsByTagName("head")[0].appendChild(styleElement);
-
-        if (this.themeStyle) {
-            this.themeStyle.remove();
-        }
-
-        this.themeStyle = styleElement;
-    }
-
-    onThemeSelect(theme: string): void {
-        this.theme = theme;
-    }
-
-    onRestart(): void {
-        this.theme = null;
-        this.initialized = false;
-    }
+  onRestart(): void {
+    this.theme = null;
+    this.initialized = false;
+  }
 }

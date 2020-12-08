@@ -1,290 +1,289 @@
-import {Component, OnInit} from '@angular/core';
-import { CountryService} from '../service/country.service';
-import { CustomerService} from '../service/customer.service';
-import { ProductService} from '../service/product.service';
+import { Component, OnInit } from '@angular/core';
+import { CountryService } from '../service/country.service';
+import { CustomerService } from '../service/customer.service';
+import { ProductService } from '../service/product.service';
 import { MessageService, MenuItem, Message } from 'primeng/api';
 import { Customer, Product } from '../domain/model';
 
 interface Option {
-    name: string,
-    code: string
+  name: string;
+  code: string;
 }
 
 @Component({
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss']
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  floatValue: string;
 
-    floatValue: string;
+  selectedCountry: any;
 
-    selectedCountry: any;
+  countries: any[];
 
-    countries: any[];
+  filteredCountries: any[];
 
-    filteredCountries: any[];
+  calendarValue: Date;
 
-    calendarValue: Date;
+  inputNumberValue: number;
 
-    inputNumberValue: number;
+  chipsValue: string;
 
-    chipsValue: string;
+  sliderValue: number;
 
-    sliderValue: number;
+  ratingValue: number;
 
-    ratingValue: number;
+  switchValue: boolean;
 
-    switchValue: boolean;
+  radioValue: string;
 
-    radioValue: string;
+  checkboxValue: string;
 
-    checkboxValue: string;
+  listboxValue: Option;
 
-    listboxValue: Option;
+  cities: Option[];
 
-    cities: Option[];
+  dropdownValue: Option;
 
-    dropdownValue: Option;
+  multiselectValue: Option[];
 
-    multiselectValue: Option[];
+  multiselectOptions: Option[];
 
-    multiselectOptions: Option[];
+  toggleValue: boolean;
 
-    toggleValue: boolean;
+  selectButtonValue1: Option;
 
-    selectButtonValue1: Option;
+  selectButtonValue2: Option;
 
-    selectButtonValue2: Option;
+  selectButtonOptions: Option[];
 
-    selectButtonOptions: Option[];
+  displayDialog: boolean;
 
-    displayDialog: boolean;
+  tieredMenuItems: MenuItem[];
 
-    tieredMenuItems: MenuItem[];
+  menuItems: MenuItem[];
 
-    menuItems: MenuItem[];
+  contextMenuItems: MenuItem[];
 
-    contextMenuItems: MenuItem[];
+  msgs: Message[];
 
-    msgs: Message[];
+  customers: Customer[];
 
-    customers: Customer[];
+  selectedCustomers: Customer[];
 
-    selectedCustomers: Customer[];
+  products: Product[];
 
-    products: Product[];
+  selectedProduct: Product;
 
-    selectedProduct: Product;
+  constructor(
+    private countryService: CountryService,
+    private messageService: MessageService,
+    private customerService: CustomerService,
+    private productService: ProductService
+  ) {}
 
-    constructor(private countryService: CountryService, private messageService: MessageService, private customerService: CustomerService, private productService: ProductService) {}
+  ngOnInit(): void {
+    this.countryService.getCountries().then((countries) => {
+      this.countries = countries;
+    });
 
-    ngOnInit(): void {
-        this.countryService.getCountries().then(countries => {
-            this.countries = countries;
-        });
+    this.productService.getProductsSmall().then((products) => (this.products = products));
+    this.customerService.getCustomersLarge().then((customers) => (this.customers = customers));
 
-        this.productService.getProductsSmall().then(products => this.products = products);
-        this.customerService.getCustomersLarge().then(customers => this.customers = customers);
+    this.cities = [
+      { name: 'New York', code: 'NY' },
+      { name: 'Rome', code: 'RM' },
+      { name: 'London', code: 'LDN' },
+      { name: 'Istanbul', code: 'IST' },
+      { name: 'Paris', code: 'PRS' },
+    ];
 
-        this.cities = [
-            {name: 'New York', code: 'NY'},
-            {name: 'Rome', code: 'RM'},
-            {name: 'London', code: 'LDN'},
-            {name: 'Istanbul', code: 'IST'},
-            {name: 'Paris', code: 'PRS'}
-        ];
+    this.multiselectOptions = [
+      { name: 'Australia', code: 'AU' },
+      { name: 'Brazil', code: 'BR' },
+      { name: 'China', code: 'CN' },
+      { name: 'Egypt', code: 'EG' },
+      { name: 'France', code: 'FR' },
+      { name: 'Germany', code: 'DE' },
+      { name: 'India', code: 'IN' },
+      { name: 'Japan', code: 'JP' },
+      { name: 'Spain', code: 'ES' },
+      { name: 'United States', code: 'US' },
+    ];
 
-        this.multiselectOptions = [
-            {name: 'Australia', code: 'AU'},
-            {name: 'Brazil', code: 'BR'},
-            {name: 'China', code: 'CN'},
-            {name: 'Egypt', code: 'EG'},
-            {name: 'France', code: 'FR'},
-            {name: 'Germany', code: 'DE'},
-            {name: 'India', code: 'IN'},
-            {name: 'Japan', code: 'JP'},
-            {name: 'Spain', code: 'ES'},
-            {name: 'United States', code: 'US'}
-        ];
+    this.selectButtonOptions = [
+      { name: 'Option 1', code: 'O1' },
+      { name: 'Option 2', code: 'O2' },
+      { name: 'Option 3', code: 'O3' },
+    ];
 
-        this.selectButtonOptions = [
-            {name: 'Option 1', code: 'O1'},
-            {name: 'Option 2', code: 'O2'},
-            {name: 'Option 3', code: 'O3'},
-        ];
+    this.tieredMenuItems = [
+      {
+        label: 'Customers',
+        icon: 'pi pi-fw pi-table',
+        items: [
+          {
+            label: 'New',
+            icon: 'pi pi-fw pi-user-plus',
+            items: [
+              {
+                label: 'Customer',
+                icon: 'pi pi-fw pi-plus',
+              },
+              {
+                label: 'Duplicate',
+                icon: 'pi pi-fw pi-copy',
+              },
+            ],
+          },
+          {
+            label: 'Edit',
+            icon: 'pi pi-fw pi-user-edit',
+          },
+        ],
+      },
+      {
+        label: 'Orders',
+        icon: 'pi pi-fw pi-shopping-cart',
+        items: [
+          {
+            label: 'View',
+            icon: 'pi pi-fw pi-list',
+          },
+          {
+            label: 'Search',
+            icon: 'pi pi-fw pi-search',
+          },
+        ],
+      },
+      {
+        label: 'Shipments',
+        icon: 'pi pi-fw pi-envelope',
+        items: [
+          {
+            label: 'Tracker',
+            icon: 'pi pi-fw pi-compass',
+          },
+          {
+            label: 'Map',
+            icon: 'pi pi-fw pi-map-marker',
+          },
+          {
+            label: 'Manage',
+            icon: 'pi pi-fw pi-pencil',
+          },
+        ],
+      },
+      {
+        label: 'Profile',
+        icon: 'pi pi-fw pi-user',
+        items: [
+          {
+            label: 'Settings',
+            icon: 'pi pi-fw pi-cog',
+          },
+          {
+            label: 'Billing',
+            icon: 'pi pi-fw pi-file',
+          },
+        ],
+      },
+      {
+        separator: true,
+      },
+      {
+        label: 'Quit',
+        icon: 'pi pi-fw pi-sign-out',
+      },
+    ];
 
-        this.tieredMenuItems = [
-            {
-                label:'Customers',
-                icon:'pi pi-fw pi-table',
-                items:[
-                    {
-                        label:'New',
-                        icon:'pi pi-fw pi-user-plus',
-                        items:[
-                            {
-                                label:'Customer',
-                                icon:'pi pi-fw pi-plus'
-                            },
-                            {
-                                label:'Duplicate',
-                                icon:'pi pi-fw pi-copy'
-                            },
+    this.menuItems = [
+      {
+        label: 'Customers',
+        items: [
+          {
+            label: 'New',
+            icon: 'pi pi-fw pi-plus',
+          },
+          {
+            label: 'Edit',
+            icon: 'pi pi-fw pi-user-edit',
+          },
+        ],
+      },
+      {
+        label: 'Orders',
+        items: [
+          {
+            label: 'View',
+            icon: 'pi pi-fw pi-list',
+          },
+          {
+            label: 'Search',
+            icon: 'pi pi-fw pi-search',
+          },
+        ],
+      },
+    ];
 
-                        ]
-                    },
-                    {
-                        label:'Edit',
-                        icon:'pi pi-fw pi-user-edit'
-                    }
-                ]
-            },
-            {
-                label:'Orders',
-                icon:'pi pi-fw pi-shopping-cart',
-                items:[
-                    {
-                        label:'View',
-                        icon:'pi pi-fw pi-list'
-                    },
-                    {
-                        label:'Search',
-                        icon:'pi pi-fw pi-search'
-                    },
+    this.contextMenuItems = [
+      {
+        label: 'Save',
+        icon: 'pi pi-save',
+      },
+      {
+        label: 'Update',
+        icon: 'pi pi-refresh',
+      },
+      {
+        label: 'Delete',
+        icon: 'pi pi-trash',
+      },
+      {
+        separator: true,
+      },
+      {
+        label: 'Options',
+        icon: 'pi pi-cog',
+      },
+    ];
 
-                ]
-            },
-            {
-                label:'Shipments',
-                icon:'pi pi-fw pi-envelope',
-                items:[
-                    {
-                        label:'Tracker',
-                        icon:'pi pi-fw pi-compass'
+    this.msgs = [
+      { severity: 'success', summary: 'Success', detail: 'Message Content' },
+      { severity: 'info', summary: 'Info', detail: 'Message Content' },
+      { severity: 'warn', summary: 'Warning', detail: 'Message Content' },
+      { severity: 'error', summary: 'Error', detail: 'Message Content' },
+    ];
+  }
 
-                    },
-                    {
-                        label:'Map',
-                        icon:'pi pi-fw pi-map-marker'
-
-                    },
-                    {
-                        label:'Manage',
-                        icon:'pi pi-fw pi-pencil'
-                    }
-                ]
-            },
-            {
-                label:'Profile',
-                icon:'pi pi-fw pi-user',
-                items:[
-                    {
-                        label:'Settings',
-                        icon:'pi pi-fw pi-cog'
-                    },
-                    {
-                        label:'Billing',
-                        icon:'pi pi-fw pi-file'
-                    }
-                ]
-            },
-            {
-                separator:true
-            },
-            {
-                label:'Quit',
-                icon:'pi pi-fw pi-sign-out'
-            }
-        ];
-
-        this.menuItems = [
-            {
-                label:'Customers',
-                items:[
-                    {
-                        label:'New',
-                        icon:'pi pi-fw pi-plus',
-                    },
-                    {
-                        label:'Edit',
-                        icon:'pi pi-fw pi-user-edit'
-                    }
-                ]
-            },
-            {
-                label:'Orders',
-                items:[
-                    {
-                        label:'View',
-                        icon:'pi pi-fw pi-list'
-                    },
-                    {
-                        label:'Search',
-                        icon:'pi pi-fw pi-search'
-                    },
-
-                ]
-            }
-        ];
-
-        this.contextMenuItems = [
-            {
-                label: 'Save',
-                icon: 'pi pi-save'
-            },
-            {
-                label: 'Update',
-                icon: 'pi pi-refresh'
-            },
-            {
-                label: 'Delete',
-                icon: 'pi pi-trash'
-            },
-            {
-                separator: true
-            },
-            {
-                label: 'Options',
-                icon: 'pi pi-cog'
-            },
-        ];
-
-        this.msgs = [
-            {severity:'success', summary: 'Success', detail: 'Message Content'},
-            {severity:'info', summary: 'Info', detail: 'Message Content'},
-            {severity:'warn', summary: 'Warning', detail: 'Message Content'},
-            {severity:'error', summary: 'Error', detail: 'Message Content'}
-        ];
+  filterCountry(event): void {
+    const filtered: any[] = [];
+    const query = event.query;
+    // tslint:disable-next-line:prefer-for-of
+    for (let i = 0; i < this.countries.length; i++) {
+      const country = this.countries[i];
+      if (country.name.toLowerCase().indexOf(query.toLowerCase()) === 0) {
+        filtered.push(country);
+      }
     }
 
-    filterCountry(event): void {
-        const filtered : any[] = [];
-        const query = event.query;
-        // tslint:disable-next-line:prefer-for-of
-        for (let i = 0; i < this.countries.length; i++) {
-            const country = this.countries[i];
-            if (country.name.toLowerCase().indexOf(query.toLowerCase()) === 0) {
-                filtered.push(country);
-            }
-        }
+    this.filteredCountries = filtered;
+  }
 
-        this.filteredCountries = filtered;
-    }
+  onRowSelect(event, op): void {
+    this.messageService.add({ severity: 'info', summary: 'Product Selected', detail: event.data.name });
+    op.hide();
+  }
 
-    onRowSelect(event, op): void {
-        this.messageService.add({severity: 'info', summary: 'Product Selected', detail: event.data.name});
-        op.hide();
-    }
+  openDialog(): void {
+    this.displayDialog = true;
+  }
 
-    openDialog(): void {
-        this.displayDialog = true;
-    }
+  closeDialog(): void {
+    this.displayDialog = false;
+  }
 
-    closeDialog(): void {
-        this.displayDialog = false;
-    }
-
-    showToast(severity): void {
-        this.messageService.add({severity, summary: 'Message Summary', detail:'Message Detail', life: 3000});
-    }
+  showToast(severity): void {
+    this.messageService.add({ severity, summary: 'Message Summary', detail: 'Message Detail', life: 3000 });
+  }
 }

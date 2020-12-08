@@ -4,7 +4,7 @@
     <p-panel header="Confirmation Dialog">
       <h3>Neutral</h3>
       <button type="button" pButton label="Open" class="p-mr-2 p-mb-2" (click)="confirmNeutral()"></button>
-<pre><code>
+      <pre><code>
 <b><u>HTML</u></b>
 &lt;p-confirmDialog #cd header="Confirmation Dialog"&gt;
   &lt;p-footer&gt;
@@ -20,7 +20,7 @@ this.confirmationService.confirm(&#123;
 </code></pre>
       <h3>WD</h3>
       <button type="button" pButton label="Open" class="flx-within-day p-mr-2 p-mb-2" (click)="confirmWithinDay()"></button>
-<pre><code>
+      <pre><code>
 <b><u>HTML</u></b>
 &lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-within-day"&gt;
   &lt;p-footer&gt;
@@ -36,7 +36,7 @@ this.confirmationService.confirm(&#123;
 </code></pre>
       <h3>DA</h3>
       <button type="button" pButton label="Open" class="flx-day-ahead p-mr-2 p-mb-2" (click)="confirmDayAhead()"></button>
-<pre><code>
+      <pre><code>
 <b><u>HTML</u></b>
 &lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-day-ahead"&gt;
   &lt;p-footer&gt;
@@ -52,7 +52,7 @@ this.confirmationService.confirm(&#123;
 </code></pre>
       <h3>Warning</h3>
       <button type="button" pButton label="Open" class="p-mr-2 p-mb-2" (click)="confirmWarning()"></button>
-<pre><code>
+      <pre><code>
 <b><u>HTML</u></b>
 &lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-warning"&gt;
   &lt;p-footer&gt;
@@ -73,7 +73,7 @@ this.confirmationService.confirm(&#123;
     <p-panel header="Dialog">
       <h3>Neutral</h3>
       <button type="button" pButton label="Open" class="p-mr-2 p-mb-2" (click)="showNeutral()"></button>
-<pre><code>
+      <pre><code>
 <b><u>HTML</u></b>
 &lt;p-dialog [(visible)]="visible"&gt;
   &lt;p-header&gt;
@@ -101,7 +101,7 @@ performAction(): void &#123;
 </code></pre>
       <h3>WD</h3>
       <button type="button" pButton label="Open" class="flx-within-day p-mr-2 p-mb-2" (click)="showWithinDay()"></button>
-<pre><code>
+      <pre><code>
 <b><u>HTML</u></b>
 &lt;p-dialog [(visible)]="visible" styleClass="flx-within-day"&gt;
   &lt;p-header&gt;
@@ -130,7 +130,7 @@ performAction(): void &#123;
 </code></pre>
       <h3>DA</h3>
       <button type="button" pButton label="Open" class="flx-day-ahead p-mr-2 p-mb-2" (click)="showDayAhead()"></button>
-<pre><code>
+      <pre><code>
 <b><u>HTML</u></b>
 &lt;p-dialog [(visible)]="visible" styleClass="flx-day-ahead"&gt;
   &lt;p-header&gt;
@@ -163,7 +163,7 @@ performAction(): void &#123;
     <p-panel header="DynamicDialog">
       <h3>Neutral</h3>
       <button type="button" pButton label="Open" class="p-mr-2 p-mb-2" (click)="showDynamicNeutral()"></button>
-<pre><code>
+      <pre><code>
 <b><u>TS</u></b>
 const ref = this.dialogService.open(DynamicDialogContentComponent, &#123;
   header: 'Pop-up title',
@@ -177,7 +177,7 @@ ref.onClose.pipe(take(1)).subscribe((res) => &#123;
 </code></pre>
       <h3>WD</h3>
       <button type="button" pButton label="Open" class="flx-within-day p-mr-2 p-mb-2" (click)="showDynamicWithinDay()"></button>
-<pre><code>
+      <pre><code>
 <b><u>TS</u></b>
 const ref = this.dialogService.open(DynamicDialogContentComponent, &#123;
   header: 'Pop-up title',
@@ -192,7 +192,7 @@ ref.onClose.pipe(take(1)).subscribe((res) => &#123;
 </code></pre>
       <h3>DA</h3>
       <button type="button" pButton label="Open" class="flx-day-ahead p-mr-2 p-mb-2" (click)="showDynamicDayAhead()"></button>
-<pre><code>
+      <pre><code>
 <b><u>TS</u></b>
 const ref = this.dialogService.open(DynamicDialogContentComponent, &#123;
   header: 'Pop-up title',
@@ -233,9 +233,7 @@ ref.onClose.pipe(take(1)).subscribe((res) => &#123;
   </p-footer>
 </p-confirmDialog>
 <p-dialog [(visible)]="neutralDialogVisible">
-  <p-header>
-    Pop-up title
-  </p-header>
+  <p-header> Pop-up title </p-header>
   <div class="fake-content">PLACE CONTENT HERE</div>
   <p-footer>
     <button type="button" pButton label="Cancel" class="p-button-secondary" (click)="close()"></button>
@@ -243,9 +241,7 @@ ref.onClose.pipe(take(1)).subscribe((res) => &#123;
   </p-footer>
 </p-dialog>
 <p-dialog [(visible)]="withinDayDialogVisible" styleClass="flx-within-day">
-  <p-header>
-    <span class="p-tag p-tag-rounded flx-within-day">WD</span>Pop-up title
-  </p-header>
+  <p-header> <span class="p-tag p-tag-rounded flx-within-day">WD</span>Pop-up title </p-header>
   <div class="fake-content">PLACE CONTENT HERE</div>
   <p-footer>
     <button type="button" pButton label="Cancel" class="p-button-secondary flx-within-day" (click)="close()"></button>

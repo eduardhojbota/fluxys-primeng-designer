@@ -8,9 +8,8 @@ describe('AstraComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AstraComponent ]
-    })
-    .compileComponents();
+      declarations: [AstraComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

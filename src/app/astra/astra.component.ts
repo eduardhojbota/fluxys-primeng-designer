@@ -1,18 +1,20 @@
 import { Component } from '@angular/core';
-import {MenuItem} from 'primeng/api';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-astra',
   templateUrl: './astra.component.html',
-  styles: [`
-:host {
-  display: block;
-  min-height: calc(100vh - 153px);
-}
-.p-grid {
-  flex-wrap: nowrap;
-}
-  `],
+  styles: [
+    `
+      :host {
+        display: block;
+        min-height: calc(100vh - 153px);
+      }
+      .p-grid {
+        flex-wrap: nowrap;
+      }
+    `,
+  ],
 })
 export class AstraComponent {
   readonly menu: MenuItem[] = [
@@ -20,7 +22,7 @@ export class AstraComponent {
       label: 'Button',
       items: [
         { label: 'Button', routerLink: ['/', 'astra', 'button'] },
-        { label: 'SplitButton', routerLink: ['/', 'astra', 'splitbutton']}
+        { label: 'SplitButton', routerLink: ['/', 'astra', 'splitbutton'] },
       ],
     },
     { separator: true },
@@ -39,6 +41,6 @@ export class AstraComponent {
         { label: 'Messages', routerLink: ['/', 'astra', 'messages'] },
         { label: 'Toast', routerLink: ['/', 'astra', 'toast'] },
       ],
-    }
+    },
   ];
 }

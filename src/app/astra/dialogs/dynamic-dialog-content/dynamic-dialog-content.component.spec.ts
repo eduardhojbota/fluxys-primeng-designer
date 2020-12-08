@@ -8,9 +8,8 @@ describe('DynamicDialogContentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DynamicDialogContentComponent ]
-    })
-    .compileComponents();
+      declarations: [DynamicDialogContentComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

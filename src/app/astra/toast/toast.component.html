@@ -1,5 +1,8 @@
 <h1>Toast</h1>
-<p>Toast is used to display messages in an overlay. See <a href="https://www.primefaces.org/primeng/showcase/#/toast" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<p>
+  Toast is used to display messages in an overlay. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/toast" target="_blank" rel="noreferrer noopener">official documentation</a>.
+</p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
@@ -12,7 +15,14 @@
       <h5>Positions</h5>
       <button type="button" pButton pRipple (click)="showTopLeft()" label="Top Left" class="p-mr-2 p-mb-2"></button>
       <button type="button" pButton pRipple (click)="showTopCenter()" label="Top Center" class="p-button-warning p-mr-2 p-mb-2"></button>
-      <button type="button" pButton pRipple (click)="showBottomCenter()" label="Bottom Center" class="p-button-success p-mr-2 p-mb-2"></button>
+      <button
+        type="button"
+        pButton
+        pRipple
+        (click)="showBottomCenter()"
+        label="Bottom Center"
+        class="p-button-success p-mr-2 p-mb-2"
+      ></button>
 
       <h5>Multiple</h5>
       <button type="button" pButton pRipple (click)="showMultiple()" label="Multiple" class="p-button-warning p-mr-2 p-mb-2"></button>
@@ -37,8 +47,8 @@
     <div class="p-flex p-flex-column" style="flex: 1">
       <div class="p-text-center">
         <i class="pi pi-exclamation-triangle" style="font-size: 3rem"></i>
-        <h4>{{message.summary}}</h4>
-        <p>{{message.detail}}</p>
+        <h4>{{ message.summary }}</h4>
+        <p>{{ message.detail }}</p>
       </div>
       <div class="p-grid p-fluid">
         <div class="p-col-6">

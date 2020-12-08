@@ -4,18 +4,18 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+  - main
 
 pool: Default
 
 steps:
-- task: Cake@2
-  inputs:
-    script: 'build.cake'
-    target: 'Default'
-    verbosity: 'Verbose'
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: 'Output/install/'
-    Contents: '*'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)/ArtifactsToBePublished'
+  - task: Cake@2
+    inputs:
+      script: 'build.cake'
+      target: 'Default'
+      verbosity: 'Verbose'
+  - task: CopyFiles@2
+    inputs:
+      SourceFolder: 'Output/install/'
+      Contents: '*'
+      TargetFolder: '$(Build.ArtifactStagingDirectory)/ArtifactsToBePublished'

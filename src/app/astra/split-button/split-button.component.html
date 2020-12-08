@@ -1,5 +1,8 @@
 <h1>SplitButton</h1>
-<p>SplitButton groups a set of commands in an overlay with a default command. See <a href="https://www.primefaces.org/primeng/showcase/#/splitbutton" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<p>
+  SplitButton groups a set of commands in an overlay with a default command. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/splitbutton" target="_blank" rel="noreferrer noopener">official documentation</a>.
+</p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
@@ -7,8 +10,20 @@
       <p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('info')" [model]="items"></p-splitButton>
 
       <h5>Severities</h5>
-      <p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('info')" [model]="items" styleClass="p-button-secondary"></p-splitButton>
-      <p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('success')" [model]="items" styleClass="p-button-success"></p-splitButton>
+      <p-splitButton
+        label="Save"
+        icon="pi pi-plus"
+        (onClick)="save('info')"
+        [model]="items"
+        styleClass="p-button-secondary"
+      ></p-splitButton>
+      <p-splitButton
+        label="Save"
+        icon="pi pi-plus"
+        (onClick)="save('success')"
+        [model]="items"
+        styleClass="p-button-success"
+      ></p-splitButton>
       <p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('info')" [model]="items" styleClass="p-button-info"></p-splitButton>
       <p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('warn')" [model]="items" styleClass="p-button-warning"></p-splitButton>
       <p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('warn')" [model]="items" styleClass="p-button-help"></p-splitButton>
@@ -16,4 +31,4 @@
     </p-panel>
   </div>
 </div>
-<p-toast [style]="{marginTop: '80px'}"></p-toast>
+<p-toast [style]="{ marginTop: '80px' }"></p-toast>

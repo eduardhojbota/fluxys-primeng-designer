@@ -4,20 +4,20 @@ import { Message, MessageService } from 'primeng/api';
 @Component({
   selector: 'app-messages',
   templateUrl: './messages.component.html',
-  providers: [MessageService]
+  providers: [MessageService],
 })
 export class MessagesComponent implements OnInit {
   msgs1: Message[];
   msgs2: Message[];
 
-  constructor(private messageService: MessageService) { }
+  constructor(private messageService: MessageService) {}
 
   ngOnInit(): void {
     this.msgs1 = [
       { severity: 'success', summary: 'Success', detail: 'Message Content' },
       { severity: 'info', summary: 'Info', detail: 'Message Content' },
       { severity: 'warn', summary: 'Warning', detail: 'Message Content' },
-      { severity: 'error', summary: 'Error', detail: 'Message Content' }
+      { severity: 'error', summary: 'Error', detail: 'Message Content' },
     ];
   }
 
@@ -26,7 +26,7 @@ export class MessagesComponent implements OnInit {
       { severity: 'success', summary: 'Success', detail: 'Message Content' },
       { severity: 'info', summary: 'Info', detail: 'Message Content' },
       { severity: 'warn', summary: 'Warning', detail: 'Message Content' },
-      { severity: 'error', summary: 'Error', detail: 'Message Content' }
+      { severity: 'error', summary: 'Error', detail: 'Message Content' },
     ];
   }
 
