@@ -1,0 +1,9 @@
+.vscode/
+dist/
+ssl/
+tools/
+node_modules/
+coverage/
+junit/
+
+src/sass/
