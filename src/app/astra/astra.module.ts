@@ -23,10 +23,12 @@ import { MessagesComponent } from './messages/messages.component';
 import { ToastComponent } from './toast/toast.component';
 import { ButtonComponent } from './button/button.component';
 import { SplitButtonComponent } from './split-button/split-button.component';
+import {CodeComponent} from './code.component';
 
 @NgModule({
   declarations: [
     AstraComponent,
+    CodeComponent,
     DialogsComponent,
     DynamicDialogContentComponent,
     MessagesComponent,
