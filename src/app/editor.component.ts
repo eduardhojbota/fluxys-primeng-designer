@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, Input } from '@angular/core';
+import {Component, EventEmitter, Output, Input, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { EditorService} from './service/editor.service';
 import { MessageService } from 'primeng/api';
@@ -8,10 +8,10 @@ import { environment } from '../environments/environment';
     selector: 'app-editor',
     templateUrl: './editor.component.html'
 })
-export class EditorComponent {
-    
+export class EditorComponent implements OnInit {
+
     @Input() theme: string;
-    
+
     @Input() active: boolean;
 
     @Input() inputStyle: string;
@@ -32,8 +32,8 @@ export class EditorComponent {
 
     downloadDialog: boolean;
 
-    scale: number = 14;
-    
+    scale = 14;
+
     scales: number[] = [12,13,14,15,16];
 
     categories: any[];
@@ -42,7 +42,7 @@ export class EditorComponent {
 
     downloadLink: HTMLAnchorElement;
 
-    ngOnInit() {
+    ngOnInit(): void {
         this.editorService.getEditor(this.theme).then(data => {
             this.categories = data;
             this.initVariables();
@@ -50,17 +50,17 @@ export class EditorComponent {
         });
     }
 
-    initVariables() {
+    initVariables(): void {
         if (this.categories) {
-            for (let category of this.categories) {
-                for (let option of category.options) {
+            for (const category of this.categories) {
+                for (const option of category.options) {
                     this.variables[option.name] = option.value;
                 }
             }
         }
     }
 
-    compile() {
+    compile(): void {
         this.http.post<any>(environment.theme_builder_url + '?theme=' + this.theme, this.variables, {responseType: 'text' as 'json'}).subscribe((response) => {
             this.compiled.emit(response);
         },
@@ -69,7 +69,7 @@ export class EditorComponent {
         });
     }
 
-    downloadTheme() {
+    downloadTheme(): void {
         this.http.post<any>(environment.theme_builder_url + '?theme=' + this.theme, this.variables, {responseType: 'text' as 'json'}).subscribe((response) => {
             const url = window.URL.createObjectURL(new Blob([response], {type: "text/css; charset=utf-8"}));
             if (this.downloadLink) {
@@ -87,48 +87,50 @@ export class EditorComponent {
         });
     }
 
-    decrementScale() {
+    decrementScale(): void {
         this.scale--;
         document.documentElement.style.fontSize = this.scale + 'px';
     }
 
-    incrementScale() {
+    incrementScale(): void {
         this.scale++;
         document.documentElement.style.fontSize = this.scale + 'px';
     }
 
-    onInputStyleChange(value: string) {
+    onInputStyleChange(value: string): void {
         this.inputStyleChange.emit(value);
     }
 
-    onRippleChange(event) {
+    onRippleChange(event): void {
         this.rippleChange.emit(event.checked);
     }
 
-    showRestartDialog(event: Event) {
+    showRestartDialog(event: Event): void {
         this.restartDialog = true;
         event.preventDefault();
     }
 
-    restartEditor() {
+    restartEditor(): void {
         this.restartDialog = false;
         this.restart.emit();
     }
 
-    download(event: Event) {
-        if (environment.production)
+    download(event: Event): void {
+        if (environment.production) {
             this.downloadDialog = true;
-        else
+        }
+        else {
             this.downloadTheme();
+        }
 
         event.preventDefault();
     }
 
-    navigateToStore() {
+    navigateToStore(): void {
         window.location.href = 'https://www.primefaces.org/store';
     }
-    
-    navigateToDesigner() {
+
+    navigateToDesigner(): void {
         window.location.href = 'https://www.primefaces.org/designer/primeng';
     }
 }

@@ -1,5 +1,9 @@
 import { Component, ElementRef, AfterViewInit, Input, ViewChild } from '@angular/core';
 
+declare global {
+  interface Window { Prism: any; }
+}
+
 @Component({
     selector: 'app-code',
     template: `
@@ -15,9 +19,9 @@ export class CodeComponent implements AfterViewInit {
 
     constructor(public el: ElementRef) { }
 
-    ngAfterViewInit() {
-        if (window['Prism']) {
-            window['Prism'].highlightElement(this.codeViewChild.nativeElement);
+    ngAfterViewInit(): void {
+        if (window.Prism) {
+            window.Prism.highlightElement(this.codeViewChild.nativeElement);
         }
     }
 }

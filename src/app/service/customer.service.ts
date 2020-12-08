@@ -9,11 +9,11 @@ export class CustomerService {
 
     constructor(private http: HttpClient) { }
 
-    getCustomersLarge() {
+    getCustomersLarge(): Promise<Customer[]> {
         return this.http.get<any>('assets/demo/data/customers-large.json')
             .toPromise()
-            .then(res => <Customer[]>res.data)
-            .then(data => { return data; });
+            .then(res => res.data as Customer[])
+            .then(data => data);
     }
 
 }

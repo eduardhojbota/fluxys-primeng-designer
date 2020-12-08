@@ -27,7 +27,7 @@ export class IntroComponent {
 
     timeout: number;
 
-    chooseTheme(theme) {
+    chooseTheme(theme): void {
         if (this.timeout) {
             return;
         }

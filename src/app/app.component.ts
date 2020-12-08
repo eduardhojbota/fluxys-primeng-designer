@@ -6,7 +6,7 @@ import { trigger, style, animate, transition } from '@angular/animations';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
+    styleUrls: ['./app.component.scss'],
     animations: [
         trigger('intro', [
             transition(':leave', [
@@ -27,32 +27,32 @@ export class AppComponent implements OnInit {
 
     sidebarActive: boolean;
 
-    inputStyle: string = 'outlined';
+    inputStyle = 'outlined';
 
     themeStyle: HTMLElement;
 
     constructor(private primengConfig: PrimeNGConfig) {}
 
-    ngOnInit() {
+    ngOnInit(): void {
         this.codeEditor = environment.editor === 'code';
         this.primengConfig.ripple = true;
     }
 
-    onMenuButtonClick() {
+    onMenuButtonClick(): void {
         this.sidebarActive = true;
     }
 
-    inputStyleChange(value: string) {
+    inputStyleChange(value: string): void {
         this.inputStyle = value;
     }
 
-    onCompile(value: string) {
+    onCompile(value: string): void {
         if (!this.initialized) {
             this.initialized = true;
         }
 
-        let styleElement = document.createElement('style');
-        styleElement.type = 'text/css';
+        const styleElement = document.createElement('style');
+        styleElement.type = 'text/css'; // tslint:disable-line:deprecation
         styleElement.appendChild(document.createTextNode(value));
         document.getElementsByTagName("head")[0].appendChild(styleElement);
 
@@ -63,11 +63,11 @@ export class AppComponent implements OnInit {
         this.themeStyle = styleElement;
     }
 
-    onThemeSelect(theme: string) {
+    onThemeSelect(theme: string): void {
         this.theme = theme;
     }
 
-    onRestart() {
+    onRestart(): void {
         this.theme = null;
         this.initialized = false;
     }

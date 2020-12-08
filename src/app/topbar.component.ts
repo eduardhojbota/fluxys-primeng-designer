@@ -6,12 +6,12 @@ import { Router } from '@angular/router';
     templateUrl: './topbar.component.html'
 })
 export class TopBarComponent {
-    
+
     constructor(public router: Router) {}
 
     @Output() menuButtonClick: EventEmitter<any> = new EventEmitter();
 
-    onMenuButtonClick(event: Event) {
+    onMenuButtonClick(event: Event): void {
         this.menuButtonClick.emit();
         event.preventDefault();
     }
