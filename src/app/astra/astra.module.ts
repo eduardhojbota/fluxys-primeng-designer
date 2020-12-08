@@ -17,24 +17,31 @@ import { MenuModule } from 'primeng/menu';
 
 import { AstraRoutingModule } from './astra-routing.module';
 import { AstraComponent } from './astra.component';
-import { DialogsComponent } from './dialogs/dialogs.component';
-import { DynamicDialogContentComponent } from './dialogs/dynamic-dialog-content/dynamic-dialog-content.component';
+import { DynamicDialogContentComponent } from './dynamic-dialog/dynamic-dialog-content/dynamic-dialog-content.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ToastComponent } from './toast/toast.component';
 import { ButtonComponent } from './button/button.component';
 import { SplitButtonComponent } from './split-button/split-button.component';
 import {CodeComponent} from './code.component';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { DialogComponent } from './dialog/dialog.component';
+import { DynamicDialogComponent } from './dynamic-dialog/dynamic-dialog.component';
+import { ProductListDemoComponent } from './dynamic-dialog/product-list-demo/product-list-demo.component';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [
     AstraComponent,
     CodeComponent,
-    DialogsComponent,
     DynamicDialogContentComponent,
     MessagesComponent,
     ToastComponent,
     ButtonComponent,
     SplitButtonComponent,
+    ConfirmDialogComponent,
+    DialogComponent,
+    DynamicDialogComponent,
+    ProductListDemoComponent,
   ],
   imports: [
     CommonModule,
@@ -53,7 +60,8 @@ import {CodeComponent} from './code.component';
     InputTextModule,
     RippleModule,
     MenuModule,
+    TableModule,
   ],
-  entryComponents: [DynamicDialogContentComponent],
+  entryComponents: [DynamicDialogContentComponent,ProductListDemoComponent],
 })
 export class AstraModule {}

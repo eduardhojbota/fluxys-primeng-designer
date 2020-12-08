@@ -1,0 +1,122 @@
+<h1>ConfirmDialog</h1>
+<p>ConfirmDialog is backed by a service utilizing Observables to display confirmation windows easily that can be shared by multiple actions on the same component. See <a href="https://www.primefaces.org/primeng/showcase/#/confirmdialog" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<div class="p-grid p-flex-column">
+  <div class="p-col">
+    <p-panel header="PrimeNG Example" [toggleable]="true">
+      <h5>Position</h5>
+      <p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000"></p-confirmDialog>
+      <p-button (click)="confirm1()" icon="pi pi-check" label="Confirm"></p-button>
+      <p-button (click)="confirm2()" icon="pi pi-times" label="Delete"></p-button>
+
+      <h5>Position</h5>
+      <div class="p-grid p-dir-col">
+        <div class="p-col">
+          <p-button (click)="confirmPosition('left')" icon="pi pi-arrow-right" label="Left" styleClass="p-button-warning"></p-button>
+          <p-button (click)="confirmPosition('right')" icon="pi pi-arrow-left" label="Right" styleClass="p-button-warning"></p-button>
+        </div>
+        <div class="p-col">
+          <p-button (click)="confirmPosition('topleft')" icon="pi pi-arrow-down" label="TopLeft" styleClass="p-button-warning"></p-button>
+          <p-button (click)="confirmPosition('top')" icon="pi pi-arrow-down" label="Top" styleClass="p-button-warning"></p-button>
+          <p-button (click)="confirmPosition('topright')" icon="pi pi-arrow-down" label="TopRight" styleClass="p-button-warning"></p-button>
+        </div>
+        <div class="p-col">
+          <p-button (click)="confirmPosition('bottomleft')" icon="pi pi-arrow-up" label="BottomLeft" styleClass="p-button-warning"></p-button>
+          <p-button (click)="confirmPosition('bottom')" icon="pi pi-arrow-up" label="Bottom" styleClass="p-button-warning"></p-button>
+          <p-button (click)="confirmPosition('bottomright')" icon="pi pi-arrow-up" label="BottomRight" styleClass="p-button-warning"></p-button>
+        </div>
+      </div>
+      <p-confirmDialog [style]="{width: '50vw'}" key="positionDialog" [position]="position" [baseZIndex]="10000"></p-confirmDialog>
+
+      <p-messages [value]="msgs"></p-messages>
+    </p-panel>
+  </div>
+  <div class="p-col">
+    <p-panel header="Fluxys Example" [toggleable]="true">
+      <h5>Neutral</h5>
+      <button type="button" pButton label="Open" class="p-mr-2 p-mb-2" (click)="confirmNeutral()"></button>
+      <app-code lang="html" ngPreserveWhitespaces>
+&lt;p-confirmDialog #cd header="Confirmation Dialog"&gt;
+  &lt;p-footer&gt;
+    &lt;button type="button" pButton label="Cancel" class="p-button-secondary" (click)="cd.reject()"&gt;&lt;/button&gt;
+    &lt;button type="button" pButton label="Ok" (click)="cd.accept()"&gt;&lt;/button&gt;
+  &lt;/p-footer&gt;
+&lt;/p-confirmDialog&gt;
+      </app-code>
+      <app-code lang="typescript" ngPreserveWhitespaces>
+this.confirmationService.confirm(&#123;
+  message: 'Dialog is a container to display content in an overlay window.',
+});
+      </app-code>
+      <h5>Within Day</h5>
+      <button type="button" pButton label="Open" class="flx-within-day p-mr-2 p-mb-2" (click)="confirmWithinDay()"></button>
+      <app-code lang="html" ngPreserveWhitespaces>
+&lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-within-day"&gt;
+  &lt;p-footer&gt;
+    &lt;button type="button" pButton label="Cancel" class="p-button-secondary flx-within-day" (click)="cd.reject()"&gt;&lt;/button&gt;
+    &lt;button type="button" pButton label="Ok" class="flx-within-day" (click)="cd.accept()"&gt;&lt;/button&gt;
+  &lt;/p-footer&gt;
+&lt;/p-confirmDialog&gt;
+      </app-code>
+      <app-code lang="typescript" ngPreserveWhitespaces>
+this.confirmationService.confirm(&#123;
+  message: 'Dialog is a container to display content in an overlay window.',
+});
+      </app-code>
+      <h5>Day Ahead</h5>
+      <button type="button" pButton label="Open" class="flx-day-ahead p-mr-2 p-mb-2" (click)="confirmDayAhead()"></button>
+      <app-code lang="html" ngPreserveWhitespaces>
+&lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-day-ahead"&gt;
+  &lt;p-footer&gt;
+    &lt;button type="button" pButton label="Cancel" class="p-button-secondary flx-day-ahead" (click)="cd.reject()"&gt;&lt;/button&gt;
+    &lt;button type="button" pButton label="Ok" class="flx-day-ahead" (click)="cd.accept()"&gt;&lt;/button&gt;
+  &lt;/p-footer&gt;
+&lt;/p-confirmDialog&gt;
+      </app-code>
+      <app-code lang="typescript" ngPreserveWhitespaces>
+this.confirmationService.confirm(&#123;
+  message: 'Dialog is a container to display content in an overlay window.',
+});
+      </app-code>
+      <h5>Warning</h5>
+      <button type="button" pButton label="Open" class="p-button-warning p-mr-2 p-mb-2" (click)="confirmWarning()"></button>
+      <app-code lang="html" ngPreserveWhitespaces>
+&lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-warning"&gt;
+  &lt;p-footer&gt;
+    &lt;button type="button" pButton label="Cancel" class="p-button-secondary" (click)="cd.reject()"&gt;&lt;/button&gt;
+    &lt;button type="button" pButton label="Ok" (click)="cd.accept()"&gt;&lt;/button&gt;
+  &lt;/p-footer&gt;
+&lt;/p-confirmDialog&gt;
+      </app-code>
+      <app-code lang="typescript" ngPreserveWhitespaces>
+this.confirmationService.confirm(&#123;
+  message: 'Dialog is a container to display content in an overlay window.',
+  icon: 'pi pi-exclamation-circle',
+});
+      </app-code>
+      <p-confirmDialog #cd1 key="normalCD" header="Confirmation Dialog">
+        <p-footer>
+          <button type="button" pButton label="Cancel" class="p-button-secondary" (click)="cd1.reject()"></button>
+          <button type="button" pButton label="Ok" (click)="cd1.accept()"></button>
+        </p-footer>
+      </p-confirmDialog>
+      <p-confirmDialog #cd2 key="withinDayCD" styleClass="flx-within-day" header="Confirmation Dialog">
+        <p-footer>
+          <button type="button" pButton label="Cancel" class="p-button-secondary flx-within-day" (click)="cd2.reject()"></button>
+          <button type="button" pButton label="Ok" class="flx-within-day" (click)="cd2.accept()"></button>
+        </p-footer>
+      </p-confirmDialog>
+      <p-confirmDialog #cd3 key="dayAheadCD" styleClass="flx-day-ahead" header="Confirmation Dialog">
+        <p-footer>
+          <button type="button" pButton label="Cancel" class="p-button-secondary flx-day-ahead" (click)="cd3.reject()"></button>
+          <button type="button" pButton label="Ok" class="flx-day-ahead" (click)="cd3.accept()"></button>
+        </p-footer>
+      </p-confirmDialog>
+      <p-confirmDialog #cd4 key="warningCD" styleClass="flx-warning" header="Warning Dialog">
+        <p-footer>
+          <button type="button" pButton label="Cancel" class="p-button-secondary" (click)="cd4.reject()"></button>
+          <button type="button" pButton label="Ok" (click)="cd4.accept()"></button>
+        </p-footer>
+      </p-confirmDialog>
+    </p-panel>
+  </div>
+</div>

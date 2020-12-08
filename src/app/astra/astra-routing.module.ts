@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AstraComponent } from './astra.component';
-import { DialogsComponent } from './dialogs/dialogs.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ToastComponent } from './toast/toast.component';
 import { ButtonComponent } from './button/button.component';
 import { SplitButtonComponent } from './split-button/split-button.component';
+import {ConfirmDialogComponent} from './confirm-dialog/confirm-dialog.component';
+import {DialogComponent} from './dialog/dialog.component';
+import {DynamicDialogComponent} from './dynamic-dialog/dynamic-dialog.component';
 
 const routes: Routes = [
   {
@@ -15,7 +17,9 @@ const routes: Routes = [
     children: [
       { path: 'button', component: ButtonComponent },
       { path: 'splitbutton', component: SplitButtonComponent },
-      { path: 'dialogs', component: DialogsComponent },
+      { path: 'confirmdialog', component: ConfirmDialogComponent },
+      { path: 'dialog', component: DialogComponent },
+      { path: 'dynamicdialog', component: DynamicDialogComponent },
       { path: 'messages', component: MessagesComponent },
       { path: 'toast', component: ToastComponent },
     ],

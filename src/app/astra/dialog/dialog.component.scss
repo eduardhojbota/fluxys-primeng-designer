@@ -1,0 +1,23 @@
+:host ::ng-deep  p-button .p-button {
+  margin: 0 .5rem 0 0;
+  min-width: 10rem;
+}
+
+p:not(.doc) {
+  margin: 0;
+}
+
+.confirmation-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:host ::ng-deep .p-dialog p-button .p-button {
+  min-width: 6rem;
+}
+
+.fake-content {
+  width: 450px;
+  height: 250px;
+}

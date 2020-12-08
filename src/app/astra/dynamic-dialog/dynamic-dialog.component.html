@@ -1,0 +1,55 @@
+<h1>Dynamic Dialog</h1>
+<p>Dialogs can be created dynamically with any component as the content using a DialogService. See <a href="https://www.primefaces.org/primeng/showcase/#/dynamicdialog" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<div class="p-grid p-flex-column">
+  <div class="p-col">
+    <p-panel header="PrimeNG Example" [toggleable]="true">
+      <p-toast [style]="{marginTop: '80px'}"></p-toast>
+      <button type="button" (click)="show()" pButton icon="pi pi-info-circle" label="Show"></button>
+    </p-panel>
+  </div>
+  <div class="p-col">
+    <p-panel header="Fluxys Example" [toggleable]="true">
+      <h5>Neutral</h5>
+      <button type="button" pButton label="Open" class="p-mr-2 p-mb-2" (click)="showDynamicNeutral()"></button>
+      <app-code lang="typescript" ngPreserveWhitespaces>
+const ref = this.dialogService.open(DynamicDialogContentComponent, &#123;
+  header: 'Pop-up title',
+  footer: 'Dynamic Dialog Footer',
+  width: '70vw',
+});
+ref.onClose.pipe(take(1)).subscribe((res) => &#123;
+  // do something based on res
+  console.log('dynamic dialog result', res);
+});
+      </app-code>
+      <h5>Within Day</h5>
+      <button type="button" pButton label="Open" class="flx-within-day p-mr-2 p-mb-2" (click)="showDynamicWithinDay()"></button>
+      <app-code lang="typescript" ngPreserveWhitespaces>
+const ref = this.dialogService.open(DynamicDialogContentComponent, &#123;
+  header: 'Pop-up title',
+  footer: 'Dynamic Dialog Footer',
+  width: '70vw',
+  styleClass: 'flx-within-day',
+});
+ref.onClose.pipe(take(1)).subscribe((res) => &#123;
+  // do something based on res
+  console.log('dynamic dialog result', res);
+});
+      </app-code>
+      <h5>Day Ahead</h5>
+      <button type="button" pButton label="Open" class="flx-day-ahead p-mr-2 p-mb-2" (click)="showDynamicDayAhead()"></button>
+      <app-code lang="typescript" ngPreserveWhitespaces>
+const ref = this.dialogService.open(DynamicDialogContentComponent, &#123;
+  header: 'Pop-up title',
+  footer: 'Dynamic Dialog Footer',
+  width: '70vw',
+  styleClass: 'flx-day-ahead',
+});
+ref.onClose.pipe(take(1)).subscribe((res) => &#123;
+  // do something based on res
+  console.log('dynamic dialog result', res);
+});
+      </app-code>
+    </p-panel>
+  </div>
+</div>

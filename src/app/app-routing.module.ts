@@ -12,7 +12,7 @@ import { DocumentationComponent } from './view/documentation.component';
         { path: 'astra', loadChildren: () => import('./astra/astra.module').then((m) => m.AstraModule) },
         { path: '**', redirectTo: '' },
       ],
-      { scrollPositionRestoration: 'enabled', enableTracing: true }
+      { scrollPositionRestoration: 'enabled' }
     ),
   ],
   exports: [RouterModule],
