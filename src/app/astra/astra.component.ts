@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MenuItem} from 'primeng/api';
 
 @Component({
   selector: 'app-astra',
@@ -11,14 +12,33 @@ import { Component } from '@angular/core';
 .p-grid {
   flex-wrap: nowrap;
 }
-nav {
-  max-height: calc(100vh - 170px);
-  overflow-y: auto;
-}
-nav ul {
-  list-style-type: none;
-  padding-inline-start: 0;
-}
   `],
 })
-export class AstraComponent {}
+export class AstraComponent {
+  readonly menu: MenuItem[] = [
+    {
+      label: 'Button',
+      items: [
+        { label: 'Button', routerLink: ['/', 'astra', 'button'] },
+        { label: 'SplitButton', routerLink: ['/', 'astra', 'splitbutton']}
+      ],
+    },
+    { separator: true },
+    {
+      label: 'Overlay',
+      items: [
+        { label: 'ConfirmDialog', routerLink: ['/', 'astra', 'confirmdialog'] },
+        { label: 'Dialog', routerLink: ['/', 'astra', 'dialog'] },
+        { label: 'DynamicDialog', routerLink: ['/', 'astra', 'dynamicdialog'] },
+      ],
+    },
+    { separator: true },
+    {
+      label: 'Messages',
+      items: [
+        { label: 'Messages', routerLink: ['/', 'astra', 'messages'] },
+        { label: 'Toast', routerLink: ['/', 'astra', 'toast'] },
+      ],
+    }
+  ];
+}

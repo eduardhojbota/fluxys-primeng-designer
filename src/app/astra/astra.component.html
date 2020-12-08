@@ -1,12 +1,6 @@
 <div class="p-grid">
-  <div class="p-col-fixed" style="width: 150px;">
-    <nav>
-      <ul>
-        <li><a [routerLink]="['/', 'astra', 'buttons']">Buttons</a></li>
-        <li><a [routerLink]="['/', 'astra', 'dialogs']">Dialogs</a></li>
-        <li><a [routerLink]="['/', 'astra', 'messages']">Messages</a></li>
-      </ul>
-    </nav>
+  <div class="p-col-fixed" style="width: 200px;">
+    <p-menu [model]="menu"></p-menu>
   </div>
   <div class="p-col">
     <router-outlet></router-outlet>
