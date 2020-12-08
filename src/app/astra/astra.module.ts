@@ -12,7 +12,8 @@ import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { ToastModule } from 'primeng/toast';
 import { InputTextModule } from 'primeng/inputtext';
-import {RippleModule} from 'primeng/ripple';
+import { RippleModule } from 'primeng/ripple';
+import { MenuModule } from 'primeng/menu';
 
 import { AstraRoutingModule } from './astra-routing.module';
 import { AstraComponent } from './astra.component';
@@ -20,9 +21,10 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { DialogsComponent } from './dialogs/dialogs.component';
 import { DynamicDialogContentComponent } from './dialogs/dynamic-dialog-content/dynamic-dialog-content.component';
 import { MessagesComponent } from './messages/messages.component';
+import { ToastComponent } from './toast/toast.component';
 
 @NgModule({
-  declarations: [AstraComponent, ButtonsComponent, DialogsComponent, DynamicDialogContentComponent, MessagesComponent],
+  declarations: [AstraComponent, ButtonsComponent, DialogsComponent, DynamicDialogContentComponent, MessagesComponent, ToastComponent],
   imports: [
     CommonModule,
     AstraRoutingModule,
@@ -39,6 +41,7 @@ import { MessagesComponent } from './messages/messages.component';
     ToastModule,
     InputTextModule,
     RippleModule,
+    MenuModule,
   ],
   entryComponents: [DynamicDialogContentComponent]
 })

@@ -5,6 +5,7 @@ import { AstraComponent } from './astra.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { DialogsComponent } from './dialogs/dialogs.component';
 import { MessagesComponent } from './messages/messages.component';
+import { ToastComponent } from './toast/toast.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
       { path: 'buttons', component: ButtonsComponent },
       { path: 'dialogs', component: DialogsComponent },
       { path: 'messages', component: MessagesComponent },
+      { path: 'toast', component: ToastComponent },
     ]
   },
 ];
