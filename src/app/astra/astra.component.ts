@@ -19,6 +19,13 @@ import { MenuItem } from 'primeng/api';
 export class AstraComponent {
   readonly menu: MenuItem[] = [
     {
+      label: 'Home',
+      items: [
+        { label: 'Home', routerLink: ['/', 'astra'] },
+      ],
+    },
+    { separator: true },
+    {
       label: 'Button',
       items: [
         { label: 'Button', routerLink: ['/', 'astra', 'button'] },

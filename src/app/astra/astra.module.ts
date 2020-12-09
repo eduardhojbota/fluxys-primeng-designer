@@ -28,6 +28,7 @@ import { DialogComponent } from './dialog/dialog.component';
 import { DynamicDialogComponent } from './dynamic-dialog/dynamic-dialog.component';
 import { ProductListDemoComponent } from './dynamic-dialog/product-list-demo/product-list-demo.component';
 import { TableModule } from 'primeng/table';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { TableModule } from 'primeng/table';
     DialogComponent,
     DynamicDialogComponent,
     ProductListDemoComponent,
+    HomeComponent,
   ],
   imports: [
     CommonModule,

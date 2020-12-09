@@ -9,12 +9,14 @@ import { SplitButtonComponent } from './split-button/split-button.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { DynamicDialogComponent } from './dynamic-dialog/dynamic-dialog.component';
+import {HomeComponent} from './home/home.component';
 
 const routes: Routes = [
   {
     path: '',
     component: AstraComponent,
     children: [
+      { path: '', pathMatch: 'full', component: HomeComponent },
       { path: 'button', component: ButtonComponent },
       { path: 'splitbutton', component: SplitButtonComponent },
       { path: 'confirmdialog', component: ConfirmDialogComponent },
