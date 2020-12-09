@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
-import {ConfirmationService, Message} from 'primeng/api';
+import { ConfirmationService, Message } from 'primeng/api';
 
 @Component({
   selector: 'app-confirm-dialog',
   templateUrl: './confirm-dialog.component.html',
-  styles: [`
-        :host ::ng-deep button {
-            margin-right: .25em;
-        }
-    `],
-  providers: [ConfirmationService]
+  styles: [
+    `
+      :host ::ng-deep button {
+        margin-right: 0.25em;
+      }
+    `,
+  ],
+  providers: [ConfirmationService],
 })
 export class ConfirmDialogComponent {
   msgs: Message[] = [];
@@ -23,11 +25,11 @@ export class ConfirmDialogComponent {
       header: 'Confirmation',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
-        this.msgs = [{severity:'info', summary:'Confirmed', detail:'You have accepted'}];
+        this.msgs = [{ severity: 'info', summary: 'Confirmed', detail: 'You have accepted' }];
       },
       reject: () => {
-        this.msgs = [{severity:'info', summary:'Rejected', detail:'You have rejected'}];
-      }
+        this.msgs = [{ severity: 'info', summary: 'Rejected', detail: 'You have rejected' }];
+      },
     });
   }
 
@@ -37,11 +39,11 @@ export class ConfirmDialogComponent {
       header: 'Delete Confirmation',
       icon: 'pi pi-info-circle',
       accept: () => {
-        this.msgs = [{severity:'info', summary:'Confirmed', detail:'Record deleted'}];
+        this.msgs = [{ severity: 'info', summary: 'Confirmed', detail: 'Record deleted' }];
       },
       reject: () => {
-        this.msgs = [{severity:'info', summary:'Rejected', detail:'You have rejected'}];
-      }
+        this.msgs = [{ severity: 'info', summary: 'Rejected', detail: 'You have rejected' }];
+      },
     });
   }
 
@@ -53,12 +55,12 @@ export class ConfirmDialogComponent {
       header: 'Delete Confirmation',
       icon: 'pi pi-info-circle',
       accept: () => {
-        this.msgs = [{severity:'info', summary:'Confirmed', detail:'Record deleted'}];
+        this.msgs = [{ severity: 'info', summary: 'Confirmed', detail: 'Record deleted' }];
       },
       reject: () => {
-        this.msgs = [{severity:'info', summary:'Rejected', detail:'You have rejected'}];
+        this.msgs = [{ severity: 'info', summary: 'Rejected', detail: 'You have rejected' }];
       },
-      key: "positionDialog"
+      key: 'positionDialog',
     });
   }
 

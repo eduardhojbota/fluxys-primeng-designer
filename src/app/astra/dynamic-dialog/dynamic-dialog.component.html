@@ -1,9 +1,13 @@
 <h1>Dynamic Dialog</h1>
-<p>Dialogs can be created dynamically with any component as the content using a DialogService. See <a href="https://www.primefaces.org/primeng/showcase/#/dynamicdialog" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<p>
+  Dialogs can be created dynamically with any component as the content using a DialogService. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/dynamicdialog" target="_blank" rel="noreferrer noopener">official documentation</a
+  >.
+</p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
-      <p-toast [style]="{marginTop: '80px'}"></p-toast>
+      <p-toast [style]="{ marginTop: '80px' }"></p-toast>
       <button type="button" (click)="show()" pButton icon="pi pi-info-circle" label="Show"></button>
     </p-panel>
   </div>

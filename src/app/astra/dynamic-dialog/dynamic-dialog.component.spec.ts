@@ -6,12 +6,13 @@ describe('DynamicDialogComponent', () => {
   let component: DynamicDialogComponent;
   let fixture: ComponentFixture<DynamicDialogComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ DynamicDialogComponent ]
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [DynamicDialogComponent],
+      }).compileComponents();
     })
-    .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DynamicDialogComponent);

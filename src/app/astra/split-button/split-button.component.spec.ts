@@ -6,11 +6,13 @@ describe('SplitButtonComponent', () => {
   let component: SplitButtonComponent;
   let fixture: ComponentFixture<SplitButtonComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [SplitButtonComponent],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SplitButtonComponent],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SplitButtonComponent);

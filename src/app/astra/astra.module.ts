@@ -22,12 +22,12 @@ import { MessagesComponent } from './messages/messages.component';
 import { ToastComponent } from './toast/toast.component';
 import { ButtonComponent } from './button/button.component';
 import { SplitButtonComponent } from './split-button/split-button.component';
-import {CodeComponent} from './code.component';
+import { CodeComponent } from './code.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { DynamicDialogComponent } from './dynamic-dialog/dynamic-dialog.component';
 import { ProductListDemoComponent } from './dynamic-dialog/product-list-demo/product-list-demo.component';
-import {TableModule} from 'primeng/table';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -62,6 +62,6 @@ import {TableModule} from 'primeng/table';
     MenuModule,
     TableModule,
   ],
-  entryComponents: [DynamicDialogContentComponent,ProductListDemoComponent],
+  entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })
 export class AstraModule {}

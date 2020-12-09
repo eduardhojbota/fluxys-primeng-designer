@@ -1,10 +1,15 @@
 <h1>ConfirmDialog</h1>
-<p>ConfirmDialog is backed by a service utilizing Observables to display confirmation windows easily that can be shared by multiple actions on the same component. See <a href="https://www.primefaces.org/primeng/showcase/#/confirmdialog" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<p>
+  ConfirmDialog is backed by a service utilizing Observables to display confirmation windows easily that can be shared by multiple actions
+  on the same component. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/confirmdialog" target="_blank" rel="noreferrer noopener">official documentation</a
+  >.
+</p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
       <h5>Position</h5>
-      <p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000"></p-confirmDialog>
+      <p-confirmDialog [style]="{ width: '50vw' }" [baseZIndex]="10000"></p-confirmDialog>
       <p-button (click)="confirm1()" icon="pi pi-check" label="Confirm"></p-button>
       <p-button (click)="confirm2()" icon="pi pi-times" label="Delete"></p-button>
 
@@ -20,12 +25,22 @@
           <p-button (click)="confirmPosition('topright')" icon="pi pi-arrow-down" label="TopRight" styleClass="p-button-warning"></p-button>
         </div>
         <div class="p-col">
-          <p-button (click)="confirmPosition('bottomleft')" icon="pi pi-arrow-up" label="BottomLeft" styleClass="p-button-warning"></p-button>
+          <p-button
+            (click)="confirmPosition('bottomleft')"
+            icon="pi pi-arrow-up"
+            label="BottomLeft"
+            styleClass="p-button-warning"
+          ></p-button>
           <p-button (click)="confirmPosition('bottom')" icon="pi pi-arrow-up" label="Bottom" styleClass="p-button-warning"></p-button>
-          <p-button (click)="confirmPosition('bottomright')" icon="pi pi-arrow-up" label="BottomRight" styleClass="p-button-warning"></p-button>
+          <p-button
+            (click)="confirmPosition('bottomright')"
+            icon="pi pi-arrow-up"
+            label="BottomRight"
+            styleClass="p-button-warning"
+          ></p-button>
         </div>
       </div>
-      <p-confirmDialog [style]="{width: '50vw'}" key="positionDialog" [position]="position" [baseZIndex]="10000"></p-confirmDialog>
+      <p-confirmDialog [style]="{ width: '50vw' }" key="positionDialog" [position]="position" [baseZIndex]="10000"></p-confirmDialog>
 
       <p-messages [value]="msgs"></p-messages>
     </p-panel>

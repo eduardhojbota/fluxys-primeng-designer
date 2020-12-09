@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {DynamicDialogConfig, DynamicDialogRef} from 'primeng/dynamicdialog';
-import {ProductService} from '../../../service/product.service';
-import {Product} from '../../../domain/model';
+import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { ProductService } from '../../../service/product.service';
+import { Product } from '../../../domain/model';
 
 @Component({
   selector: 'app-product-list-demo',
@@ -11,10 +11,10 @@ import {Product} from '../../../domain/model';
 export class ProductListDemoComponent implements OnInit {
   products: Product[];
 
-  constructor(private productService: ProductService, public ref: DynamicDialogRef, public config: DynamicDialogConfig) { }
+  constructor(private productService: ProductService, public ref: DynamicDialogRef, public config: DynamicDialogConfig) {}
 
   ngOnInit(): void {
-    this.productService.getProductsSmall().then(products => this.products = products);
+    this.productService.getProductsSmall().then((products) => (this.products = products));
   }
 
   selectProduct(product: Product): void {
