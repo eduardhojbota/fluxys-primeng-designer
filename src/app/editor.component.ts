@@ -25,8 +25,6 @@ export class EditorComponent implements OnInit {
 
   @Output() restart: EventEmitter<any> = new EventEmitter();
 
-  constructor(private editorService: EditorService, private http: HttpClient, private messageService: MessageService) {}
-
   restartDialog: boolean;
 
   downloadDialog: boolean;
@@ -40,6 +38,8 @@ export class EditorComponent implements OnInit {
   variables: any = {};
 
   downloadLink: HTMLAnchorElement;
+
+  constructor(private editorService: EditorService, private http: HttpClient, private messageService: MessageService) {}
 
   ngOnInit(): void {
     this.editorService.getEditor(this.theme).then((data) => {
@@ -61,7 +61,7 @@ export class EditorComponent implements OnInit {
 
   compile(): void {
     this.http
-      .post<any>(environment.theme_builder_url + '?theme=' + this.theme, this.variables, { responseType: 'text' as 'json' })
+      .post<any>(environment.themeBuilderUrl + '?theme=' + this.theme, this.variables, { responseType: 'text' as 'json' })
       .subscribe(
         (response) => {
           this.compiled.emit(response);
@@ -74,7 +74,7 @@ export class EditorComponent implements OnInit {
 
   downloadTheme(): void {
     this.http
-      .post<any>(environment.theme_builder_url + '?theme=' + this.theme, this.variables, { responseType: 'text' as 'json' })
+      .post<any>(environment.themeBuilderUrl + '?theme=' + this.theme, this.variables, { responseType: 'text' as 'json' })
       .subscribe(
         (response) => {
           const url = window.URL.createObjectURL(new Blob([response], { type: 'text/css; charset=utf-8' }));

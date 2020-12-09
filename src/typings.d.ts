@@ -1,3 +1,3 @@
 interface Window {
-  Prism: any;
+  Prism: any; // eslint-disable-line @typescript-eslint/naming-convention
 }

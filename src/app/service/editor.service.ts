@@ -12,8 +12,6 @@ export class EditorService {
       .get<any>('assets/editor/' + theme + '.json')
       .toPromise()
       .then((res) => res.editor as any[])
-      .then((data) => {
-        return data;
-      });
+      .then((data) => data);
   }
 }

@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   editor: 'visual',
-  theme_builder_url: 'https://www.primefaces.org/themegen-ng',
+  themeBuilderUrl: 'https://www.primefaces.org/themegen-ng',
 };
 
 /*

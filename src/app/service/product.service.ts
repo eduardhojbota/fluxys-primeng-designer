@@ -13,8 +13,6 @@ export class ProductService {
       .get<any>('assets/demo/data/products-small.json')
       .toPromise()
       .then((res) => res.data as Product[])
-      .then((data) => {
-        return data;
-      });
+      .then((data) => data);
   }
 }

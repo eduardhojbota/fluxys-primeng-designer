@@ -13,8 +13,6 @@ export class CustomerService {
       .get<any>('assets/demo/data/customers-large.json')
       .toPromise()
       .then((res) => res.data as Customer[])
-      .then((data) => {
-        return data;
-      });
+      .then((data) => data);
   }
 }

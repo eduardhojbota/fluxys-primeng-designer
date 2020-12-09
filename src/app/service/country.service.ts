@@ -12,8 +12,6 @@ export class CountryService {
       .get<any>('assets/demo/data/countries.json')
       .toPromise()
       .then((res) => res.data as any[])
-      .then((data) => {
-        return data;
-      });
+      .then((data) => data);
   }
 }

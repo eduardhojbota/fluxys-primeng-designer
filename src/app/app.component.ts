@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
     }
 
     const styleElement = document.createElement('style');
-    styleElement.type = 'text/css'; // tslint:disable-line:deprecation
+    styleElement.type = 'text/css'; // eslint-disable-line import/no-deprecated
     styleElement.appendChild(document.createTextNode(value));
     document.getElementsByTagName('head')[0].appendChild(styleElement);
 
