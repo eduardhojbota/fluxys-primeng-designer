@@ -309,6 +309,42 @@ $treeNodeChildrenPadding: 0 0 0 1rem;
 /// @group data
 $treeNodeIconColor: $textSecondaryColor;
 
+/// Padding of a vertical timeline content element
+/// @group data
+$timelineVerticalEventContentPadding:0 1rem;
+
+/// Padding of a horizontal timeline content element
+/// @group data
+$timelineHorizontalEventContentPadding:1rem 0;
+
+/// Width of a timeline marker
+/// @group data
+$timelineEventMarkerWidth:1rem;
+
+/// Height of a timeline marker
+/// @group data
+$timelineEventMarkerHeight:1rem;
+
+/// Border radius of a timeline marker
+/// @group data
+$timelineEventMarkerBorderRadius:50%;
+
+/// Border of a timeline marker
+/// @group data
+$timelineEventMarkerBorder:2px solid $highlightBg;
+
+/// Background of a timeline marker
+/// @group data
+$timelineEventMarkerBackground:$highlightTextColor;
+
+/// Size of a timeline connector
+/// @group data
+$timelineEventConnectorSize:2px;
+
+/// Color of a timeline event
+/// @group data
+$timelineEventColor:#dee2e6; 
+
 /// Color of a line to connect to organization chart nodes
 /// @group data
 $organizationChartConnectorColor: #dee2e6;
