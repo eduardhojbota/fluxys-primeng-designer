@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CountryService } from '../service/country.service';
 import { CustomerService } from '../service/customer.service';
 import { ProductService } from '../service/product.service';
-import { MessageService, MenuItem, Message } from 'primeng/api';
+import { MessageService, MenuItem, Message, ConfirmationService, PrimeIcons } from 'primeng/api';
 import { Customer, Product } from '../domain/model';
 
 interface Option {
@@ -14,7 +14,7 @@ interface Option {
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   floatValue: string;
 
   selectedCountry: any;
@@ -75,14 +75,17 @@ export class HomeComponent implements OnInit {
 
   selectedProduct: Product;
 
+  events: any[];
+
   constructor(
     private countryService: CountryService,
     private messageService: MessageService,
     private customerService: CustomerService,
-    private productService: ProductService
+    private productService: ProductService,
+    private confirmationService: ConfirmationService
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.countryService.getCountries().then((countries) => {
       this.countries = countries;
     });
@@ -254,15 +257,21 @@ export class HomeComponent implements OnInit {
       { severity: 'warn', summary: 'Warning', detail: 'Message Content' },
       { severity: 'error', summary: 'Error', detail: 'Message Content' },
     ];
+
+    this.events = [
+      { status: 'Ordered', date: '15/10/2020 10:30', icon: PrimeIcons.SHOPPING_CART, color: '#9C27B0', image: 'game-controller.jpg' },
+      { status: 'Processing', date: '15/10/2020 14:00', icon: PrimeIcons.COG, color: '#673AB7' },
+      { status: 'Shipped', date: '15/10/2020 16:15', icon: PrimeIcons.ENVELOPE, color: '#FF9800' },
+      { status: 'Delivered', date: '16/10/2020 10:00', icon: PrimeIcons.CHECK, color: '#607D8B' },
+    ];
   }
 
-  filterCountry(event): void {
-    const filtered: any[] = [];
-    const query = event.query;
-    // tslint:disable-next-line:prefer-for-of
+  filterCountry(event) {
+    let filtered: any[] = [];
+    let query = event.query;
     for (let i = 0; i < this.countries.length; i++) {
-      const country = this.countries[i];
-      if (country.name.toLowerCase().indexOf(query.toLowerCase()) === 0) {
+      let country = this.countries[i];
+      if (country.name.toLowerCase().indexOf(query.toLowerCase()) == 0) {
         filtered.push(country);
       }
     }
@@ -270,20 +279,50 @@ export class HomeComponent implements OnInit {
     this.filteredCountries = filtered;
   }
 
-  onRowSelect(event, op): void {
+  onRowSelect(event, op) {
     this.messageService.add({ severity: 'info', summary: 'Product Selected', detail: event.data.name });
     op.hide();
   }
 
-  openDialog(): void {
+  openDialog() {
     this.displayDialog = true;
   }
 
-  closeDialog(): void {
+  closeDialog() {
     this.displayDialog = false;
   }
 
-  showToast(severity): void {
-    this.messageService.add({ severity, summary: 'Message Summary', detail: 'Message Detail', life: 3000 });
+  showToast(severity) {
+    this.messageService.add({ severity: severity, summary: 'Message Summary', detail: 'Message Detail', life: 3000 });
+  }
+
+  showConfirmPopup(event: Event) {
+    this.confirmationService.confirm({
+      target: event.target,
+      message: 'Are you sure that you want to proceed?',
+      icon: 'pi pi-exclamation-triangle',
+      accept: () => {
+        this.messageService.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted' });
+      },
+      reject: () => {
+        this.messageService.add({ severity: 'error', summary: 'Rejected', detail: 'You have rejected' });
+      },
+      key: 'popup',
+    });
+  }
+
+  showConfirmDialog() {
+    this.confirmationService.confirm({
+      message: 'Are you sure that you want to proceed?',
+      header: 'Confirmation',
+      icon: 'pi pi-exclamation-triangle',
+      accept: () => {
+        this.messageService.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted' });
+      },
+      reject: () => {
+        this.messageService.add({ severity: 'info', summary: 'Rejected', detail: 'You have rejected' });
+      },
+      key: 'dialog',
+    });
   }
 }

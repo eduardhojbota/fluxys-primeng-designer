@@ -31,7 +31,7 @@ export class EditorComponent implements OnInit {
 
   downloadDialog: boolean;
 
-  scale = 14;
+  scale: number = 14;
 
   scales: number[] = [12, 13, 14, 15, 16];
 
@@ -49,17 +49,17 @@ export class EditorComponent implements OnInit {
     });
   }
 
-  initVariables(): void {
+  initVariables() {
     if (this.categories) {
-      for (const category of this.categories) {
-        for (const option of category.options) {
+      for (let category of this.categories) {
+        for (let option of category.options) {
           this.variables[option.name] = option.value;
         }
       }
     }
   }
 
-  compile(): void {
+  compile() {
     this.http
       .post<any>(environment.theme_builder_url + '?theme=' + this.theme, this.variables, { responseType: 'text' as 'json' })
       .subscribe(

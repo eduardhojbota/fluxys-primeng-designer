@@ -36,6 +36,24 @@
             "scripts": ["node_modules/prismjs/prism.js", "node_modules/prismjs/components/prism-typescript.js"]
           },
           "configurations": {
+            "code": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "replaceWith": "src/environments/environment.code.ts"
+                }
+              ],
+              "styles": [
+                "node_modules/primeng/resources/primeng.min.css",
+                "node_modules/primeicons/primeicons.css",
+                "node_modules/primeflex/primeflex.css",
+                "node_modules/prismjs/themes/prism-coy.css",
+                "node_modules/@fortawesome/fontawesome-free/css/all.css",
+                "src/assets/demo/styles/flags.css",
+                "src/styles.scss",
+                "src/sass/themes/fluxys/theme.scss"
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -72,6 +90,9 @@
             "browserTarget": "primeng-designer:build"
           },
           "configurations": {
+            "code": {
+              "browserTarget": "primeng-designer:build:code"
+            },
             "production": {
               "browserTarget": "primeng-designer:build:production"
             }

@@ -20,6 +20,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ChipsModule } from 'primeng/chips';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ConfirmPopupModule } from 'primeng/confirmpopup';
 import { ContextMenuModule } from 'primeng/contextmenu';
 import { DialogModule } from 'primeng/dialog';
 import { DropdownModule } from 'primeng/dropdown';
@@ -47,11 +48,12 @@ import { SplitButtonModule } from 'primeng/splitbutton';
 import { TableModule } from 'primeng/table';
 import { TabViewModule } from 'primeng/tabview';
 import { TieredMenuModule } from 'primeng/tieredmenu';
+import { TimelineModule } from 'primeng/timeline';
 import { ToastModule } from 'primeng/toast';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { TooltipModule } from 'primeng/tooltip';
 
-import { MessageService } from 'primeng/api';
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { HomeComponent } from './view/home.component';
 import { DocumentationComponent } from './view/documentation.component';
 
@@ -66,6 +68,7 @@ import { DocumentationComponent } from './view/documentation.component';
     AutoCompleteModule,
     ButtonModule,
     CalendarModule,
+    ConfirmPopupModule,
     CheckboxModule,
     ChipsModule,
     ConfirmDialogModule,
@@ -96,6 +99,7 @@ import { DocumentationComponent } from './view/documentation.component';
     TableModule,
     TabViewModule,
     TieredMenuModule,
+    TimelineModule,
     ToastModule,
     ToggleButtonModule,
     TooltipModule,
@@ -110,7 +114,7 @@ import { DocumentationComponent } from './view/documentation.component';
     HomeComponent,
     DocumentationComponent,
   ],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, MessageService],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, MessageService, ConfirmationService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

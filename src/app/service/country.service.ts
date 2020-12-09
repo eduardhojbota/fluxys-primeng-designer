@@ -7,11 +7,13 @@ import { Injectable } from '@angular/core';
 export class CountryService {
   constructor(private http: HttpClient) {}
 
-  getCountries(): Promise<any[]> {
+  getCountries() {
     return this.http
       .get<any>('assets/demo/data/countries.json')
       .toPromise()
-      .then((res) => res.data as any[])
-      .then((data) => data);
+      .then((res) => <any[]>res.data)
+      .then((data) => {
+        return data;
+      });
   }
 }

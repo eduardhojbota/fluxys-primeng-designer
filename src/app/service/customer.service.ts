@@ -8,11 +8,13 @@ import { Customer } from '../domain/model';
 export class CustomerService {
   constructor(private http: HttpClient) {}
 
-  getCustomersLarge(): Promise<Customer[]> {
+  getCustomersLarge() {
     return this.http
       .get<any>('assets/demo/data/customers-large.json')
       .toPromise()
-      .then((res) => res.data as Customer[])
-      .then((data) => data);
+      .then((res) => <Customer[]>res.data)
+      .then((data) => {
+        return data;
+      });
   }
 }

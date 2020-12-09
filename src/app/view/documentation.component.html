@@ -4,7 +4,7 @@
       <h1>Getting Started</h1>
 
       <h5>Current Version</h5>
-      <p>Angular 10 and PrimeNG 10</p>
+      <p>Angular 11 and PrimeNG 11</p>
 
       <h5>Overview</h5>
       <p>
@@ -33,17 +33,15 @@
 
       <h5>Code Editor</h5>
       <p>
-        Code editor mode is enabled by changing the <i>editor</i> variable in environment.ts configuration file located in the root folder.
-        The default value is <i>visual</i> and <i>code</i> should be set instead to design a theme with the sass api directly.
+        Code editor mode enables working with the sass api directly within your editor. Run the application with the
+        <b>code</b> configuration for this mode.
       </p>
 
-      <app-code lang="typescript" ngPreserveWhitespaces>
-        export const environment = &#123; production: false, editor: 'code' &#125;
-      </app-code>
+      <app-code ngPreserveWhitespaces> ng serve --configuration code </app-code>
 
       <p>
-        A built-in base theme named <i>fluxys</i> is available to get started with your own theme. To begin with navigate to the
-        <i>src/sass/themes/fluxys/</i> folder which includes the following artifacts;
+        A built-in base theme named <i>mytheme</i> is available to get started with your own theme. To begin with navigate to the
+        <i>src/sass/themes/mytheme/</i> folder which includes the following artifacts;
       </p>
 
       <ul>
@@ -62,476 +60,16 @@
       <h5>Full List of SASS Variables</h5>
       <p class="p-mb-3">
         A wide range of variables are available to customize different aspects of the components such as colors, margins and paddings. Refer
-        to the <a href="https://www.primefaces.org/designer/api/primeng/10.0.0">API documentation</a> for details on each variable.
+        to the <a href="https://www.primefaces.org/designer/api/primeng/11.0.0">API documentation</a> for details on each variable.
       </p>
-      <div style="height: 400px; overflow: auto">
-        <app-code lang="css" ngPreserveWhitespaces>
-          /// Font of the theme /// @group general $fontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /// Size of the font /// @group general $fontSize: 1rem; ///
-          Thickness of the texts /// @group general $fontWeight: normal; /// Primary text color /// @group general $textColor: #495057; ///
-          Secondary text color /// @group general $textSecondaryColor: #6c757d; /// Background of a highlighted item /// @group general
-          $highlightBg: $primaryColor; /// Text color of a highlighted item /// @group general $highlightTextColor: $primaryTextColor; ///
-          Radius of the corners /// @group general $borderRadius: 3px; /// Duration of the property transitions /// @group general
-          $transitionDuration: .2s; /// Properties of a form element transition /// @group general $formElementTransition: background-color
-          $transitionDuration, color $transitionDuration, border-color $transitionDuration, box-shadow $transitionDuration; /// Properties
-          of a action icon transition /// @group general $actionIconTransition: background-color $transitionDuration, color
-          $transitionDuration, box-shadow $transitionDuration; /// Properties of a list item transition /// @group general
-          $listItemTransition: background-color $transitionDuration, border-color $transitionDuration, box-shadow $transitionDuration; ///
-          Size of the Icons /// @group general $primeIconFontSize: 1rem; /// Separator border /// @group general $divider: 1px solid
-          #dee2e6; /// Space between two inline items /// @group general $inlineSpacing: .5rem; /// Opacity of the disabled elements ///
-          @group general $disabledOpacity: .8; /// Background of the modal layer /// @group general $maskBg: rgba(0, 0, 0, 0.4); /// Font
-          size of the loading icons /// @group general $loadingIconFontSize: 2rem; /// Color to use on an invalid element e.g. invalid input
-          /// @group general $errorColor: #e4677e; /// Outline color of a focused element /// @group general $focusOutlineColor: #bfd1f6;
-          /// Outline of a focused element /// @group general $focusOutline: 0 none; /// Outline offset of a focused element /// @group
-          general $focusOutlineOffset: 0; /// Box shadow of a focused element /// @group general $focusShadow: 0 0 0 0.2rem
-          $focusOutlineColor; /// Width of an action icon /// @group general $actionIconWidth: 2rem; /// Height of an action icon /// @group
-          general $actionIconHeight: 2rem; /// Background of an action icon /// @group general $actionIconBg: transparent; /// Border of an
-          action icon /// @group general $actionIconBorder: 0 none; /// Color of an action icon /// @group general $actionIconColor:
-          $textSecondaryColor; /// Backgroun of an action icon in hover state /// @group general $actionIconHoverBg: #e9ecef; /// Border of
-          an action icon in hover state /// @group general $actionIconHoverBorderColor: transparent; /// Color of an action icon in hover
-          state /// @group general $actionIconHoverColor: $textColor; /// Border radius of an action icon /// @group general
-          $actionIconBorderRadius: 50%; /// Scale factor of small component size /// @group general $scaleSM:0.875; /// Scale factor of
-          small large size /// @group general $scaleLG:1.25; /// Padding of an input field, must be defined with a shorthand for vertical
-          and horizontal values e.g. ".5rem .5rem" /// @group form $inputPadding: .5rem .5rem; /// Background of an input field /// @group
-          form $inputBg: #ffffff; /// Font size of an input field /// @group form $inputTextFontSize: 1rem; /// Text color of an input field
-          /// @group form $inputTextColor: $textColor; /// Color of an icon inside an input field /// @group form $inputIconColor:
-          $textColor; /// Border of an input field /// @group form $inputBorder: 1px solid #ced4da; /// Border of an input field in hover
-          state /// @group form $inputHoverBorderColor: $primaryColor; /// Border of an input field in focus state /// @group form
-          $inputFocusBorderColor: $primaryColor; /// Color of an input field in invalid state /// @group form $inputErrorBorderColor:
-          #ced4da #ced4da #ced4da $errorColor; /// Text color of a placeholder /// @group form $inputPlaceholderTextColor: #6c757d; ///
-          Background of a filled input /// @group form $inputFilledBg:#f8f9fa; /// Background of a filled input in hover state /// @group
-          form $inputFilledHoverBg:#f8f9fa; /// Background of a filled input in focus state /// @group form $inputFilledFocusBg:#f8f9fa; ///
-          Backgroud color of an input group addon /// @group form $inputGroupBg: #e9ecef; /// Text color of an input group addon /// @group
-          form $inputGroupTextColor: $textSecondaryColor; /// Minimum width of an input group addon /// @group form
-          $inputGroupAddOnMinWidth: 2.357rem; /// Background of an input list such as dropdown, listbox, multiselect /// @group form
-          $inputListBg: #ffffff; /// Text color of an input list /// @group form $inputListTextColor: $textColor; /// Border of an input
-          list /// @group form $inputListBorder: $inputBorder; /// Padding of an input list /// @group form $inputListPadding: .5rem 0; ///
-          Padding for an individual itrem of an input list /// @group form $inputListItemPadding: .5rem 1rem; /// Background for an
-          individual itrem of an input list /// @group form $inputListItemBg: transparent; /// Text color for an individual itrem of an
-          input list /// @group form $inputListItemTextColor: $textColor; /// Hover state background for an individual itrem of an input
-          list /// @group form $inputListItemHoverBg: #e9ecef; /// Hover state text color for an individual itrem of an input list ///
-          @group form $inputListItemTextHoverColor: $textColor; /// Border for an individual itrem of an input list /// @group form
-          $inputListItemBorder: 0 none; /// Border radius for an individual itrem of an input list /// @group form
-          $inputListItemBorderRadius: 0; /// Margin for an individual itrem of an input list /// @group form $inputListItemMargin: 0; ///
-          Box shadow for an individual itrem of an input list in focused state /// @group form $inputListItemFocusShadow: inset 0 0 0
-          0.15rem $focusOutlineColor; /// Padding for a header of an input list /// @group form $inputListHeaderPadding: .5rem 1rem; ///
-          Margin for a header of an input list /// @group form $inputListHeaderMargin: 0; /// Background for a header of an input list ///
-          @group form $inputListHeaderBg: #f8f9fa; /// Text color for a header of an input list /// @group form $inputListHeaderTextColor:
-          $textColor; /// Border for a header of an input list /// @group form $inputListHeaderBorder: 0 none; /// Background for an overlay
-          of an input such as autocomplete or dropdown /// @group form $inputOverlayBg:$inputListBg; /// Background for an overlay header of
-          an input such as autocomplete or dropdown /// @group form $inputOverlayHeaderBg:$inputListHeaderBg; /// Border for an overlay of
-          an input such as autocomplete or dropdown /// @group form $inputOverlayBorder: 0 none; /// Shadow for an overlay of an input such
-          as autocomplete or dropdown /// @group form $inputOverlayShadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1); /// Width of a checkbox ///
-          @group form $checkboxWidth: 20px; /// Height of a checkbox /// @group form $checkboxHeight: 20px; /// Border of a checkbox ///
-          @group form $checkboxBorder: 2px solid #ced4da; /// Size of a checkbox icon /// @group form $checkboxIconFontSize: 14px; ///
-          Border color of a selected checkbox /// @group form $checkboxActiveBorderColor: $primaryColor; /// Background of a selected
-          checkbox /// @group form $checkboxActiveBg: $primaryColor; /// Icon color of a selected checkbox /// @group form
-          $checkboxIconActiveColor: $primaryTextColor; /// Background of a selected checkbox in hover state /// @group form
-          $checkboxActiveHoverBg: $primaryDarkerColor; /// Icon color of a selected checkbox in hover state /// @group form
-          $checkboxIconActiveHoverColor: $primaryTextColor; /// Border color of a selected checkbox in hover state /// @group form
-          $checkboxActiveHoverBorderColor: $primaryDarkerColor; /// Width of a radiobutton /// @group form $radiobuttonWidth: 20px; ///
-          Height of a radiobutton /// @group form $radiobuttonHeight: 20px; /// Border of a radiobutton /// @group form $radiobuttonBorder:
-          2px solid #ced4da; /// Font size of a radiobutton icon /// @group form $radiobuttonIconSize: 12px; /// Border color of a selected
-          radiobutton /// @group form $radiobuttonActiveBorderColor: $primaryColor; /// Background of a selected radiobutton /// @group form
-          $radiobuttonActiveBg: $primaryColor; /// Icon color of a selected radiobutton /// @group form $radiobuttonIconActiveColor:
-          $primaryTextColor; /// Background of a selected radiobutton in hover state /// @group form $radiobuttonActiveHoverBg:
-          $primaryDarkerColor; /// Icon color of a selected radiobutton in hover state /// @group form $radiobuttonIconActiveHoverColor:
-          $primaryTextColor; /// Border color of a selected radiobutton in hover state /// @group form $radiobuttonActiveHoverBorderColor:
-          $primaryDarkerColor; /// Width of a color picker preview element /// @group form $colorPickerPreviewWidth: 2rem; /// Height of a
-          color picker preview element /// @group form $colorPickerPreviewHeight: 2rem; /// Background of a color picker /// @group form
-          $colorPickerBg: #323232; /// Border color of a color picker /// @group form $colorPickerBorderColor: #191919; /// Handle color of
-          a color picker /// @group form $colorPickerHandleColor: #ffffff; /// Font size of a rating icon /// @group form
-          $ratingIconFontSize: 1.143rem; /// Icon color for the cancel icon of a rating /// @group form $ratingCancelIconColor: #e74c3c; ///
-          Hover icon color for the cancel icon of a rating /// @group form $ratingCancelIconHoverColor: #c0392b; /// Icon color for the star
-          icon of a rating in unselected state /// @group form $ratingStarIconOffColor: $textColor; /// Icon color for the star icon of a
-          rating in selected state /// @group form $ratingStarIconOnColor: $primaryColor; /// Icon color for the star icon of a rating in
-          hover state /// @group form $ratingStarIconHoverColor: $primaryColor; /// Background of a slider /// @group form $sliderBg:
-          #dee2e6; /// Border of a slider /// @group form $sliderBorder: 0 none; /// Height of a horizontal slider /// @group form
-          $sliderHorizontalHeight: .286rem; /// Width of a vertical slider /// @group form $sliderVerticalWidth: 0.286rem; /// Width of a
-          slider handle /// @group form $sliderHandleWidth: 1.143rem; /// Height of a slider handle /// @group form $sliderHandleHeight:
-          1.143rem; /// Background of a slider handle /// @group form $sliderHandleBg: #ffffff; /// Border of a slider handle /// @group
-          form $sliderHandleBorder: 2px solid $primaryColor; /// Border radius of a slider handle /// @group form $sliderHandleBorderRadius:
-          50%; /// Border of a slider handle in hover state /// @group form $sliderHandleHoverBorderColor: $primaryColor; /// Background of
-          a slider handle in hover state /// @group form $sliderHandleHoverBg: $primaryColor; /// Background color of a range slider ///
-          @group form $sliderRangeBg: $primaryColor; /// Margin of a calendar table /// @group form $calendarTableMargin: .5rem 0; ///
-          Margin of a calendar /// @group form $calendarPadding: .5rem; /// Background of a calendar /// @group form $calendarBg:#ffffff;
-          /// Background of an inlime calendar /// @group form $calendarInlineBg:$calendarBg; /// Text color of a calendar /// @group form
-          $calendarTextColor: $textColor; /// Border of an inline calendar /// @group form $calendarBorder: $inputListBorder; /// Border of
-          an overlay calendar /// @group form $calendarOverlayBorder: $inputOverlayBorder; /// Padding of a calendar header /// @group form
-          $calendarHeaderPadding: .5rem; /// Background of a calendar header /// @group form $calendarHeaderBg: #ffffff; /// Background of
-          an inline calendar header /// @group form $calendarInlineHeaderBg:$calendarBg; /// Border of a calendar header /// @group form
-          $calendarHeaderBorder: 1px solid #dee2e6; /// Text color of a calendar header /// @group form $calendarHeaderTextColor:
-          $textColor; /// Font weight of a calendar header /// @group form $calendarHeaderFontWeight: 600; /// Padding of a calendar weekday
-          cell /// @group form $calendarHeaderCellPadding: .5rem; /// Padding of a calendar date cell /// @group form
-          $calendarCellDatePadding: .5rem; /// Width of a calendar date cell /// @group form $calendarCellDateWidth: 2.5rem; /// Height of a
-          calendar date cell /// @group form $calendarCellDateHeight: 2.5rem; /// Border radius of a calendar date cell /// @group form
-          $calendarCellDateBorderRadius: 50%; /// Border of a calendar date cell /// @group form $calendarCellDateBorder:1px solid
-          transparent; /// Background of a calendar date cell in hover state /// @group form $calendarCellDateHoverBg: #e9ecef; ///
-          Background of a calendar date cell indicating today /// @group form $calendarCellDateTodayBg: #ced4da; /// Border color of a
-          calendar date cell indicating today /// @group form $calendarCellDateTodayBorderColor: transparent; /// Text color of a calendar
-          date cell indicating today /// @group form $calendarCellDateTodayTextColor: $textColor; /// Padding of the calendar button bar ///
-          @group form $calendarButtonBarPadding: 1rem 0; /// Padding of a time picker container of a calendar /// @group form
-          $calendarTimePickerPadding: .5rem; /// Padding of a time picker element of a calendar /// @group form
-          $calendarTimePickerElementPadding: 0 .429rem; /// Font size of a time picker element of a calendar /// @group form
-          $calendarTimePickerTimeFontSize: 1.286rem; /// Breakpoint of calendar to apply styles for small screens like phones /// @group
-          form $calendarBreakpoint: 769px; /// Padding of a calendar date cell on small screens like phones /// @group form
-          $calendarCellDatePaddingSM: 0; /// Width of an inputswitch /// @group form $inputSwitchWidth: 3rem; /// Height of an inputswitch
-          /// @group form $inputSwitchHeight: 1.75rem; /// Border radius of an inputswitch /// @group form $inputSwitchBorderRadius: 30px;
-          /// Width of an inputswitch handle /// @group form $inputSwitchHandleWidth: 1.250rem; /// Height of an inputswitch handle ///
-          @group form $inputSwitchHandleHeight: 1.250rem; /// Border radius of an inputswitch handle /// @group form
-          $inputSwitchHandleBorderRadius: 50%; /// Padding of an inputswitch slider /// @group form $inputSwitchSliderPadding: .25rem; ///
-          Background color of an inputswitch slider when unselected /// @group form $inputSwitchSliderOffBg: #ced4da; /// Background color
-          of an inputswitch handle when unselected /// @group form $inputSwitchHandleOffBg: #ffffff; /// Hover background color of an
-          inputswitch slider when unselected /// @group form $inputSwitchSliderOffHoverBg: #c3cad2; /// Background color of an inputswitch
-          slider when selected /// @group form $inputSwitchSliderOnBg: $primaryColor; /// Hover background color of an inputswitch slider
-          when selected /// @group form $inputSwitchSliderOnHoverBg: $primaryDarkColor; /// Background color of an inputswitch handle when
-          selected /// @group form $inputSwitchHandleOnBg: #ffffff; /// Height for the progress bar of a fileupload /// @group form
-          $fileUploadProgressBarHeight: .25rem; /// Padding of the fileupload content section /// @group form $fileUploadContentPadding:
-          2rem 1rem; /// Background of an editor toolbar /// @group form $editorToolbarBg:#f8f9fa; /// Border of an editor toolbar ///
-          @group form $editorToolbarBorder:1px solid #dee2e6; /// Padding of an editor toolbar /// @group form $editorToolbarPadding:1rem;
-          /// Icon color of an editor toolbar /// @group form $editorToolbarIconColor:#6c757d; /// Icon color of an editor toolbar in hover
-          state /// @group form $editorToolbarIconHoverColor:#495057; /// Icon color of an editor toolbar in active state /// @group form
-          $editorIconActiveColor:$primaryColor; /// Border of an editor content /// @group form $editorContentBorder: 1px solid #dee2e6; ///
-          Background of an editor content /// @group form $editorContentBg:#ffffff; /// Padding of a button, must be defined with a
-          shorthand for vertical and horizontal values e.g. ".5rem .5rem" /// @group button $buttonPadding: .5rem 1rem; /// Width of a
-          button having an icon with no label /// @group button $buttonIconOnlyWidth: 2.357rem; /// Padding of a button having an icon with
-          no label /// @group button $buttonIconOnlyPadding: .5rem 0; /// Background of a button /// @group button $buttonBg: $primaryColor;
-          /// Text color of a button /// @group button $buttonTextColor: $primaryTextColor; /// Border of a button /// @group button
-          $buttonBorder: 1px solid $primaryColor; /// Background of a button in hover state /// @group button $buttonHoverBg:
-          $primaryDarkColor; /// Text color of a button in hover state /// @group button $buttonTextHoverColor: $primaryTextColor; ///
-          Border color of a button in hover state /// @group button $buttonHoverBorderColor: $primaryDarkColor; /// Background of a button
-          in pressed state /// @group button $buttonActiveBg: $primaryDarkerColor; /// Color of a button in pressed state /// @group button
-          $buttonTextActiveColor: $primaryTextColor; /// Border color of a button in pressed state /// @group button
-          $buttonActiveBorderColor: $primaryDarkerColor; /// Shadow of a raised button /// @group button $raisedButtonShadow: 0px 3px 1px
-          -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); /// Border radius of a rounded
-          button /// @group button $roundedButtonBorderRadius: 2rem; /// Alpha level of a text button background in hover state /// @group
-          button $textButtonHoverBgOpacity:.04; /// Alpha level of a text button background in hover state /// @group button
-          $textButtonActiveBgOpacity:.16; /// Border style of a outlined button /// @group button $outlinedButtonBorder:1px solid; ///
-          Background of a secondary button /// @group button $secondaryButtonBg: #607D8B; /// Text color of a secondary button /// @group
-          button $secondaryButtonTextColor: #ffffff; /// Border of a secondary button /// @group button $secondaryButtonBorder: 1px solid
-          #607D8B; /// Background of a secondary button in hover state /// @group button $secondaryButtonHoverBg: #546E7A; /// Text color of
-          a secondary button in hover state /// @group button $secondaryButtonTextHoverColor: #ffffff; /// Border color of a secondary
-          button in hover state /// @group button $secondaryButtonHoverBorderColor: #546E7A; /// Background of a secondary button in pressed
-          state /// @group button $secondaryButtonActiveBg: #455A64; /// Text color of a secondary button in pressed state /// @group button
-          $secondaryButtonTextActiveColor: #ffffff; /// Border color of a secondary button in pressed state /// @group button
-          $secondaryButtonActiveBorderColor: #455A64; /// Box shadow of a secondary button in focused state /// @group button
-          $secondaryButtonFocusShadow: 0 0 0 0.2rem #B0BEC5; /// Background of an info button /// @group button $infoButtonBg: #03A9F4; ///
-          Text color of an info button /// @group button $infoButtonTextColor: #ffffff; /// Border of an info button /// @group button
-          $infoButtonBorder: 1px solid #03A9F4; /// Background of an info button in hover state /// @group button $infoButtonHoverBg:
-          #039BE5; /// Text color of an info button in hover state /// @group button $infoButtonTextHoverColor: #ffffff; /// Border color of
-          an info button in hover state /// @group button $infoButtonHoverBorderColor: #039BE5; /// Background of an info button in pressed
-          state /// @group button $infoButtonActiveBg: #0288D1; /// Text color of an info button in pressed state /// @group button
-          $infoButtonTextActiveColor: #ffffff; /// Border color of an info button in pressed state /// @group button
-          $infoButtonActiveBorderColor: #0288D1; /// Box shadow of an info button in focused state /// @group button $infoButtonFocusShadow:
-          0 0 0 0.2rem lighten($infoButtonBg, 35%); /// Background of a success button /// @group button $successButtonBg: #4CAF50; /// Text
-          color of a success button /// @group button $successButtonTextColor: #ffffff; /// Border of a success button /// @group button
-          $successButtonBorder: 1px solid #4CAF50; /// Background of a success button in hover state /// @group button
-          $successButtonHoverBg: #43A047; /// Text color of a success button in hover state /// @group button $successButtonTextHoverColor:
-          #ffffff; /// Border color of a success button in hover state /// @group button $successButtonHoverBorderColor: #43A047; ///
-          Background of a success button in pressed state /// @group button $successButtonActiveBg: #388E3C; /// Text Color of a success
-          button in pressed state /// @group button $successButtonTextActiveColor: #ffffff; /// Border color of a success button in pressed
-          state /// @group button $successButtonActiveBorderColor: #388E3C; /// Box shadow of a success button in focused state /// @group
-          button $successButtonFocusShadow: 0 0 0 0.2rem lighten($successButtonBg, 35%); /// Background of a warning button /// @group
-          button $warningButtonBg: #FFC107; /// Text color of a warning button /// @group button $warningButtonTextColor: $textColor; ///
-          Border of a warning button /// @group button $warningButtonBorder: 1px solid #FFC107; /// Background of a warning button in hover
-          state /// @group button $warningButtonHoverBg: #FFB300; /// Text color of a warning button in hover state /// @group button
-          $warningButtonTextHoverColor: $textColor; /// Border color of a warning button in hover state /// @group button
-          $warningButtonHoverBorderColor: #FFB300; /// Background of a warning button in pressed state /// @group button
-          $warningButtonActiveBg: #FFA000; /// Text color of a warning button in pressed state /// @group button
-          $warningButtonTextActiveColor: $textColor; /// Border color of a warning button in pressed state /// @group button
-          $warningButtonActiveBorderColor: #FFA000; /// Box shadow of a warning button in focused state /// @group button
-          $warningButtonFocusShadow: 0 0 0 0.2rem lighten($warningButtonBg, 35%); /// Background of a help button /// @group button
-          $helpButtonBg:#9C27B0; /// Text color of a help button /// @group button $helpButtonTextColor:#ffffff; /// Border of a help button
-          /// @group button $helpButtonBorder:1px solid #9C27B0; /// Background of a help help in hover state /// @group button
-          $helpButtonHoverBg:#8E24AA; /// Text color of a help button in hover state /// @group button $helpButtonTextHoverColor:#ffffff;
-          /// Border color of a help button in hover state /// @group button $helpButtonHoverBorderColor:#8E24AA; /// Background of a help
-          button in pressed state /// @group button $helpButtonActiveBg:#7B1FA2; /// Text color of a help button in pressed state /// @group
-          button $helpButtonTextActiveColor:#ffffff; /// Border color of a help button in pressed state /// @group button
-          $helpButtonActiveBorderColor:#7B1FA2; /// Box shadow of a help button in focused state /// @group button $helpButtonFocusShadow:0
-          0 0 0.2rem #CE93D8; /// Background of a danger button /// @group button $dangerButtonBg: #f44336; /// Text color of a danger
-          button /// @group button $dangerButtonTextColor: #ffffff; /// Border of a danger button /// @group button $dangerButtonBorder: 1px
-          solid #f44336; /// Background of a danger button in hover state /// @group button $dangerButtonHoverBg: #e53935; /// Text color of
-          a danger button in hover state /// @group button $dangerButtonTextHoverColor: #ffffff; /// Border color of a danger button in
-          hover state /// @group button $dangerButtonHoverBorderColor: #e53935; /// Background of a danger button in pressed state ///
-          @group button $dangerButtonActiveBg: #d32f2f; /// Text color of a danger button in pressed state /// @group button
-          $dangerButtonTextActiveColor: #ffffff; /// Border color of a danger button in pressed state /// @group button
-          $dangerButtonActiveBorderColor: #d32f2f; /// Box shadow of a danger button in focused state /// @group button
-          $dangerButtonFocusShadow: 0 0 0 0.2rem lighten($dangerButtonBg, 35%); /// Text color of a link button /// @group button
-          $linkButtonColor:$primaryDarkerColor; /// Text color of a link button in hover state /// @group button
-          $linkButtonHoverColor:$primaryDarkerColor; /// Text decoration of a link button in hover state /// @group button
-          $linkButtonTextHoverDecoration:underline; /// Box shadow of a link button in focused state /// @group button
-          $linkButtonFocusShadow: 0 0 0 0.2rem $focusOutlineColor; /// Background of a toggle button /// @group button $toggleButtonBg:
-          #ffffff; /// Border of a toggle button /// @group button $toggleButtonBorder: 1px solid #ced4da; /// Text color of a toggle button
-          /// @group button $toggleButtonTextColor: $textColor; /// Icon color of a toggle button /// @group button $toggleButtonIconColor:
-          $textSecondaryColor; /// Background of a toggle button in hover state /// @group button $toggleButtonHoverBg: #e9ecef; /// Border
-          color of a toggle button in hover state /// @group button $toggleButtonHoverBorderColor: #ced4da; /// Text color of a toggle
-          button in hover state /// @group button $toggleButtonTextHoverColor: $textColor; /// Icon color of a toggle button in hover state
-          /// @group button $toggleButtonIconHoverColor: $textSecondaryColor; /// Background of a toggle button in selected state /// @group
-          button $toggleButtonActiveBg: $primaryColor; /// Border color of a toggle button in selected state /// @group button
-          $toggleButtonActiveBorderColor: $primaryColor; /// Text color of a toggle button in selected state /// @group button
-          $toggleButtonTextActiveColor: $primaryTextColor; /// Icon color of a toggle button in selected state /// @group button
-          $toggleButtonIconActiveColor: $primaryTextColor; /// Hover background of a toggle button in selected state /// @group button
-          $toggleButtonActiveHoverBg: $primaryDarkColor; /// Hover border color of a toggle button in selected state /// @group button
-          $toggleButtonActiveHoverBorderColor: $primaryDarkColor; /// Hover text color of a toggle button in selected state /// @group
-          button $toggleButtonTextActiveHoverColor: $primaryTextColor; /// Hover icon of a toggle button in selected state /// @group button
-          $toggleButtonIconActiveHoverColor: $primaryTextColor; /// Border of a panel header /// @group panel $panelHeaderBorder: 1px solid
-          #dee2e6; /// Background of a panel header /// @group panel $panelHeaderBg: #f8f9fa; /// Text color of a panel header /// @group
-          panel $panelHeaderTextColor: $textColor; /// Font weight of a panel header /// @group panel $panelHeaderFontWeight: 600; ///
-          Padding of a panel header /// @group panel $panelHeaderPadding: 1rem; /// Font weight of a toggleable panel header /// @group
-          panel $panelToggleableHeaderPadding: .5rem 1rem; /// Background of a panel header in hover state e.g. toggleable state /// @group
-          panel $panelHeaderHoverBg: #e9ecef; /// Border color of a panel header in hover state e.g. toggleable state /// @group panel
-          $panelHeaderHoverBorderColor: #dee2e6; /// Text color of a panel header in hover state e.g. toggleable state /// @group panel
-          $panelHeaderTextHoverColor: #495057; /// Border for the content section of a panel /// @group panel $panelContentBorder: 1px solid
-          #dee2e6; /// Background for the content section of a panel /// @group panel $panelContentBg: #ffffff; /// Text color for the
-          content section of a panel /// @group panel $panelContentTextColor: $textColor; /// Padding for the content section of a panel ///
-          @group panel $panelContentPadding: 1rem; /// Border for the footer section of a panel /// @group panel $panelFooterBorder: 1px
-          solid #dee2e6; /// Background for the footer section of a panel /// @group panel $panelFooterBg: #ffffff; /// Text color for the
-          footer section of a panel /// @group panel $panelFooterTextColor: $textColor; /// Padding for the footer section of a panel ///
-          @group panel $panelFooterPadding: 0.5rem 1rem; /// Spacing between to accordion panels /// @group panel $accordionSpacing: 0; ///
-          Border of an accordion panel header /// @group panel $accordionHeaderBorder: $panelHeaderBorder; /// Background of an accordion
-          panel header /// @group panel $accordionHeaderBg: $panelHeaderBg; /// Text color of an accordion panel header /// @group panel
-          $accordionHeaderTextColor: $panelHeaderTextColor; /// Font weight of an accordion panel header /// @group panel
-          $accordionHeaderFontWeight: $panelHeaderFontWeight; /// Padding of an accordion panel header /// @group panel
-          $accordionHeaderPadding: $panelHeaderPadding; /// Background of an accordion panel header in hover state /// @group panel
-          $accordionHeaderHoverBg: #e9ecef; /// Border of an accordion panel header in hover state /// @group panel
-          $accordionHeaderHoverBorderColor: $panelHeaderBorder; /// Text color of an accordion panel header in hover state /// @group panel
-          $accordionHeaderTextHoverColor: $textColor; /// Background of an accordion panel header in expanded state /// @group panel
-          $accordionHeaderActiveBg: $panelHeaderBg; /// Border of an accordion panel header in expanded state /// @group panel
-          $accordionHeaderActiveBorderColor: #dee2e6; /// Text color of an accordion panel header in expanded state /// @group panel
-          $accordionHeaderTextActiveColor: $textColor; /// Hover background of an accordion panel header in expanded state /// @group panel
-          $accordionHeaderActiveHoverBg: #e9ecef; /// Hover border of an accordion panel header in expanded state /// @group panel
-          $accordionHeaderActiveHoverBorderColor: #dee2e6; /// Text color of an accordion panel header in expanded state /// @group panel
-          $accordionHeaderTextActiveHoverColor: $textColor; /// Border for a content section of an accordion panel /// @group panel
-          $accordionContentBorder: $panelContentBorder; /// Background for a content section of an accordion panel /// @group panel
-          $accordionContentBg: $panelContentBg; /// Text color for a content section of an accordion panel /// @group panel
-          $accordionContentTextColor: $panelContentTextColor; /// Padding for a content section of an accordion panel /// @group panel
-          $accordionContentPadding: $panelContentPadding; /// Border for a parent element containing all the headers of a tabview /// @group
-          panel $tabviewNavBorder: 1px solid #dee2e6; /// Border width for a parent element containing all the headers of a tabview ///
-          @group panel $tabviewNavBorderWidth: 0 0 2px 0; /// Background for a parent element containing all the headers of a tabview ///
-          @group panel $tabviewNavBg: #ffffff; /// Spacing between tabview headers /// @group panel $tabviewHeaderSpacing: 0; /// Border of
-          a tabview header /// @group panel $tabviewHeaderBorder: solid #dee2e6; /// Border width of a tabview header /// @group panel
-          $tabviewHeaderBorderWidth: 0 0 2px 0; /// Border color of a tabview header /// @group panel $tabviewHeaderBorderColor: transparent
-          transparent #dee2e6 transparent; /// Background of a tabview header /// @group panel $tabviewHeaderBg: #ffffff; /// Text color of
-          a tabview header /// @group panel $tabviewHeaderTextColor: $textSecondaryColor; /// Font weight of a tabview header /// @group
-          panel $tabviewHeaderFontWeight: $panelHeaderFontWeight; /// Padding of a tabview header /// @group panel $tabviewHeaderPadding:
-          $panelHeaderPadding; /// Margin of a tabview header /// @group panel $tabviewHeaderMargin: 0 0 -2px 0; /// Background of a tabview
-          header in hover state /// @group panel $tabviewHeaderHoverBg: #ffffff; /// Border of a tabview header in hover state /// @group
-          panel $tabviewHeaderHoverBorderColor: #9ba2aa; /// Text color of a tabview header in hover state /// @group panel
-          $tabviewHeaderTextHoverColor: $textSecondaryColor; /// Background of a tabview header in selected state /// @group panel
-          $tabviewHeaderActiveBg: #ffffff; /// Border of a tabview header in selected state /// @group panel
-          $tabviewHeaderActiveBorderColor: $primaryColor; /// Text color of a tabview header in selected state /// @group panel
-          $tabviewHeaderTextActiveColor: $primaryColor; /// Border for content section of a tabview tab /// @group panel
-          $tabviewContentBorder: 0 none; /// Background for content section of a tabview tab /// @group panel $tabviewContentBg:
-          $panelContentBg; /// Text color for a content section of a tabview tab /// @group panel $tabviewContentTextColor:
-          $panelContentTextColor; /// Padding for a content section of a tabview tab /// @group panel $tabviewContentPadding:
-          $panelContentPadding; /// Background of a fieldset header in hover state /// @group panel $panelHeaderHoverBg: #e9ecef; /// Border
-          of a fieldset header in hover state /// @group panel $panelHeaderHoverBorderColor: #dee2e6; /// Text color of a fieldset header in
-          hover state /// @group panel $panelHeaderTextHoverColor: $textColor; /// Border for a track bar of a scroll panel /// @group panel
-          $scrollPanelTrackBorder: 0 none; /// Background for a track bar of a scroll panel /// @group panel $scrollPanelTrackBg: #f8f9fa;
-          /// Padding of a card body /// @group panel $cardBodyPadding: 1rem; /// Font size of a card title /// @group panel
-          $cardTitleFontSize: 1.5rem; /// Font weight of a card title /// @group panel $cardTitleFontWeight: 700; /// Font size of a card
-          subtitle /// @group panel $cardSubTitleFontWeight: 700; /// Text color of a card subtitle /// @group panel $cardSubTitleColor:
-          $textSecondaryColor; /// Padding of a card content /// @group panel $cardContentPadding: 1rem 0; /// Padding of a card footer ///
-          @group panel $cardFooterPadding: 1rem 0 0 0; /// Box shadow of a card /// @group panel $cardShadow: 0px 2px 1px -1px rgba(0, 0, 0,
-          0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12); /// Background of a paginator /// @group data
-          $paginatorBg: #ffffff; /// Text color of a paginator /// @group data $paginatorTextColor: $textSecondaryColor; /// Border of a
-          paginator /// @group data $paginatorBorder: solid #e9ecef; /// Border width of a paginator /// @group data $paginatorBorderWidth:
-          0; /// Padding of a paginator /// @group data $paginatorPadding: .5rem 1rem; /// Width of a paginator element /// @group data
-          $paginatorElementWidth: $buttonIconOnlyWidth; /// Height of a paginator element /// @group data $paginatorElementHeight:
-          $buttonIconOnlyWidth; /// Background of a paginator element /// @group data $paginatorElementBg: transparent; /// Border of a
-          paginator element /// @group data $paginatorElementBorder: 0 none; /// Icon color of a paginator element /// @group data
-          $paginatorElementIconColor: $textSecondaryColor; /// Background of a paginator element in hover state /// @group data
-          $paginatorElementHoverBg: #e9ecef; /// Border color of a paginator element in hover state /// @group data
-          $paginatorElementHoverBorderColor: transparent; /// Icon color of a paginator element in hover state /// @group data
-          $paginatorElementIconHoverColor: $textSecondaryColor; /// Border radius of a paginator element /// @group data
-          $paginatorElementBorderRadius: $borderRadius; /// Margin of a paginator element /// @group data $paginatorElementMargin: .143rem;
-          /// Padding of a paginator element /// @group data $paginatorElementPadding: 0; /// Border of a table header /// @group data
-          $tableHeaderBorder: 1px solid #e9ecef; /// Border width of a table header /// @group data $tableHeaderBorderWidth: 0 0 1px 0; ///
-          Background of a table header /// @group data $tableHeaderBg: #f8f9fa; /// Text color of a table header /// @group data
-          $tableHeaderTextColor: $textColor; /// Font weight of a table header /// @group data $tableHeaderFontWeight: 600; /// Padding of a
-          table header, must be defined with a shorthand for vertical and horizontal values e.g. ".5rem .5rem" /// @group data
-          $tableHeaderPadding: 1rem 1rem; /// Padding of a table header cell, must be defined with a shorthand for vertical and horizontal
-          values e.g. ".5rem .5rem" /// @group data $tableHeaderCellPadding: 1rem 1rem; /// Background of a table header cell /// @group
-          data $tableHeaderCellBg: #f8f9fa; /// Text color of a table header cell /// @group data $tableHeaderCellTextColor: $textColor; ///
-          Font weight of a table header cell /// @group data $tableHeaderCellFontWeight: 600; /// Border of a table header cell /// @group
-          data $tableHeaderCellBorder: 1px solid #e9ecef; /// Border width of a table header cell /// @group data
-          $tableHeaderCellBorderWidth: 0 0 1px 0; /// Background of a table header cell in hover state /// @group data
-          $tableHeaderCellHoverBg: #e9ecef; /// Text color of a table header cell in hover state /// @group data
-          $tableHeaderCellTextHoverColor: $textColor; /// Icon color of a table header cell /// @group data $tableHeaderCellIconColor:
-          $textSecondaryColor; /// Icon color of a table header cell in hover state /// @group data $tableHeaderCellIconHoverColor:
-          $textSecondaryColor; /// Background of a table header cell in sorted state /// @group data $tableHeaderCellHighlightBg:#f8f9fa;
-          /// Text color of a table header cell in sorted state /// @group data $tableHeaderCellHighlightTextColor:$primaryColor; /// Hover
-          background of a table header cell in sorted state /// @group data $tableHeaderCellHighlightHoverBg:#e9ecef; /// Hover text color
-          of a table header cell in sorted state /// @group data $tableHeaderCellHighlightTextHoverColor:$primaryColor; /// Size of a
-          multiple column sorting order indicator /// @group data $tableSortableColumnBadgeSize: 1.143rem; /// Background of a table body
-          row /// @group data $tableBodyRowBg: #ffffff; /// Text color of a table body row /// @group data $tableBodyRowTextColor:
-          $textColor; /// Background of an even table body row /// @group data $tableBodyRowEvenBg: #ffffff; /// Background of a table body
-          row in hover state /// @group data $tableBodyRowHoverBg: #e9ecef; /// Text color of a table body row in hover state /// @group
-          data $tableBodyRowTextHoverColor: $textColor; /// Border for a cell of a table toby row /// @group data $tableBodyCellBorder: 1px
-          solid rgba(0,0,0,0.08); /// Border width for a cell of a table toby row /// @group data $tableBodyCellBorderWidth: 0 0 1px 0; ///
-          Padding for a cell of a table toby row, must be defined with a shorthand for vertical and horizontal values e.g. ".5rem .5rem" ///
-          @group data $tableBodyCellPadding: 1rem 1rem; /// Padding of a table footer cell, must be defined with a shorthand for vertical
-          and horizontal values e.g. ".5rem .5rem" /// @group data $tableFooterCellPadding: 1rem 1rem; /// Background of a table footer cell
-          /// @group data $tableFooterCellBg: #f8f9fa; /// Text color of a table footer cell /// @group data $tableFooterCellTextColor:
-          $textColor; /// Font weight of a table footer cell /// @group data $tableFooterCellFontWeight: 600; /// Border of a table footer
-          cell /// @group data /// Border of a table footer cell /// @group data $tableFooterCellBorder: 1px solid #e9ecef; /// Border width
-          of a table footer cell /// @group data $tableFooterCellBorderWidth: 0 0 1px 0; /// Backgground of a table column resize indicator
-          bar /// @group data $tableResizerHelperBg: $primaryColor; /// Border of a table footer /// @group data $tableFooterBorder: 1px
-          solid #e9ecef; /// Border width of a table footer /// @group data $tableFooterBorderWidth: 0 0 1px 0; /// Background of a table
-          footer /// @group data $tableFooterBg: #f8f9fa; /// Text color of a table footer /// @group data $tableFooterTextColor:
-          $textColor; /// Font weight of a table footer /// @group data $tableFooterFontWeight: 600; /// Padding of a table footer, must be
-          defined with a shorthand for vertical and horizontal values e.g. ".5rem .5rem" /// @group data $tableFooterPadding: 1rem 1rem; ///
-          Content alignment of a table cell /// @group data $tableCellContentAlignment: left; /// Border width of a table paginator
-          positioned at top /// @group data $tableTopPaginatorBorderWidth: 1px 0 1px 0; /// Border width of a table paginator positioned at
-          bottom /// @group data $tableBottomPaginatorBorderWidth: 0 0 1px 0; /// Scale factor of a small datatable /// @group data
-          $tableScaleSM: 0.5; /// Scale factor of a large datatable /// @group data $tableScaleLG: 1.25; /// Padding for content section of
-          a dataview /// @group data $dataViewContentPadding: 0; /// Border for content section of a dataview /// @group data
-          $dataViewContentBorder: 0 none; /// Border for an item of a dataview in list orientation /// @group data $dataViewListItemBorder:
-          solid #e9ecef; /// Border width for an item of a dataview in list orientation /// @group data $dataViewListItemBorderWidth: 0 0
-          1px 0; /// Breakpoint of orderlist to alternate between horizontal and vertical layout /// @group data $orderListBreakpoint:
-          769px; /// Breakpoint of picklist to alternate between horizontal and vertical layout /// @group data $pickListBreakpoint: 769px;
-          /// Background of a full calendar event /// @group data $fullCalendarEventBg: $primaryDarkColor; /// Border of a full calendar
-          event /// @group data $fullCalendarEventBorder: 1px solid $primaryDarkColor; /// Text color of a full calendar event /// @group
-          data $fullCalendarEventTextColor: $primaryTextColor; /// Padding of a tree /// @group data $treeContainerPadding: 0.286rem; ///
-          Padding of a tree node /// @group data $treeNodePadding: 0.143rem; /// Padding of a tree node content consists of toggler, icon
-          and label /// @group data $treeNodeContentPadding: .5rem; /// Padding of a tree node children container /// @group data
-          $treeNodeChildrenPadding: 0 0 0 1rem; /// Color of a treenode data icon, $dataActionIconColor for the toggler element /// @group
-          data $treeNodeIconColor: $textSecondaryColor; /// Color of a line to connect to organization chart nodes /// @group data
-          $organizationChartConnectorColor: #dee2e6; /// Border of an overlay container element such as dialog or overlaypanel /// @group
-          overlay $overlayContentBorder: 0 none; /// Background of an overlay container element such as dialog or overlaypanel /// @group
-          overlay $overlayContentBg:$panelContentBg; /// Box shadow of an overlay container element such as dialog or overlaypanel ///
-          @group overlay $overlayContainerShadow: 0 0 14px 0 rgba(0, 0, 0, 0.1); /// Background of a dialog header /// @group overlay
-          $dialogHeaderBg: #ffffff; /// Border of a dialog header /// @group overlay $dialogHeaderBorder: 1px solid #dee2e6; /// Text color
-          of a dialog header /// @group overlay $dialogHeaderTextColor: $panelHeaderTextColor; /// Font weight of a dialog header /// @group
-          overlay $dialogHeaderFontWeight: 600; /// Font size of a dialog header /// @group overlay $dialogHeaderFontSize: 1.25rem; ///
-          Padding of a dialog header /// @group overlay $dialogHeaderPadding: 1.5rem; /// Padding of a dialog content /// @group overlay
-          $dialogContentPadding: 0 1.5rem; /// Border of a dialog footer /// @group overlay $dialogFooterBorder: 1px solid #dee2e6; ///
-          Padding of a dialog footer /// @group overlay $dialogFooterPadding: 1.5rem; /// Background of a tooltip /// @group overlay
-          $tooltipBg: $textColor; /// Text color of a tooltip /// @group overlay $tooltipTextColor: #ffffff; /// Padding of a tooltip ///
-          @group overlay $tooltipPadding: $inputPadding; /// Margin of a message /// @group message $messageMargin: 1rem 0; /// Padding of a
-          message /// @group message $messagePadding: 1rem 1.5rem; /// Border width of a message /// @group message $messageBorderWidth: 0 0
-          0 4px; /// Font size of a message icon /// @group message $messageIconFontSize: 1.5rem; /// Font size of a message text /// @group
-          message $messageTextFontSize: 1rem; /// Font weight of a message text /// @group message $messageTextFontWeight: 500; /// Padding
-          of an inline message /// @group message $inlineMessagePadding: $inputPadding; /// Margin of an inline message /// @group message
-          $inlineMessageMargin: 0; /// Font size of an inline message icon /// @group message $inlineMessageIconFontSize: 1rem; /// Padding
-          of an inline message text /// @group message $inlineMessageTextFontSize: 1rem; /// Border width of an inline message text ///
-          @group message $inlineMessageBorderWidth: 1px; /// Font size of a toast message icon /// @group message $toastIconFontSize: 2rem;
-          /// Margin of a toast message text /// @group message $toastMessageTextMargin: 0 0 0 1rem; /// Margin of a toast message ///
-          @group message $toastMargin: 0 0 1rem 0; /// Padding of a toast message /// @group message $toastPadding: 1rem; /// Border width
-          of a toast message /// @group message $toastBorderWidth: 0 0 0 4px; /// Box shadow of a toast message /// @group message
-          $toastShadow: 0 3px 14px 0 rgba(0, 0, 0, 0.3); /// Opacity of a toast message /// @group message $toastOpacity: .9; /// Font
-          weight of a toast message title text /// @group message $toastTitleFontWeight: 700; /// Margin of a toast message detail text ///
-          @group message $toastDetailMargin: $inlineSpacing 0 0 0; /// Background of an info message /// @group message $infoMessageBg:
-          #039BE5; /// Border of an info message /// @group message $infoMessageBorder: solid #027cb7; /// Text color of an info message ///
-          @group message $infoMessageTextColor: #ffffff; /// Icon color of an info message /// @group message $infoMessageIconColor:
-          #ffffff; /// Background of a success message /// @group message $successMessageBg: #43A047; /// Border of a success message ///
-          @group message $successMessageBorder: 0 none; /// Text color of a success message /// @group message $successMessageTextColor:
-          #ffffff; /// Icon color of a success message /// @group message $successMessageIconColor: #ffffff; /// Background of a warning
-          message /// @group message $warningMessageBg: #FFB300; /// Border of a warning message /// @group message $warningMessageBorder: 0
-          none; /// Text color of a warning message /// @group message $warningMessageTextColor: $textColor; /// Icon color of a warning
-          message /// @group message $warningMessageIconColor: $textColor; /// Background of an error message /// @group message
-          $errorMessageBg: #E53935; /// Border of an error message /// @group message $errorMessageBorder: 0 none; /// Text color of an
-          error message /// @group message $errorMessageTextColor: #ffffff; /// Icon color of an error message /// @group message
-          $errorMessageIconColor: #ffffff; /// Background of a steps item /// @group menu $stepsItemBg: #ffffff; /// Border of a steps item
-          /// @group menu $stepsItemBorder: 1px solid #c8c8c8; /// Text color of a steps item /// @group menu $stepsItemTextColor:
-          $textSecondaryColor; /// Width of a steps itrem number /// @group menu $stepsItemNumberWidth: 2rem; /// Height of a steps itrem
-          number /// @group menu $stepsItemNumberHeight: 2rem; /// Font size of a steps itrem number /// @group menu
-          $stepsItemNumberFontSize: 1.143rem; /// Color of a steps itrem number /// @group menu $stepsItemNumberColor: $textColor; ///
-          Border radius of a steps itrem number /// @group menu $stepsItemNumberBorderRadius: 50%; /// Font weight of an active steps itrem
-          number /// @group menu $stepsItemActiveFontWeight: 600; /// Width of a vertical menu such as tieredmenu or context menu /// @group
-          menu $menuWidth: 12.5rem; /// Background of a menu /// @group menu $menuBg: #ffffff; /// Border of a menu /// @group menu
-          $menuBorder: 1px solid #dee2e6; /// Text color of a menu /// @group menu $menuTextColor: $textColor; /// Padding of a menuitem ///
-          @group menu $menuitemPadding: .75rem 1rem; /// Border radius of a menuitem /// @group menu $menuitemBorderRadius: 0; /// Text
-          color of a menuitem /// @group menu $menuitemTextColor: $textColor; /// Icon color of a menuitem /// @group menu
-          $menuitemIconColor: $textSecondaryColor; /// Text color of a menuitrem in hover state /// @group menu $menuitemTextHoverColor:
-          $textColor; /// Icon color of a menuitrem in hover state /// @group menu $menuitemIconHoverColor: $textSecondaryColor; ///
-          Background of a menuitrem in hover state /// @group menu $menuitemHoverBg: #e9ecef; /// Text color of a menuitrem in active state
-          /// @group menu $menuitemTextActiveColor: $textColor; /// Icon color of a menuitrem in active state /// @group menu
-          $menuitemIconActiveColor: $textSecondaryColor; /// Background of a menuitrem in active state /// @group menu $menuitemActiveBg:
-          #e9ecef; /// Font size of an icon indicating the itrem has a submenu /// @group menu $menuitemSubmenuIconFontSize: .875rem; ///
-          Margin of a submenu header /// @group menu $submenuHeaderMargin: 0; /// Padding of a submenu header /// @group menu
-          $submenuHeaderPadding: .75rem 1rem; /// Background of a submenu header /// @group menu $submenuHeaderBg: #ffffff; /// Text color
-          of a submenu header /// @group menu $submenuHeaderTextColor: $textColor; /// Border radius of a submenu header /// @group menu
-          $submenuHeaderBorderRadius: 0; /// Font weight of a submenu header /// @group menu $submenuHeaderFontWeight: 600; /// Background
-          of an overlay menu /// @group menu $overlayMenuBg:$menuBg; /// Border of an overlay menu /// @group menu $overlayMenuBorder: 0
-          none; /// Box shadow of an overlay menu /// @group menu $overlayMenuShadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1); /// Padding of a
-          vertical menu e.g. tieredmenu, contextmenu /// @group menu $verticalMenuPadding: .25rem 0; /// Margin of a menuitrem separator ///
-          @group menu $menuSeparatorMargin: .25rem 0; /// Padding of a breadcrumb /// @group menu $breadcrumbPadding: 1rem; /// Background
-          of a breadcrumb /// @group menu $breadcrumbBg: $menuBg; /// Border of a breadcrumb /// @group menu $breadcrumbBorder: $menuBorder;
-          /// Text color of a breadcrumb item /// @group menu $breadcrumbItemTextColor: $menuitemTextColor; /// Icon color of a breadcrumb
-          item /// @group menu $breadcrumbItemIconColor: $menuitemIconColor; /// Text color of the breadcrumb item /// @group menu
-          $breadcrumbLastItemTextColor: $menuitemTextColor; /// Icon color of the breadcrumb item /// @group menu
-          $breadcrumbLastItemIconColor: $menuitemIconColor; /// Color of a breadcrumb separator /// @group menu $breadcrumbSeparatorColor:
-          $menuitemTextColor; /// Padding of a horizontal menu e.g. menubar /// @group menu $horizontalMenuPadding: .5rem; /// Background of
-          a horizontal menu e.g. menubar /// @group menu $horizontalMenuBg: #f8f9fa; /// Border of a horizontal menu e.g. menubar /// @group
-          menu $horizontalMenuBorder: $menuBorder; /// Text color of a horizontal menu e.g. menubar /// @group menu
-          $horizontalMenuTextColor: $menuTextColor; /// Padding of a horizontal menu root item e.g. menubar /// @group menu
-          $horizontalMenuRootMenuitemPadding: $menuitemPadding; /// Border radius of a horizontal menu root item e.g. menubar /// @group
-          menu $horizontalMenuRootMenuitemBorderRadius: $borderRadius; /// Text color of a horizontal menu root item e.g. menubar /// @group
-          menu $horizontalMenuRootMenuitemTextColor: $menuitemTextColor; /// Icon color of a horizontal menu root item e.g. menubar ///
-          @group menu $horizontalMenuRootMenuitemIconColor: $menuitemIconColor; /// Text color of a horizontal menu root item in hover state
-          e.g. menubar /// @group menu $horizontalMenuRootMenuitemTextHoverColor: $menuitemTextHoverColor; /// Icon color of a horizontal
-          menu root item in hover state e.g. menubar /// @group menu $horizontalMenuRootMenuitemIconHoverColor: $menuitemIconHoverColor; ///
-          Background of a horizontal menu root item in hover state e.g. menubar /// @group menu $horizontalMenuRootMenuitemHoverBg:
-          $menuitemHoverBg; /// Text color of a horizontal menu root item in hover active e.g. menubar /// @group menu
-          $horizontalMenuRootMenuitemTextActiveColor:$menuitemTextActiveColor; /// Icon color of a horizontal menu root item in hover active
-          e.g. menubar /// @group menu $horizontalMenuRootMenuitemIconActiveColor: $menuitemIconActiveColor; /// Background of a horizontal
-          menu root item in active state e.g. menubar /// @group menu $horizontalMenuRootMenuitemActiveBg: $menuitemActiveBg; /// Padding of
-          a carousel indicators container /// @group media $carouselIndicatorsPadding: 1rem; /// Padding of a carousel indicator /// @group
-          media $carouselIndicatorBg: #e9ecef; /// Padding of a carousel indicator in hover state /// @group media
-          $carouselIndicatorHoverBg: #dee2e6; /// Border radius of a carousel indicator /// @group media $carouselIndicatorBorderRadius: 0;
-          /// Width of a carousel indicator /// @group media $carouselIndicatorWidth: 2rem; /// Height of a carousel indicator /// @group
-          media $carouselIndicatorHeight: .5rem; /// Background of a galleria modal /// @group media $galleriaMaskBg: rgba(0,0,0,0.9); ///
-          Margin of a galleria close icon /// @group media $galleriaCloseIconMargin: .5rem; /// Font size of a galleria close icon ///
-          @group media $galleriaCloseIconFontSize: 2rem; /// Background of a galleria close icon /// @group media $galleriaCloseIconBg:
-          transparent; /// Color of a galleria close icon /// @group media $galleriaCloseIconColor: #ebedef; /// Background of a galleria
-          close icon in hover state /// @group media $galleriaCloseIconHoverBg: rgba(255,255,255,0.1); /// Color of a galleria close icon in
-          hover state /// @group media $galleriaCloseIconHoverColor: #ebedef; /// Width of a galleria close icon /// @group media
-          $galleriaCloseIconWidth: 4rem; /// Height of a galleria close icon /// @group media $galleriaCloseIconHeight: 4rem; /// Border
-          radius of a galleria close icon /// @group media $galleriaCloseIconBorderRadius: 50%; /// Background of a galleria navigator item
-          /// @group media $galleriaItemNavigatorBg: rgba(0,0,0,.2); /// Color of a galleria navigator item /// @group media
-          $galleriaItemNavigatorColor: #aeb6bf; /// Margin of a galleria navigator item /// @group media $galleriaItemNavigatorMargin: .5rem
-          0; /// Font size of a galleria navigator item /// @group media $galleriaItemNavigatorFontSize: 2rem; /// Background of a galleria
-          navigator item in hover state /// @group media $galleriaItemNavigatorHoverBg: rgba(0,0,0,.3); /// Color of a galleria navigator
-          item in hover state /// @group media $galleriaItemNavigatorHoverColor: #ebedef; /// Width of a galleria navigator item /// @group
-          media $galleriaItemNavigatorWidth: 4rem; /// Height of a galleria navigator item /// @group media $galleriaItemNavigatorHeight:
-          4rem; /// Border radius of a galleria navigator item /// @group media $galleriaItemNavigatorBorderRadius: $borderRadius; ///
-          Background of a galleria caption /// @group media $galleriaCaptionBg: rgba(0,0,0,.5); /// Color of a galleria caption /// @group
-          media $galleriaCaptionTextColor: #ebedef; /// Padding of a galleria caption /// @group media $galleriaCaptionPadding: 1rem; ///
-          Padding of a galleria indicators container /// @group media $galleriaIndicatorsPadding: 1rem; /// Background of a galleria
-          indicator /// @group media $galleriaIndicatorBg: #e9ecef; /// Background of a galleria indicator in hover state /// @group media
-          $galleriaIndicatorHoverBg: #dee2e6; /// Border radius of a galleria indicator /// @group media $galleriaIndicatorBorderRadius:
-          50%; /// Width of a galleria indicator /// @group media $galleriaIndicatorWidth: 1rem; /// Height of a galleria indicator ///
-          @group media $galleriaIndicatorHeight: 1rem; /// Background of a galleria indicator container when placed inside the viewport ///
-          @group media $galleriaIndicatorsBgOnItem: rgba(0,0,0,.5); /// Background of a galleria indicator when placed inside the viewport
-          /// @group media $galleriaIndicatorBgOnItem: rgba(255,255,255,.4); /// Background of a galleria indicator in hover state when
-          placed inside the viewport /// @group media $galleriaIndicatorHoverBgOnItem: rgba(255,255,255,.6); /// Background of a galleria
-          thumbnail container /// @group media $galleriaThumbnailContainerBg: rgba(0,0,0,.9); /// Padding of a galleria thumbnail container
-          /// @group media $galleriaThumbnailContainerPadding: 1rem .25rem; /// Background of a galleria thumbnail navigator /// @group
-          media $galleriaThumbnailNavigatorBg: transparent; /// Color of a galleria thumbnail navigator /// @group media
-          $galleriaThumbnailNavigatorColor: #aeb6bf; /// Background of a galleria thumbnail navigator in hover state /// @group media
-          $galleriaThumbnailNavigatorHoverBg: rgba(255,255,255,0.1); /// Color of a galleria thumbnail navigator in hover state /// @group
-          media $galleriaThumbnailNavigatorHoverColor: #aeb6bf; /// Border radius of a galleria thumbnail navigator in hover state ///
-          @group media $galleriaThumbnailNavigatorBorderRadius: 50%; /// Width of a galleria thumbnail navigator in hover state /// @group
-          media $galleriaThumbnailNavigatorWidth: 2rem; /// Height of a galleria thumbnail navigator in hover state /// @group media
-          $galleriaThumbnailNavigatorHeight: 2rem; /// Padding of an inplace element /// @group misc $inplacePadding: $inputPadding; ///
-          Background of an inplace element in hover state /// @group misc $inplaceHoverBg: #e9ecef; /// Text color of an inplace element in
-          hover state /// @group misc $inplaceTextHoverColor: $textColor; /// Background of a badge /// @group misc $badgeBg: $primaryColor;
-          /// Text color of a badge /// @group misc $badgeTextColor: $primaryTextColor; /// Minimum width of a badge /// @group misc
-          $badgeMinWidth: 1.5rem; /// Height of a badge /// @group misc $badgeHeight: 1.5rem; /// Font weight of a badge /// @group misc
-          $badgeFontWeight: 700; /// Font size of a badge /// @group misc $badgeFontSize: .75rem; /// Padding of a badge /// @group misc
-          $tagPadding: .25rem .4rem; /// Height of a progress bar /// @group misc $progressBarHeight: 1.5rem; /// Border of a progress bar
-          /// @group misc $progressBarBorder: 0 none; /// Background of a progress bar /// @group misc $progressBarBg: #dee2e6; ///
-          Background of a progress bar value /// @group misc $progressBarValueBg: $primaryColor;
-        </app-code>
-      </div>
+
       <h5>Customization</h5>
       <p>
         SASS API is located inside the <i>src/sass/designer</i> folder and themes import the main <i>_components.scss</i> from this
         location. In case you need to make extend the API, add these changes to the <i>_extensions.scss</i> file in the theme folder instead
         of editing the .scss files inside the designer folder to avoid any maintenance issues. Designer is updated periodically for
         improvements and updating is done by replacing the designer folder only so for seamless updates, never edit the designer folder as
-        <i>src/sass/themes/fluxys/_extensions.scss</i> file is created for this purpose.
+        <i>src/sass/themes/mytheme/_extensions.scss</i> file is created for this purpose.
       </p>
 
       <h5>Optimize Bundle Size</h5>
@@ -596,12 +134,12 @@
         Once the theme is designed and ready for use, it needs to be included in your application. If you have used the visual editor, you
         may just download it as a css file by clicking the download button. Second alternative is including the sass api inside your
         application so that angular-cli can build and include it in your bundle which is exactly the approach used in code editor mode by
-        importing fluxys.scss in main.js. Another alternative would be compiling the sass yourself with the command below and use in your
+        importing mytheme.scss in main.js. Another alternative would be compiling the sass yourself with the command below and use in your
         application via a link tag or an import statement e.g. in your main.js entry file to have it bundled. Choice is depending on your
         requirements.
       </p>
 
-      <app-code ngPreserveWhitespaces> sass --update src/assets/fluxys:src/assets/fluxys </app-code>
+      <app-code ngPreserveWhitespaces> sass --update src/assets/mytheme:src/assets/mytheme </app-code>
     </div>
   </div>
 </div>

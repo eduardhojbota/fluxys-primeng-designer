@@ -1,3 +1,10 @@
+# 11.0.0
+
+- Compatibility with PrimeNG 11.0.0
+- New variables for Timeline
+- Theming for Table filtering elements
+- Theming for ConfirmPopup
+
 # 10.1.0
 
 - Enhanced Visual Designer to include Material, Bootstrap, Fluent and Soho

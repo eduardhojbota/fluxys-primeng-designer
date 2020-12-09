@@ -10,10 +10,6 @@ if (environment.production) {
   enableProdMode();
 }
 
-if (environment.editor === 'code') {
-  require('style-loader!./sass/themes/fluxys/theme.scss');
-}
-
 platformBrowserDynamic()
   .bootstrapModule(AppModule)
   .catch((err) => console.error(err));

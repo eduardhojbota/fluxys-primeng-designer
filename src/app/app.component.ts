@@ -20,32 +20,32 @@ export class AppComponent implements OnInit {
 
   sidebarActive: boolean;
 
-  inputStyle = 'outlined';
+  inputStyle: string = 'outlined';
 
   themeStyle: HTMLElement;
 
   constructor(private primengConfig: PrimeNGConfig) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.codeEditor = environment.editor === 'code';
     this.primengConfig.ripple = true;
   }
 
-  onMenuButtonClick(): void {
+  onMenuButtonClick() {
     this.sidebarActive = true;
   }
 
-  inputStyleChange(value: string): void {
+  inputStyleChange(value: string) {
     this.inputStyle = value;
   }
 
-  onCompile(value: string): void {
+  onCompile(value: string) {
     if (!this.initialized) {
       this.initialized = true;
     }
 
-    const styleElement = document.createElement('style');
-    styleElement.type = 'text/css'; // tslint:disable-line:deprecation
+    let styleElement = document.createElement('style');
+    styleElement.type = 'text/css';
     styleElement.appendChild(document.createTextNode(value));
     document.getElementsByTagName('head')[0].appendChild(styleElement);
 
@@ -56,11 +56,11 @@ export class AppComponent implements OnInit {
     this.themeStyle = styleElement;
   }
 
-  onThemeSelect(theme: string): void {
+  onThemeSelect(theme: string) {
     this.theme = theme;
   }
 
-  onRestart(): void {
+  onRestart() {
     this.theme = null;
     this.initialized = false;
   }
