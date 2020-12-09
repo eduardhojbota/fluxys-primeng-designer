@@ -4,13 +4,13 @@
   "license": "PrimeNG Commercial",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --configuration=code",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint --fix --type-check",
     "format": "prettier --write .",
     "e2e": "ng e2e",
-    "build-release": "ng build --prod",
+    "build-release": "ng build --prod --configuration=code-production",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
   "private": true,
