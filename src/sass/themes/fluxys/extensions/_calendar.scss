@@ -1,3 +1,31 @@
+.p-calendar.p-calendar-w-btn {
+  .p-inputtext {
+    border-bottom-right-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
+
+    /*&:has(+ .p-datepicker-trigger:enabled:hover) {
+      border-color: $inputHoverBorderColor;
+    }*/
+  }
+
+  .p-datepicker-trigger {
+    background: transparent;
+    color: $grayColor700;
+    border: 0 none;
+    margin-left: -$buttonIconOnlyWidth;
+
+    &:enabled:hover {
+      background: transparent;
+      color: $grayColor900;
+    }
+
+    &:enabled:active {
+      background: transparent;
+      color: $grayColor700;
+    }
+  }
+}
+
 .p-datepicker {
   .p-datepicker-header {
     .p-datepicker-prev,
