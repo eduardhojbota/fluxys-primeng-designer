@@ -7,11 +7,11 @@ import { Injectable } from '@angular/core';
 export class EditorService {
   constructor(private http: HttpClient) {}
 
-  getEditor(theme: string) {
+  getEditor(theme: string): Promise<any[]> {
     return this.http
       .get<any>('assets/editor/' + theme + '.json')
       .toPromise()
-      .then((res) => <any[]>res.editor)
+      .then((res) => res.editor as any[])
       .then((data) => {
         return data;
       });

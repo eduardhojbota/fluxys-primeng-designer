@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { CountryService } from '../service/country.service';
 import { CustomerService } from '../service/customer.service';
 import { ProductService } from '../service/product.service';
@@ -14,7 +14,7 @@ interface Option {
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   floatValue: string;
 
   selectedCountry: any;
@@ -85,7 +85,7 @@ export class HomeComponent {
     private confirmationService: ConfirmationService
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.countryService.getCountries().then((countries) => {
       this.countries = countries;
     });
@@ -266,12 +266,11 @@ export class HomeComponent {
     ];
   }
 
-  filterCountry(event) {
-    let filtered: any[] = [];
-    let query = event.query;
-    for (let i = 0; i < this.countries.length; i++) {
-      let country = this.countries[i];
-      if (country.name.toLowerCase().indexOf(query.toLowerCase()) == 0) {
+  filterCountry(event): void {
+    const filtered: any[] = [];
+    const query = event.query;
+    for (const country of this.countries) {
+      if (country.name.toLowerCase().indexOf(query.toLowerCase()) === 0) {
         filtered.push(country);
       }
     }
@@ -279,24 +278,24 @@ export class HomeComponent {
     this.filteredCountries = filtered;
   }
 
-  onRowSelect(event, op) {
+  onRowSelect(event, op): void {
     this.messageService.add({ severity: 'info', summary: 'Product Selected', detail: event.data.name });
     op.hide();
   }
 
-  openDialog() {
+  openDialog(): void {
     this.displayDialog = true;
   }
 
-  closeDialog() {
+  closeDialog(): void {
     this.displayDialog = false;
   }
 
-  showToast(severity) {
-    this.messageService.add({ severity: severity, summary: 'Message Summary', detail: 'Message Detail', life: 3000 });
+  showToast(severity): void {
+    this.messageService.add({ severity, summary: 'Message Summary', detail: 'Message Detail', life: 3000 });
   }
 
-  showConfirmPopup(event: Event) {
+  showConfirmPopup(event: Event): void {
     this.confirmationService.confirm({
       target: event.target,
       message: 'Are you sure that you want to proceed?',
@@ -311,7 +310,7 @@ export class HomeComponent {
     });
   }
 
-  showConfirmDialog() {
+  showConfirmDialog(): void {
     this.confirmationService.confirm({
       message: 'Are you sure that you want to proceed?',
       header: 'Confirmation',

@@ -1,11 +1,5 @@
 import { Component, ElementRef, AfterViewInit, Input, ViewChild } from '@angular/core';
 
-declare global {
-  interface Window {
-    Prism: any;
-  }
-}
-
 @Component({
   selector: 'app-code',
   template: `

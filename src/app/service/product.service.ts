@@ -8,11 +8,11 @@ import { Product } from '../domain/model';
 export class ProductService {
   constructor(private http: HttpClient) {}
 
-  getProductsSmall() {
+  getProductsSmall(): Promise<Product[]> {
     return this.http
       .get<any>('assets/demo/data/products-small.json')
       .toPromise()
-      .then((res) => <Product[]>res.data)
+      .then((res) => res.data as Product[])
       .then((data) => {
         return data;
       });
