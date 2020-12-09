@@ -20,11 +20,11 @@ $textSecondaryColor: #6c757d;
 
 /// Background of a highlighted item
 /// @group general
-$highlightBg: $primaryColor;
+$highlightBg: $neutralColor900;
 
 /// Text color of a highlighted item
 /// @group general
-$highlightTextColor: $primaryTextColor;
+$highlightTextColor: $white;
 
 /// Radius of the corners
 /// @group general
@@ -52,7 +52,7 @@ $primeIconFontSize: 1rem;
 
 /// Separator border
 /// @group general
-$divider: 1px solid #dee2e6;
+$divider: 1px solid $grayColor300;
 
 /// Space between two inline items
 /// @group general

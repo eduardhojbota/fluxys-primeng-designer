@@ -1,0 +1,52 @@
+.p-datepicker {
+  .p-datepicker-header {
+    .p-datepicker-prev,
+    .p-datepicker-next {
+      color: $white;
+
+      &:enabled:hover {
+        color: $white;
+        background: $neutralColor500;
+      }
+    }
+
+    .p-datepicker-title {
+      select {
+        color: $white;
+        background: transparent;
+        border: solid $white;
+        border-width: 0 0 1px 0;
+
+        &:focus {
+          box-shadow: none;
+          border-color: $white;
+        }
+
+        option {
+          color: $black;
+        }
+      }
+    }
+  }
+
+  table.p-datepicker-calendar {
+    thead {
+      color: $white;
+      font-weight: 900;
+      font-size: 1rem;
+      background: $neutralColor700;
+    }
+  }
+
+  .p-datepicker-buttonbar {
+    background: $grayColor50;
+    border-top-width: 0;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+
+    .p-button {
+      padding: 0.25rem 0;
+    }
+  }
+}
