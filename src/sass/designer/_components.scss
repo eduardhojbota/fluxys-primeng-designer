@@ -31,11 +31,13 @@
 @import './components/data/_carousel';
 @import './components/data/_datatable';
 @import './components/data/_dataview';
+@import './components/data/_filter';
 @import './components/data/_fullcalendar';
 @import './components/data/_orderlist';
 @import './components/data/_organizationchart';
 @import './components/data/_paginator';
 @import './components/data/_picklist';
+@import './components/data/_timeline';
 @import './components/data/_tree';
 @import './components/data/_treetable';
 @import './components/data/_virtualscroller';
@@ -50,6 +52,7 @@
 @import './components/panel/_toolbar';
 
 //Overlay
+@import './components/overlay/_confirmpopup';
 @import './components/overlay/_dialog';
 @import './components/overlay/_overlaypanel';
 @import './components/overlay/_sidebar';
