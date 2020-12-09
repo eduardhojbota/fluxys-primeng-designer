@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DynamicDialogContentComponent } from './dynamic-dialog-content.component';
 
@@ -6,7 +6,7 @@ describe('DynamicDialogContentComponent', () => {
   let component: DynamicDialogContentComponent;
   let fixture: ComponentFixture<DynamicDialogContentComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [DynamicDialogContentComponent],
     }).compileComponents();
