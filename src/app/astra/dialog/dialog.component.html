@@ -103,6 +103,7 @@
           <button type="button" pButton label="Ok" (click)="neutralDialogVisible = false"></button>
         </p-footer>
       </p-dialog>
+      <!-- prettier-ignore -->
       <app-code lang="html" ngPreserveWhitespaces>
 &lt;p-dialog [(visible)]="visible"&gt;
   &lt;p-header&gt;
@@ -114,7 +115,8 @@
     &lt;button type="button" pButton label="Ok" (click)="performAction()"&gt;&lt;/button&gt;
   &lt;/p-footer&gt;
 &lt;/p-dialog&gt;
-      </app-code>
+</app-code>
+      <!-- prettier-ignore -->
       <app-code lang="typescript" ngPreserveWhitespaces>
 visible = false;
 show(): void &#123;
@@ -127,7 +129,7 @@ performAction(): void &#123;
   // do something
   this.visible = false;
 }
-      </app-code>
+</app-code>
       <h5>Within Day</h5>
       <button type="button" pButton label="Open" class="flx-within-day p-mr-2 p-mb-2" (click)="showWithinDay()"></button>
       <p-dialog [(visible)]="withinDayDialogVisible" styleClass="flx-within-day">
@@ -138,6 +140,7 @@ performAction(): void &#123;
           <button type="button" pButton label="Ok" class="flx-within-day" (click)="withinDayDialogVisible = false"></button>
         </p-footer>
       </p-dialog>
+      <!-- prettier-ignore -->
       <app-code lang="html" ngPreserveWhitespaces>
 &lt;p-dialog [(visible)]="visible" styleClass="flx-within-day"&gt;
   &lt;p-header&gt;
@@ -150,7 +153,8 @@ performAction(): void &#123;
     &lt;button type="button" pButton label="Ok" class="flx-within-day" (click)="performAction()"&gt;&lt;/button&gt;
   &lt;/p-footer&gt;
 &lt;/p-dialog&gt;
-      </app-code>
+</app-code>
+      <!-- prettier-ignore -->
       <app-code lang="typescript" ngPreserveWhitespaces>
 visible = false;
 show(): void &#123;
@@ -163,7 +167,7 @@ performAction(): void &#123;
   // do something
   this.visible = false;
 }
-      </app-code>
+</app-code>
       <h5>Day Ahead</h5>
       <button type="button" pButton label="Open" class="flx-day-ahead p-mr-2 p-mb-2" (click)="showDayAhead()"></button>
       <p-dialog [(visible)]="dayAheadDialogVisible" styleClass="flx-day-ahead">
@@ -177,6 +181,7 @@ performAction(): void &#123;
           <button type="button" pButton label="Ok" class="flx-day-ahead" (click)="dayAheadDialogVisible = false"></button>
         </p-footer>
       </p-dialog>
+      <!-- prettier-ignore -->
       <app-code lang="html" ngPreserveWhitespaces>
 &lt;p-dialog [(visible)]="visible" styleClass="flx-day-ahead"&gt;
   &lt;p-header&gt;
@@ -189,7 +194,8 @@ performAction(): void &#123;
     &lt;button type="button" pButton label="Ok" class="flx-day-ahead" (click)="performAction()"&gt;&lt;/button&gt;
   &lt;/p-footer&gt;
 &lt;/p-dialog&gt;
-      </app-code>
+</app-code>
+      <!-- prettier-ignore -->
       <app-code lang="typescript" ngPreserveWhitespaces>
 visible = false;
 show(): void &#123;
@@ -202,7 +208,7 @@ performAction(): void &#123;
   // do something
   this.visible = false;
 }
-      </app-code>
+</app-code>
     </p-panel>
   </div>
 </div>

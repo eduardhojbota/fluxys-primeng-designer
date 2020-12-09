@@ -34,6 +34,7 @@
     <p-panel header="Fluxys Example" [toggleable]="true">
       <h5>Neutral</h5>
       <button type="button" pButton label="Open" class="p-mr-2 p-mb-2" (click)="confirmNeutral()"></button>
+      <!-- prettier-ignore -->
       <app-code lang="html" ngPreserveWhitespaces>
 &lt;p-confirmDialog #cd header="Confirmation Dialog"&gt;
   &lt;p-footer&gt;
@@ -41,14 +42,16 @@
     &lt;button type="button" pButton label="Ok" (click)="cd.accept()"&gt;&lt;/button&gt;
   &lt;/p-footer&gt;
 &lt;/p-confirmDialog&gt;
-      </app-code>
+</app-code>
+      <!-- prettier-ignore -->
       <app-code lang="typescript" ngPreserveWhitespaces>
 this.confirmationService.confirm(&#123;
   message: 'Dialog is a container to display content in an overlay window.',
 });
-      </app-code>
+</app-code>
       <h5>Within Day</h5>
       <button type="button" pButton label="Open" class="flx-within-day p-mr-2 p-mb-2" (click)="confirmWithinDay()"></button>
+      <!-- prettier-ignore -->
       <app-code lang="html" ngPreserveWhitespaces>
 &lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-within-day"&gt;
   &lt;p-footer&gt;
@@ -56,14 +59,16 @@ this.confirmationService.confirm(&#123;
     &lt;button type="button" pButton label="Ok" class="flx-within-day" (click)="cd.accept()"&gt;&lt;/button&gt;
   &lt;/p-footer&gt;
 &lt;/p-confirmDialog&gt;
-      </app-code>
+</app-code>
+      <!-- prettier-ignore -->
       <app-code lang="typescript" ngPreserveWhitespaces>
 this.confirmationService.confirm(&#123;
   message: 'Dialog is a container to display content in an overlay window.',
 });
-      </app-code>
+</app-code>
       <h5>Day Ahead</h5>
       <button type="button" pButton label="Open" class="flx-day-ahead p-mr-2 p-mb-2" (click)="confirmDayAhead()"></button>
+      <!-- prettier-ignore -->
       <app-code lang="html" ngPreserveWhitespaces>
 &lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-day-ahead"&gt;
   &lt;p-footer&gt;
@@ -71,14 +76,16 @@ this.confirmationService.confirm(&#123;
     &lt;button type="button" pButton label="Ok" class="flx-day-ahead" (click)="cd.accept()"&gt;&lt;/button&gt;
   &lt;/p-footer&gt;
 &lt;/p-confirmDialog&gt;
-      </app-code>
+</app-code>
+      <!-- prettier-ignore -->
       <app-code lang="typescript" ngPreserveWhitespaces>
 this.confirmationService.confirm(&#123;
   message: 'Dialog is a container to display content in an overlay window.',
 });
-      </app-code>
+</app-code>
       <h5>Warning</h5>
       <button type="button" pButton label="Open" class="p-button-warning p-mr-2 p-mb-2" (click)="confirmWarning()"></button>
+      <!-- prettier-ignore -->
       <app-code lang="html" ngPreserveWhitespaces>
 &lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-warning"&gt;
   &lt;p-footer&gt;
@@ -86,13 +93,14 @@ this.confirmationService.confirm(&#123;
     &lt;button type="button" pButton label="Ok" (click)="cd.accept()"&gt;&lt;/button&gt;
   &lt;/p-footer&gt;
 &lt;/p-confirmDialog&gt;
-      </app-code>
+</app-code>
+      <!-- prettier-ignore -->
       <app-code lang="typescript" ngPreserveWhitespaces>
 this.confirmationService.confirm(&#123;
   message: 'Dialog is a container to display content in an overlay window.',
   icon: 'pi pi-exclamation-circle',
 });
-      </app-code>
+</app-code>
       <p-confirmDialog #cd1 key="normalCD" header="Confirmation Dialog">
         <p-footer>
           <button type="button" pButton label="Cancel" class="p-button-secondary" (click)="cd1.reject()"></button>

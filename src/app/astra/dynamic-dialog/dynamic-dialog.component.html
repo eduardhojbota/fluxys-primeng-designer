@@ -11,6 +11,7 @@
     <p-panel header="Fluxys Example" [toggleable]="true">
       <h5>Neutral</h5>
       <button type="button" pButton label="Open" class="p-mr-2 p-mb-2" (click)="showDynamicNeutral()"></button>
+      <!-- prettier-ignore -->
       <app-code lang="typescript" ngPreserveWhitespaces>
 const ref = this.dialogService.open(DynamicDialogContentComponent, &#123;
   header: 'Pop-up title',
@@ -21,9 +22,10 @@ ref.onClose.pipe(take(1)).subscribe((res) => &#123;
   // do something based on res
   console.log('dynamic dialog result', res);
 });
-      </app-code>
+</app-code>
       <h5>Within Day</h5>
       <button type="button" pButton label="Open" class="flx-within-day p-mr-2 p-mb-2" (click)="showDynamicWithinDay()"></button>
+      <!-- prettier-ignore -->
       <app-code lang="typescript" ngPreserveWhitespaces>
 const ref = this.dialogService.open(DynamicDialogContentComponent, &#123;
   header: 'Pop-up title',
@@ -35,9 +37,10 @@ ref.onClose.pipe(take(1)).subscribe((res) => &#123;
   // do something based on res
   console.log('dynamic dialog result', res);
 });
-      </app-code>
+</app-code>
       <h5>Day Ahead</h5>
       <button type="button" pButton label="Open" class="flx-day-ahead p-mr-2 p-mb-2" (click)="showDynamicDayAhead()"></button>
+      <!-- prettier-ignore -->
       <app-code lang="typescript" ngPreserveWhitespaces>
 const ref = this.dialogService.open(DynamicDialogContentComponent, &#123;
   header: 'Pop-up title',
@@ -49,7 +52,7 @@ ref.onClose.pipe(take(1)).subscribe((res) => &#123;
   // do something based on res
   console.log('dynamic dialog result', res);
 });
-      </app-code>
+</app-code>
     </p-panel>
   </div>
 </div>
