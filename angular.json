@@ -40,7 +40,7 @@
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "replaceWith": "src/environments/environment.code.ts"
+                  "with": "src/environments/environment.code.ts"
                 }
               ],
               "styles": [
@@ -58,7 +58,7 @@
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "replaceWith": "src/environments/environment.code.prod.ts"
+                  "with": "src/environments/environment.code.prod.ts"
                 }
               ],
               "styles": [
