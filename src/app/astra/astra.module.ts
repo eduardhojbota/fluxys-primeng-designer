@@ -29,6 +29,8 @@ import { DynamicDialogComponent } from './dynamic-dialog/dynamic-dialog.componen
 import { ProductListDemoComponent } from './dynamic-dialog/product-list-demo/product-list-demo.component';
 import { TableModule } from 'primeng/table';
 import { HomeComponent } from './home/home.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import {CalendarModule} from 'primeng/calendar';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,7 @@ import { HomeComponent } from './home/home.component';
     DynamicDialogComponent,
     ProductListDemoComponent,
     HomeComponent,
+    CalendarComponent,
   ],
   imports: [
     CommonModule,
@@ -63,6 +66,7 @@ import { HomeComponent } from './home/home.component';
     RippleModule,
     MenuModule,
     TableModule,
+    CalendarModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })

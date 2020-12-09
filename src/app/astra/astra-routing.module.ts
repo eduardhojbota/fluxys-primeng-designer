@@ -10,6 +10,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
 import { DialogComponent } from './dialog/dialog.component';
 import { DynamicDialogComponent } from './dynamic-dialog/dynamic-dialog.component';
 import {HomeComponent} from './home/home.component';
+import {CalendarComponent} from './calendar/calendar.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,7 @@ const routes: Routes = [
       { path: 'dynamicdialog', component: DynamicDialogComponent },
       { path: 'messages', component: MessagesComponent },
       { path: 'toast', component: ToastComponent },
+      { path: 'calendar', component: CalendarComponent },
     ],
   },
 ];
