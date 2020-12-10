@@ -28,8 +28,7 @@
 
       <h5>Dynamic Values, Preselection, Value Binding and Disabled Option</h5>
       <div *ngFor="let category of categories" class="p-field-checkbox">
-        <p-checkbox name="group2" value="category" [value]="category"  [(ngModel)]="selectedCategories" [label]="category.name" [disabled]="category.key === 'R' || category.key === 'M'"></p-checkbox>
-        <!--<label [for]="category.key">{{category.name}}</label>-->
+        <p-checkbox name="group2" value="category" [value]="category"  [(ngModel)]="selectedCategories" [label]="category.name" [disabled]="category.key === 'P' || category.key === 'R'"></p-checkbox>
       </div>
     </p-panel>
   </div>

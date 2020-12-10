@@ -1,0 +1,26 @@
+.p-checkbox {
+  .p-checkbox-box {
+    &.p-highlight.p-disabled {
+      border-color: $neutralColor100;
+      background: $neutralColor100;
+      opacity: 1;
+    }
+
+    &.p-disabled {
+      border-color: $grayColor300;
+    }
+  }
+}
+
+.p-checkbox-label {
+  color: $grayColor700;
+
+  &.p-checkbox-label-active:not(.p-disabled) {
+    color: $grayColor900;
+  }
+
+  &.p-disabled {
+    color: $grayColor400;
+    opacity: 1;
+  }
+}
