@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 export class RadioButtonComponent implements OnInit {
   city: string;
   selectedCategory: any = null;
-  categories: any[] = [{name: 'Accounting', key: 'A'}, {name: 'Marketing', key: 'M'}, {name: 'Production', key: 'P'}, {name: 'Research', key: 'R'}];
+  categories: any[] = [
+    { name: 'Accounting', key: 'A' },
+    { name: 'Marketing', key: 'M' },
+    { name: 'Production', key: 'P' },
+    { name: 'Research', key: 'R' },
+  ];
 
   ngOnInit(): void {
     this.selectedCategory = this.categories.find((c) => c.key === 'R');

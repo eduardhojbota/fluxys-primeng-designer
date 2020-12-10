@@ -30,14 +30,14 @@ import { ProductListDemoComponent } from './dynamic-dialog/product-list-demo/pro
 import { TableModule } from 'primeng/table';
 import { HomeComponent } from './home/home.component';
 import { CalendarComponent } from './calendar/calendar.component';
-import {CalendarModule} from 'primeng/calendar';
+import { CalendarModule } from 'primeng/calendar';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
-import {RadioButtonModule} from 'primeng/radiobutton';
+import { RadioButtonModule } from 'primeng/radiobutton';
 import { InputSwitchComponent } from './input-switch/input-switch.component';
-import {InputSwitchModule} from 'primeng/inputswitch';
+import { InputSwitchModule } from 'primeng/inputswitch';
 import { SelectButtonComponent } from './select-button/select-button.component';
-import {SelectButtonModule} from 'primeng/selectbutton';
+import { SelectButtonModule } from 'primeng/selectbutton';
 
 @NgModule({
   declarations: [

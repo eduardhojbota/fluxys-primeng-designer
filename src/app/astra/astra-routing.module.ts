@@ -9,12 +9,12 @@ import { SplitButtonComponent } from './split-button/split-button.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { DynamicDialogComponent } from './dynamic-dialog/dynamic-dialog.component';
-import {HomeComponent} from './home/home.component';
-import {CalendarComponent} from './calendar/calendar.component';
-import {CheckboxComponent} from './checkbox/checkbox.component';
-import {RadioButtonComponent} from './radio-button/radio-button.component';
-import {InputSwitchComponent} from './input-switch/input-switch.component';
-import {SelectButtonComponent} from './select-button/select-button.component';
+import { HomeComponent } from './home/home.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
+import { RadioButtonComponent } from './radio-button/radio-button.component';
+import { InputSwitchComponent } from './input-switch/input-switch.component';
+import { SelectButtonComponent } from './select-button/select-button.component';
 
 const routes: Routes = [
   {

@@ -1,5 +1,8 @@
 <h1>RadioButton</h1>
-<p>RadioButton is an extension to standard radio button element with theming. See <a href="https://www.primefaces.org/primeng/showcase/#/radiobutton" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<p>
+  RadioButton is an extension to standard radio button element with theming. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/radiobutton" target="_blank" rel="noreferrer noopener">official documentation</a>.
+</p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
@@ -19,7 +22,13 @@
 
       <h5>Dynamic Values, Preselection, Value Binding and Disabled Option</h5>
       <div *ngFor="let category of categories" class="p-field-checkbox">
-        <p-radioButton [label]="category.name" name="category" [value]="category" [(ngModel)]="selectedCategory" [disabled]="category.key === 'R'"></p-radioButton>
+        <p-radioButton
+          [label]="category.name"
+          name="category"
+          [value]="category"
+          [(ngModel)]="selectedCategory"
+          [disabled]="category.key === 'R'"
+        ></p-radioButton>
       </div>
     </p-panel>
   </div>

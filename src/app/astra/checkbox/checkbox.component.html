@@ -1,5 +1,8 @@
 <h1>Checkbox</h1>
-<p>Checkbox is an extension to standard checkbox element with theming. See <a href="https://www.primefaces.org/primeng/showcase/#/checkbox" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<p>
+  Checkbox is an extension to standard checkbox element with theming. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/checkbox" target="_blank" rel="noreferrer noopener">official documentation</a>.
+</p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
@@ -23,7 +26,14 @@
 
       <h5>Dynamic Values, Preselection, Value Binding and Disabled Option</h5>
       <div *ngFor="let category of categories" class="p-field-checkbox">
-        <p-checkbox name="group2" value="category" [value]="category"  [(ngModel)]="selectedCategories" [label]="category.name" [disabled]="category.key === 'P' || category.key === 'R'"></p-checkbox>
+        <p-checkbox
+          name="group2"
+          value="category"
+          [value]="category"
+          [(ngModel)]="selectedCategories"
+          [label]="category.name"
+          [disabled]="category.key === 'P' || category.key === 'R'"
+        ></p-checkbox>
       </div>
     </p-panel>
   </div>

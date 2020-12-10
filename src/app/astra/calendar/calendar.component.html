@@ -1,5 +1,8 @@
 <h1>Calendar</h1>
-<p>Calendar is an input component to select a date. See <a href="https://www.primefaces.org/primeng/showcase/#/calendar" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<p>
+  Calendar is an input component to select a date. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/calendar" target="_blank" rel="noreferrer noopener">official documentation</a>.
+</p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
@@ -27,12 +30,24 @@
 
         <div class="p-field p-col-12 p-md-4">
           <label for="disabledays">Disable Days</label>
-          <p-calendar [(ngModel)]="date5" [disabledDates]="invalidDates" [disabledDays]="[0,6]" [readonlyInput]="true" inputId="disabledays"></p-calendar>
+          <p-calendar
+            [(ngModel)]="date5"
+            [disabledDates]="invalidDates"
+            [disabledDays]="[0, 6]"
+            [readonlyInput]="true"
+            inputId="disabledays"
+          ></p-calendar>
         </div>
 
         <div class="p-field p-col-12 p-md-4">
           <label for="navigators">Navigators</label>
-          <p-calendar [(ngModel)]="date6" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2030" inputId="navigators"></p-calendar>
+          <p-calendar
+            [(ngModel)]="date6"
+            [monthNavigator]="true"
+            [yearNavigator]="true"
+            yearRange="2000:2030"
+            inputId="navigators"
+          ></p-calendar>
         </div>
 
         <div class="p-field p-col-12 p-md-4">
@@ -64,7 +79,7 @@
           <label for="template">Date Template</label>
           <p-calendar [(ngModel)]="date10" inputId="template">
             <ng-template pTemplate="date" let-date>
-              <span [ngStyle]="{textDecoration: (date.day < 21 && date.day > 10) ? 'line-through' : 'inherit'}">{{date.day}}</span>
+              <span [ngStyle]="{ textDecoration: date.day < 21 && date.day > 10 ? 'line-through' : 'inherit' }">{{ date.day }}</span>
             </ng-template>
           </p-calendar>
         </div>
@@ -76,7 +91,15 @@
 
         <div class="p-field p-col-12 p-md-4">
           <label for="monthpicker">Month Picker</label>
-          <p-calendar [(ngModel)]="date12" view="month" dateFormat="mm/yy" [yearNavigator]="true" yearRange="2000:2030" [readonlyInput]="true" inputId="monthpicker"></p-calendar>
+          <p-calendar
+            [(ngModel)]="date12"
+            view="month"
+            dateFormat="mm/yy"
+            [yearNavigator]="true"
+            yearRange="2000:2030"
+            [readonlyInput]="true"
+            inputId="monthpicker"
+          ></p-calendar>
         </div>
 
         <div class="p-field p-col-12 p-md-4">

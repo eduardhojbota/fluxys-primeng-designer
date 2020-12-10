@@ -65,15 +65,14 @@
         "react/jsx-wrap-multilines": "off",
         "space-before-function-paren": "off",
         "space-in-parens": ["off", "never"],
-        "import/order": ["error", {
-          "group": [
-            ["external", "builtin"],
-            "internal",
-            ["parent", "sibling", "index"]
-          ],
-          "newlines-between": "always",
-          "alphabetize": { "order":  "asc" }
-        }]
+        "import/order": [
+          "error",
+          {
+            "group": [["external", "builtin"], "internal", ["parent", "sibling", "index"]],
+            "newlines-between": "always",
+            "alphabetize": { "order": "asc" }
+          }
+        ]
       }
     },
     {

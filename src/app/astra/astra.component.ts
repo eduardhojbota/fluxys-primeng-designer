@@ -20,9 +20,7 @@ export class AstraComponent {
   readonly menu: MenuItem[] = [
     {
       label: 'Home',
-      items: [
-        { label: 'Home', routerLink: ['./'] },
-      ],
+      items: [{ label: 'Home', routerLink: ['./'] }],
     },
     { separator: true },
     {
