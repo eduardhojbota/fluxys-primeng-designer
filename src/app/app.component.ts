@@ -7,7 +7,6 @@ import { environment } from '../environments/environment';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
   animations: [trigger('intro', [transition(':leave', [animate('.3s', style({ opacity: 0 }))])])],
 })
 export class AppComponent implements OnInit {
