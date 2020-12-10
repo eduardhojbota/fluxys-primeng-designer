@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
 import { trigger, style, animate, transition } from '@angular/animations';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-intro',

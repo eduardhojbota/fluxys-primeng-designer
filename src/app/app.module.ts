@@ -1,19 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-
-import { AppComponent } from './app.component';
-import { TopBarComponent } from './topbar.component';
-import { EditorComponent } from './editor.component';
-import { IntroComponent } from './intro.component';
-import { FooterComponent } from './footer.component';
-import { CodeComponent } from './code.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccordionModule } from 'primeng/accordion';
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
@@ -33,8 +25,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ListboxModule } from 'primeng/listbox';
 import { MenuModule } from 'primeng/menu';
 import { MenubarModule } from 'primeng/menubar';
-import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
+import { MessagesModule } from 'primeng/messages';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { PanelModule } from 'primeng/panel';
@@ -53,9 +45,15 @@ import { ToastModule } from 'primeng/toast';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { TooltipModule } from 'primeng/tooltip';
 
-import { ConfirmationService, MessageService } from 'primeng/api';
-import { HomeComponent } from './view/home.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { CodeComponent } from './code.component';
+import { EditorComponent } from './editor.component';
+import { FooterComponent } from './footer.component';
+import { IntroComponent } from './intro.component';
+import { TopBarComponent } from './topbar.component';
 import { DocumentationComponent } from './view/documentation.component';
+import { HomeComponent } from './view/home.component';
 
 @NgModule({
   imports: [

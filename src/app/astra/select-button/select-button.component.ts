@@ -8,10 +8,10 @@ export class SelectButtonComponent implements OnInit {
   stateOptions: any[];
   paymentOptions: any[];
   justifyOptions: any[];
-  value1: string = 'off';
+  value1 = 'off';
   value2: number;
   value3: any;
-  value4: string = 'off';
+  value4 = 'off';
   value5: number;
   value6: any;
 

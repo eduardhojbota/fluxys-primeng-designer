@@ -1,7 +1,8 @@
-import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { HomeComponent } from './view/home.component';
+import { RouterModule } from '@angular/router';
+
 import { DocumentationComponent } from './view/documentation.component';
+import { HomeComponent } from './view/home.component';
 
 @NgModule({
   imports: [

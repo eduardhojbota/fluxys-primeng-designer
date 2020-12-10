@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
-import { ProductService } from '../../../service/product.service';
+
 import { Product } from '../../../domain/model';
+import { ProductService } from '../../../service/product.service';
 
 @Component({
   selector: 'app-product-list-demo',

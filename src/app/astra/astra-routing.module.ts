@@ -2,19 +2,19 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AstraComponent } from './astra.component';
-import { MessagesComponent } from './messages/messages.component';
-import { ToastComponent } from './toast/toast.component';
 import { ButtonComponent } from './button/button.component';
-import { SplitButtonComponent } from './split-button/split-button.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { DynamicDialogComponent } from './dynamic-dialog/dynamic-dialog.component';
 import { HomeComponent } from './home/home.component';
-import { CalendarComponent } from './calendar/calendar.component';
-import { CheckboxComponent } from './checkbox/checkbox.component';
-import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { InputSwitchComponent } from './input-switch/input-switch.component';
+import { MessagesComponent } from './messages/messages.component';
+import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { SelectButtonComponent } from './select-button/select-button.component';
+import { SplitButtonComponent } from './split-button/split-button.component';
+import { ToastComponent } from './toast/toast.component';
 
 const routes: Routes = [
   {

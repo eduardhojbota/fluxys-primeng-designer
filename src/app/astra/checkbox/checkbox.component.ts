@@ -13,7 +13,7 @@ export class CheckboxComponent implements OnInit {
     { name: 'Production', key: 'P' },
     { name: 'Research', key: 'R' },
   ];
-  checked: boolean = false;
+  checked = false;
 
   ngOnInit(): void {
     this.selectedCategories = this.categories.slice(1, 3);

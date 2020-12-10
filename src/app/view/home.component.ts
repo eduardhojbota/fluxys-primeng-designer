@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService, MenuItem, Message, ConfirmationService, PrimeIcons } from 'primeng/api';
+
+import { Customer, Product } from '../domain/model';
 import { CountryService } from '../service/country.service';
 import { CustomerService } from '../service/customer.service';
 import { ProductService } from '../service/product.service';
-import { MessageService, MenuItem, Message, ConfirmationService, PrimeIcons } from 'primeng/api';
-import { Customer, Product } from '../domain/model';
 
 interface Option {
   name: string;

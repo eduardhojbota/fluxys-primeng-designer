@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Output, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { EditorService } from './service/editor.service';
+import { Component, EventEmitter, Output, Input, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
+
 import { environment } from '../environments/environment';
+import { EditorService } from './service/editor.service';
 
 @Component({
   selector: 'app-editor',

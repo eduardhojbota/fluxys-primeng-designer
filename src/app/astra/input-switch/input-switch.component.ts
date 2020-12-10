@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './input-switch.component.html',
 })
 export class InputSwitchComponent {
-  checked1: boolean = false;
-  checked1bis: boolean = false;
-  checked2: boolean = true;
-  checked2bis: boolean = true;
+  checked1 = false;
+  checked1bis = false;
+  checked2 = true;
+  checked2bis = true;
 }

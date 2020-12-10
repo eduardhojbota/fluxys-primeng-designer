@@ -1,7 +1,8 @@
+import { trigger, style, animate, transition } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
+
 import { environment } from '../environments/environment';
-import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-root',

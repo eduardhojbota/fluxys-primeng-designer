@@ -1,10 +1,12 @@
 import { Component, OnDestroy } from '@angular/core';
-import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { MessageService } from 'primeng/api';
-import { ProductListDemoComponent } from './product-list-demo/product-list-demo.component';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { take } from 'rxjs/operators';
+
 import { Product } from '../../domain/model';
 import { DynamicDialogContentComponent } from './dynamic-dialog-content/dynamic-dialog-content.component';
-import { take } from 'rxjs/operators';
+import { ProductListDemoComponent } from './product-list-demo/product-list-demo.component';
+
 
 @Component({
   selector: 'app-dynamic-dialog',
