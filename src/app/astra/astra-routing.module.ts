@@ -14,6 +14,7 @@ import {CalendarComponent} from './calendar/calendar.component';
 import {CheckboxComponent} from './checkbox/checkbox.component';
 import {RadioButtonComponent} from './radio-button/radio-button.component';
 import {InputSwitchComponent} from './input-switch/input-switch.component';
+import {SelectButtonComponent} from './select-button/select-button.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,7 @@ const routes: Routes = [
       { path: 'checkbox', component: CheckboxComponent },
       { path: 'radiobutton', component: RadioButtonComponent },
       { path: 'inputswitch', component: InputSwitchComponent },
+      { path: 'selectbutton', component: SelectButtonComponent },
     ],
   },
 ];

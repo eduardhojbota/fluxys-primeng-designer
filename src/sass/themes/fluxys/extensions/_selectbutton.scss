@@ -1,0 +1,41 @@
+.p-selectbutton {
+  .p-button {
+    text-transform: none;
+
+    &.p-disabled {
+      opacity: 1;
+      background: $grayColor50;
+      border-color: $grayColor300;
+      color: $grayColor400;
+
+      .p-button-icon-left,
+      .p-button-icon-right {
+        color: $grayColor400;
+      }
+    }
+  }
+
+  &.flx-select-button-secondary {
+    .p-button.p-highlight {
+      background: $secondaryButtonBg;
+      border-color: $neutralColor200;
+      color: $secondaryButtonTextColor;
+
+      .p-button-icon-left,
+      .p-button-icon-right {
+        color: $secondaryButtonTextColor;
+      }
+
+      &:hover {
+        background: $secondaryButtonHoverBg;
+        border-color: $secondaryButtonHoverBorderColor;
+        color: $secondaryButtonTextHoverColor;
+
+        .p-button-icon-left,
+        .p-button-icon-right {
+          color: $secondaryButtonTextHoverColor;
+        }
+      }
+    }
+  }
+}

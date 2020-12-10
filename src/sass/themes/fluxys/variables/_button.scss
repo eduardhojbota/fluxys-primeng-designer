@@ -243,7 +243,7 @@ $helpButtonBg:#9C27B0;
 
 /// Text color of a help button
 /// @group button
-$helpButtonTextColor:#ffffff;
+$helpButtonTextColor:$white;
 
 /// Border of a help button
 /// @group button
@@ -255,7 +255,7 @@ $helpButtonHoverBg:#8E24AA;
 
 /// Text color of a help button in hover state
 /// @group button
-$helpButtonTextHoverColor:#ffffff;
+$helpButtonTextHoverColor:$white;
 
 /// Border color of a help button in hover state
 /// @group button
@@ -267,7 +267,7 @@ $helpButtonActiveBg:#7B1FA2;
 
 /// Text color of a help button in pressed state
 /// @group button
-$helpButtonTextActiveColor:#ffffff;
+$helpButtonTextActiveColor:$white;
 
 /// Border color of a help button in pressed state
 /// @group button
@@ -335,35 +335,35 @@ $linkButtonFocusShadow: 0 0 0 0.2rem $focusOutlineColor;
 
 /// Background of a toggle button
 /// @group button
-$toggleButtonBg: #ffffff;
+$toggleButtonBg: $white;
 
 /// Border of a toggle button
 /// @group button
-$toggleButtonBorder: 1px solid #ced4da;
+$toggleButtonBorder: 1px solid $neutralColor200;
 
 /// Text color of a toggle button
 /// @group button
-$toggleButtonTextColor: $textColor;
+$toggleButtonTextColor: $neutralColor900;
 
 /// Icon color of a toggle button
 /// @group button
-$toggleButtonIconColor: $textSecondaryColor;
+$toggleButtonIconColor: $neutralColor900;
 
 /// Background of a toggle button in hover state
 /// @group button
-$toggleButtonHoverBg: #e9ecef;
+$toggleButtonHoverBg: $white;
 
 /// Border color of a toggle button in hover state
 /// @group button
-$toggleButtonHoverBorderColor: #ced4da;
+$toggleButtonHoverBorderColor: $neutralColor300;
 
 /// Text color of a toggle button in hover state
 /// @group button
-$toggleButtonTextHoverColor: $textColor;
+$toggleButtonTextHoverColor: $neutralColor900;
 
 /// Icon color of a toggle button in hover state
 /// @group button
-$toggleButtonIconHoverColor: $textSecondaryColor;
+$toggleButtonIconHoverColor: $neutralColor900;
 
 /// Background of a toggle button in selected state
 /// @group button

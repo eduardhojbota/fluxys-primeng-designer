@@ -32,6 +32,7 @@ export class AstraComponent {
         { label: 'Checkbox', routerLink: ['./checkbox'] },
         { label: 'InputSwitch', routerLink: ['./inputswitch'] },
         { label: 'RadioButton', routerLink: ['./radiobutton'] },
+        { label: 'SelectButton', routerLink: ['./selectbutton'] },
       ],
     },
     { separator: true },
