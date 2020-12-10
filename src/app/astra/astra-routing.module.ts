@@ -12,6 +12,7 @@ import { DynamicDialogComponent } from './dynamic-dialog/dynamic-dialog.componen
 import {HomeComponent} from './home/home.component';
 import {CalendarComponent} from './calendar/calendar.component';
 import {CheckboxComponent} from './checkbox/checkbox.component';
+import {RadioButtonComponent} from './radio-button/radio-button.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,7 @@ const routes: Routes = [
       { path: 'toast', component: ToastComponent },
       { path: 'calendar', component: CalendarComponent },
       { path: 'checkbox', component: CheckboxComponent },
+      { path: 'radiobutton', component: RadioButtonComponent },
     ],
   },
 ];

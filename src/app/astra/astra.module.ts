@@ -32,6 +32,8 @@ import { HomeComponent } from './home/home.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import {CalendarModule} from 'primeng/calendar';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { RadioButtonComponent } from './radio-button/radio-button.component';
+import {RadioButtonModule} from 'primeng/radiobutton';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
     HomeComponent,
     CalendarComponent,
     CheckboxComponent,
+    RadioButtonComponent,
   ],
   imports: [
     CommonModule,
@@ -69,6 +72,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
     MenuModule,
     TableModule,
     CalendarModule,
+    RadioButtonModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })
