@@ -31,6 +31,7 @@ import { TableModule } from 'primeng/table';
 import { HomeComponent } from './home/home.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import {CalendarModule} from 'primeng/calendar';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import {CalendarModule} from 'primeng/calendar';
     ProductListDemoComponent,
     HomeComponent,
     CalendarComponent,
+    CheckboxComponent,
   ],
   imports: [
     CommonModule,

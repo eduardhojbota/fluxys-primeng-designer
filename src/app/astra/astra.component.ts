@@ -29,6 +29,7 @@ export class AstraComponent {
       label: 'Form',
       items: [
         { label: 'Calendar', routerLink: ['/', 'astra', 'calendar'] },
+        { label: 'Checkbox', routerLink: ['/', 'astra', 'checkbox'] },
       ],
     },
     { separator: true },
