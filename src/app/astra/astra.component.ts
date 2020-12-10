@@ -21,40 +21,40 @@ export class AstraComponent {
     {
       label: 'Home',
       items: [
-        { label: 'Home', routerLink: ['/', 'astra'] },
+        { label: 'Home', routerLink: ['./'] },
       ],
     },
     { separator: true },
     {
       label: 'Form',
       items: [
-        { label: 'Calendar', routerLink: ['/', 'astra', 'calendar'] },
-        { label: 'Checkbox', routerLink: ['/', 'astra', 'checkbox'] },
+        { label: 'Calendar', routerLink: ['./calendar'] },
+        { label: 'Checkbox', routerLink: ['./checkbox'] },
       ],
     },
     { separator: true },
     {
       label: 'Button',
       items: [
-        { label: 'Button', routerLink: ['/', 'astra', 'button'] },
-        { label: 'SplitButton', routerLink: ['/', 'astra', 'splitbutton'] },
+        { label: 'Button', routerLink: ['./button'] },
+        { label: 'SplitButton', routerLink: ['./splitbutton'] },
       ],
     },
     { separator: true },
     {
       label: 'Overlay',
       items: [
-        { label: 'ConfirmDialog', routerLink: ['/', 'astra', 'confirmdialog'] },
-        { label: 'Dialog', routerLink: ['/', 'astra', 'dialog'] },
-        { label: 'DynamicDialog', routerLink: ['/', 'astra', 'dynamicdialog'] },
+        { label: 'ConfirmDialog', routerLink: ['./confirmdialog'] },
+        { label: 'Dialog', routerLink: ['./dialog'] },
+        { label: 'DynamicDialog', routerLink: ['./dynamicdialog'] },
       ],
     },
     { separator: true },
     {
       label: 'Messages',
       items: [
-        { label: 'Messages', routerLink: ['/', 'astra', 'messages'] },
-        { label: 'Toast', routerLink: ['/', 'astra', 'toast'] },
+        { label: 'Messages', routerLink: ['./messages'] },
+        { label: 'Toast', routerLink: ['./toast'] },
       ],
     },
   ];
