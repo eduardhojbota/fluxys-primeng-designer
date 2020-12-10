@@ -1,0 +1,13 @@
+.p-inputswitch.p-disabled {
+  opacity: 1;
+
+  .p-inputswitch-slider {
+    background: $grayColor300;
+  }
+
+  &.p-inputswitch-checked {
+    .p-inputswitch-slider {
+      background: $neutralColor100;
+    }
+  }
+}
