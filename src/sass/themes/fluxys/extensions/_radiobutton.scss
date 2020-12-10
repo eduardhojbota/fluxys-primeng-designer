@@ -1,0 +1,29 @@
+.p-radiobutton {
+  .p-radiobutton-box {
+    &.p-highlight.p-disabled {
+      border-color: $neutralColor100;
+      opacity: 1;
+
+      .p-radiobutton-icon {
+        background-color: $neutralColor100;
+      }
+    }
+
+    &.p-disabled {
+      border-color: $grayColor300;
+    }
+  }
+}
+
+.p-radiobutton-label {
+  color: $grayColor700;
+
+  &.p-radiobutton-label-active:not(.p-disabled) {
+    color: $grayColor900;
+  }
+
+  &.p-disabled {
+    color: $grayColor400;
+    opacity: 1;
+  }
+}

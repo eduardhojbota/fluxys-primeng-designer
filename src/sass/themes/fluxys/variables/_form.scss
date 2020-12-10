@@ -193,43 +193,43 @@ $checkboxActiveHoverBorderColor: $neutralColor700;
 
 /// Width of a radiobutton
 /// @group form
-$radiobuttonWidth: 20px;
+$radiobuttonWidth: 16px;
 
 /// Height of a radiobutton
 /// @group form
-$radiobuttonHeight: 20px;
+$radiobuttonHeight: 16px;
 
 /// Border of a radiobutton
 /// @group form
-$radiobuttonBorder: 2px solid #ced4da;
+$radiobuttonBorder: 2px solid $grayColor400;
 
 /// Font size of a radiobutton icon
 /// @group form
-$radiobuttonIconSize: 12px;
+$radiobuttonIconSize: 8px;
 
 /// Border color of a selected radiobutton
 /// @group form
-$radiobuttonActiveBorderColor: $primaryColor;
+$radiobuttonActiveBorderColor: $neutralColor500;
 
 /// Background of a selected radiobutton
 /// @group form
-$radiobuttonActiveBg: $primaryColor;
+$radiobuttonActiveBg: $white;
 
 /// Icon color of a selected radiobutton
 /// @group form
-$radiobuttonIconActiveColor: $primaryTextColor;
+$radiobuttonIconActiveColor: $neutralColor500;
 
 /// Background of a selected radiobutton in hover state
 /// @group form
-$radiobuttonActiveHoverBg: $primaryDarkerColor;
+$radiobuttonActiveHoverBg: $white;
 
 /// Icon color of a selected radiobutton in hover state
 /// @group form
-$radiobuttonIconActiveHoverColor: $primaryTextColor;
+$radiobuttonIconActiveHoverColor: $neutralColor700;
 
 /// Border color of a selected radiobutton in hover state
 /// @group form
-$radiobuttonActiveHoverBorderColor: $primaryDarkerColor;
+$radiobuttonActiveHoverBorderColor: $neutralColor700;
 
 /// Width of a color picker preview element
 /// @group form
