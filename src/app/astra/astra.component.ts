@@ -43,6 +43,13 @@ export class AstraComponent {
     },
     { separator: true },
     {
+      label: 'Panel',
+      items: [
+        { label: 'Card', routerLink: ['./card'] },
+      ]
+    },
+    { separator: true },
+    {
       label: 'Overlay',
       items: [
         { label: 'ConfirmDialog', routerLink: ['./confirmdialog'] },

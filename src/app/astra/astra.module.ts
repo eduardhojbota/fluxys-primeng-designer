@@ -39,6 +39,8 @@ import { SelectButtonComponent } from './select-button/select-button.component';
 import { SplitButtonComponent } from './split-button/split-button.component';
 import { ToastComponent } from './toast/toast.component';
 import { BadgeComponent } from './badge/badge.component';
+import { CardComponent } from './card/card.component';
+import {CardModule} from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,7 @@ import { BadgeComponent } from './badge/badge.component';
     InputSwitchComponent,
     SelectButtonComponent,
     BadgeComponent,
+    CardComponent,
   ],
   imports: [
     CommonModule,
@@ -83,6 +86,7 @@ import { BadgeComponent } from './badge/badge.component';
     RadioButtonModule,
     InputSwitchModule,
     SelectButtonModule,
+    CardModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })
