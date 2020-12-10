@@ -7,7 +7,6 @@ import { Product } from '../../domain/model';
 import { DynamicDialogContentComponent } from './dynamic-dialog-content/dynamic-dialog-content.component';
 import { ProductListDemoComponent } from './product-list-demo/product-list-demo.component';
 
-
 @Component({
   selector: 'app-dynamic-dialog',
   templateUrl: './dynamic-dialog.component.html',

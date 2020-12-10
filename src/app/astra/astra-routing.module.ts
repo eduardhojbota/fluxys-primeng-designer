@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AstraComponent } from './astra.component';
+import { BadgeComponent } from './badge/badge.component';
 import { ButtonComponent } from './button/button.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { CardComponent } from './card/card.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { DialogComponent } from './dialog/dialog.component';
@@ -15,8 +17,6 @@ import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { SelectButtonComponent } from './select-button/select-button.component';
 import { SplitButtonComponent } from './split-button/split-button.component';
 import { ToastComponent } from './toast/toast.component';
-import {BadgeComponent} from './badge/badge.component';
-import {CardComponent} from './card/card.component';
 
 const routes: Routes = [
   {

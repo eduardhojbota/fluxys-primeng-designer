@@ -44,9 +44,7 @@ export class AstraComponent {
     { separator: true },
     {
       label: 'Panel',
-      items: [
-        { label: 'Card', routerLink: ['./card'] },
-      ]
+      items: [{ label: 'Card', routerLink: ['./card'] }],
     },
     { separator: true },
     {
@@ -68,9 +66,7 @@ export class AstraComponent {
     { separator: true },
     {
       label: 'Misc',
-      items: [
-        { label: 'Badge', routerLink: ['./badge'] },
-      ]
-    }
+      items: [{ label: 'Badge', routerLink: ['./badge'] }],
+    },
   ];
 }
