@@ -34,6 +34,8 @@ import {CalendarModule} from 'primeng/calendar';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
 import {RadioButtonModule} from 'primeng/radiobutton';
+import { InputSwitchComponent } from './input-switch/input-switch.component';
+import {InputSwitchModule} from 'primeng/inputswitch';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,7 @@ import {RadioButtonModule} from 'primeng/radiobutton';
     CalendarComponent,
     CheckboxComponent,
     RadioButtonComponent,
+    InputSwitchComponent,
   ],
   imports: [
     CommonModule,
@@ -73,6 +76,7 @@ import {RadioButtonModule} from 'primeng/radiobutton';
     TableModule,
     CalendarModule,
     RadioButtonModule,
+    InputSwitchModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })
