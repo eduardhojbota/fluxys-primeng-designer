@@ -58,5 +58,12 @@ export class AstraComponent {
         { label: 'Toast', routerLink: ['./toast'] },
       ],
     },
+    { separator: true },
+    {
+      label: 'Misc',
+      items: [
+        { label: 'Badge', routerLink: ['./badge'] },
+      ]
+    }
   ];
 }

@@ -1,0 +1,94 @@
+<h1>Badge</h1>
+<p>Badge is a small status indicator for another element. See <a href="https://www.primefaces.org/primeng/showcase/#/badge" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<div class="p-grid p-flex-column">
+  <div class="p-col">
+    <p-panel header="PrimeNG Example" [toggleable]="true">
+      <h5>Numbers</h5>
+      <div class="badges">
+        <span class="p-badge">2</span>
+        <span class="p-badge p-badge-secondary">7</span>
+        <span class="p-badge p-badge-success">8</span>
+        <span class="p-badge p-badge-info">4</span>
+        <span class="p-badge p-badge-warning">12</span>
+        <span class="p-badge p-badge-danger">3</span>
+      </div>
+
+      <h5>Tags</h5>
+      <div class="badges">
+        <span class="p-tag">Primary</span>
+        <span class="p-tag p-tag-success">Success</span>
+        <span class="p-tag p-tag-info">Info</span>
+        <span class="p-tag p-tag-warning">Warning</span>
+        <span class="p-tag p-tag-danger">Danger</span>
+      </div>
+
+      <h5>Pills</h5>
+      <div class="badges">
+        <span class="p-tag p-tag-rounded">Primary</span>
+        <span class="p-tag p-tag-rounded p-tag-success">Success</span>
+        <span class="p-tag p-tag-rounded p-tag-info">Info</span>
+        <span class="p-tag p-tag-rounded p-tag-warning">Warning</span>
+        <span class="p-tag p-tag-rounded p-tag-danger">Danger</span>
+      </div>
+
+      <h5>Positioned Badge</h5>
+      <span class="p-overlay-badge p-mr-5">
+    <i class="pi pi-bell" style="font-size: 2em"></i>
+    <span class="p-badge">2</span>
+</span>
+
+      <span class="p-overlay-badge">
+    <p-button label="New"></p-button>
+    <span class="p-badge p-badge-warning">5</span>
+</span>
+
+      <h5>Inline Button Badge</h5>
+      <p-button label="Emails" badge="8" styleClass="p-mr-2" ></p-button>
+      <p-button label="Messages" icon="pi pi-users" styleClass="p-button-warning" badge="8" badgeClass="p-badge-danger" ></p-button>
+
+      <h5>Sizes</h5>
+      <div class="badges">
+        <span class="p-badge">2</span>
+        <span class="p-badge p-badge-lg p-badge-sucess">4</span>
+        <span class="p-badge p-badge-xl p-badge-warning">6</span>
+      </div>
+    </p-panel>
+  </div>
+  <div class="p-col">
+    <p-panel header="Fluxys Example" [toggleable]="true">
+      <h5>Tags</h5>
+      <div class="badges">
+        <span class="p-tag flx-tag-secondary">Secondary</span>
+        <span class="p-tag flx-within-day">WD</span>
+        <span class="p-tag flx-day-ahead">DA</span>
+        <span class="p-tag flx-tag-secondary flx-within-day">WD</span>
+        <span class="p-tag flx-tag-secondary flx-day-ahead">DA</span>
+      </div>
+      <!-- prettier-ignore -->
+      <app-code lang="html" ngPreserveWhitespaces>
+&lt;span class="p-tag flx-tag-secondary"&gt;Secondary&lt;/span&gt;
+&lt;span class="p-tag flx-within-day"&gt;WD&lt;/span&gt;
+&lt;span class="p-tag flx-day-ahead"&gt;DA&lt;/span&gt;
+&lt;span class="p-tag flx-tag-secondary flx-within-day"&gt;WD&lt;/span&gt;
+&lt;span class="p-tag flx-tag-secondary flx-day-ahead"&gt;DA&lt;/span&gt;
+</app-code>
+
+      <h5>Pills</h5>
+      <div class="badges">
+        <span class="p-tag p-tag-rounded flx-tag-secondary">Secondary</span>
+        <span class="p-tag p-tag-rounded flx-within-day">WD</span>
+        <span class="p-tag p-tag-rounded flx-day-ahead">DA</span>
+        <span class="p-tag p-tag-rounded flx-tag-secondary flx-within-day">WD</span>
+        <span class="p-tag p-tag-rounded flx-tag-secondary flx-day-ahead">DA</span>
+      </div>
+      <!-- prettier-ignore -->
+      <app-code lang="html" ngPreserveWhitespaces>
+&lt;span class="p-tag p-tag-rounded flx-tag-secondary"&gt;Secondary&lt;/span&gt;
+&lt;span class="p-tag p-tag-rounded flx-within-day"&gt;WD&lt;/span&gt;
+&lt;span class="p-tag p-tag-rounded flx-day-ahead"&gt;DA&lt;/span&gt;
+&lt;span class="p-tag p-tag-rounded flx-tag-secondary flx-within-day"&gt;WD&lt;/span&gt;
+&lt;span class="p-tag p-tag-rounded flx-tag-secondary flx-day-ahead"&gt;DA&lt;/span&gt;
+</app-code>
+    </p-panel>
+  </div>
+</div>

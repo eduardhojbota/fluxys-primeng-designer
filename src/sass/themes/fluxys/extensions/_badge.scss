@@ -1,20 +1,36 @@
-%wd-da-tag {
-  color: $white;
-  padding: 0 0.6rem;
-  font-weight: normal;
-  font-size: 1rem;
-  vertical-align: middle;
-  margin-right: 1rem;
+.p-badge {
+  &.p-badge-info {
+    border: $infoButtonBorder;
+  }
 }
 
 .p-tag {
+  &.p-tag-info {
+    border: $infoButtonBorder;
+  }
+
+  &.flx-tag-secondary {
+    background-color: $secondaryButtonBg;
+    color: $secondaryButtonTextColor;
+
+    &.flx-within-day {
+      background-color: $wdColor50;
+      color: $wdColor700;
+    }
+
+    &.flx-day-ahead {
+      background-color: $daColor50;
+      color: $daColor700;
+    }
+  }
+
   &.flx-within-day {
-    @extend %wd-da-tag;
     background-color: $wdColor400;
+    color: $white;
   }
 
   &.flx-day-ahead {
-    @extend %wd-da-tag;
     background-color: $daColor400;
+    color: $white;
   }
 }

@@ -38,6 +38,7 @@ import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { SelectButtonComponent } from './select-button/select-button.component';
 import { SplitButtonComponent } from './split-button/split-button.component';
 import { ToastComponent } from './toast/toast.component';
+import { BadgeComponent } from './badge/badge.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { ToastComponent } from './toast/toast.component';
     RadioButtonComponent,
     InputSwitchComponent,
     SelectButtonComponent,
+    BadgeComponent,
   ],
   imports: [
     CommonModule,

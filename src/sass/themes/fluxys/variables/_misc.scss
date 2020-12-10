@@ -12,11 +12,11 @@ $inplaceTextHoverColor: $textColor;
 
 /// Background of a badge
 /// @group misc
-$badgeBg: $primaryColor;
+$badgeBg: $neutralColor700;
 
 /// Text color of a badge
 /// @group misc
-$badgeTextColor: $primaryTextColor;
+$badgeTextColor: $white;
 
 /// Minimum width of a badge
 /// @group misc
@@ -28,7 +28,7 @@ $badgeHeight: 1.5rem;
 
 /// Font weight of a badge
 /// @group misc
-$badgeFontWeight: 700;
+$badgeFontWeight: 500;
 
 /// Font size of a badge
 /// @group misc

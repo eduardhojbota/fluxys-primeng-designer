@@ -15,6 +15,7 @@ import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { SelectButtonComponent } from './select-button/select-button.component';
 import { SplitButtonComponent } from './split-button/split-button.component';
 import { ToastComponent } from './toast/toast.component';
+import {BadgeComponent} from './badge/badge.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,7 @@ const routes: Routes = [
       { path: 'radiobutton', component: RadioButtonComponent },
       { path: 'inputswitch', component: InputSwitchComponent },
       { path: 'selectbutton', component: SelectButtonComponent },
+      { path: 'badge', component: BadgeComponent },
     ],
   },
 ];

@@ -199,7 +199,10 @@ performAction(): void &#123;
       <h5>Within Day</h5>
       <button type="button" pButton label="Open" class="flx-within-day p-mr-2 p-mb-2" (click)="showWithinDay()"></button>
       <p-dialog [(visible)]="withinDayDialogVisible" styleClass="flx-within-day">
-        <p-header> <span class="p-tag p-tag-rounded flx-within-day">WD</span>Pop-up title </p-header>
+        <p-header>
+          <span class="p-tag p-tag-rounded flx-within-day">WD</span>
+          Pop-up title
+        </p-header>
         <div class="fake-content">PLACE CONTENT HERE</div>
         <p-footer>
           <button
