@@ -2,10 +2,6 @@
   .p-inputtext {
     border-bottom-right-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
-
-    /*&:has(+ .p-datepicker-trigger:enabled:hover) {
-      border-color: $inputHoverBorderColor;
-    }*/
   }
 
   .p-datepicker-trigger {
@@ -22,6 +18,12 @@
     &:enabled:active {
       background: transparent;
       color: $grayColor700;
+    }
+  }
+
+  &:hover {
+    .p-inputtext:enabled {
+      border-color: $inputHoverBorderColor;
     }
   }
 }
