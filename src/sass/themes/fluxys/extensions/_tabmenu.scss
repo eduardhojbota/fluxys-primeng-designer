@@ -1,0 +1,21 @@
+.p-tabmenu {
+  .p-tabmenu-nav {
+    .p-tabmenuitem {
+      text-transform: uppercase;
+
+      &.p-highlight {
+        .p-menuitem-link {
+          font-weight: 500;
+        }
+      }
+
+      &.p-disabled {
+        opacity: 1;
+
+        .p-menuitem-link {
+          color: $neutralColor300;
+        }
+      }
+    }
+  }
+}

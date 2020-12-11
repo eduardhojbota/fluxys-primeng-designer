@@ -144,15 +144,15 @@ $accordionContentPadding: $panelContentPadding;
 
 /// Border for a parent element containing all the headers of a tabview
 /// @group panel
-$tabviewNavBorder: 1px solid #dee2e6;
+$tabviewNavBorder: 1px solid $grayColor50;
 
 /// Border width for a parent element containing all the headers of a tabview
 /// @group panel
-$tabviewNavBorderWidth: 0 0 2px 0;
+$tabviewNavBorderWidth: 0 0 4px 0;
 
 /// Background for a parent element containing all the headers of a tabview
 /// @group panel
-$tabviewNavBg: #ffffff;
+$tabviewNavBg: $grayColor50;
 
 /// Spacing between tabview headers
 /// @group panel
@@ -160,27 +160,27 @@ $tabviewHeaderSpacing: 0;
 
 /// Border of a tabview header
 /// @group panel
-$tabviewHeaderBorder: solid #dee2e6;
+$tabviewHeaderBorder: solid $grayColor50;
 
 /// Border width of a tabview header
 /// @group panel
-$tabviewHeaderBorderWidth: 0 0 2px 0;
+$tabviewHeaderBorderWidth: 0 0 4px 0;
 
 /// Border color of a tabview header
 /// @group panel
-$tabviewHeaderBorderColor: transparent transparent #dee2e6 transparent;
+$tabviewHeaderBorderColor: transparent transparent $grayColor50 transparent;
 
 /// Background of a tabview header
 /// @group panel
-$tabviewHeaderBg: #ffffff;
+$tabviewHeaderBg: $grayColor50;
 
 /// Text color of a tabview header
 /// @group panel
-$tabviewHeaderTextColor: $textSecondaryColor;
+$tabviewHeaderTextColor: $neutralColor500;
 
 /// Font weight of a tabview header
 /// @group panel
-$tabviewHeaderFontWeight: $panelHeaderFontWeight;
+$tabviewHeaderFontWeight: normal;
 
 /// Padding of a tabview header
 /// @group panel
@@ -188,31 +188,31 @@ $tabviewHeaderPadding: $panelHeaderPadding;
 
 /// Margin of a tabview header
 /// @group panel
-$tabviewHeaderMargin: 0 0 -2px 0;
+$tabviewHeaderMargin: 0 0 -4px 0;
 
 /// Background of a tabview header in hover state
 /// @group panel
-$tabviewHeaderHoverBg: #ffffff;
+$tabviewHeaderHoverBg: $grayColor50;
 
 /// Border of a tabview header in hover state
 /// @group panel
-$tabviewHeaderHoverBorderColor: #9ba2aa;
+$tabviewHeaderHoverBorderColor: $grayColor300;
 
 /// Text color of a tabview header in hover state
 /// @group panel
-$tabviewHeaderTextHoverColor: $textSecondaryColor;
+$tabviewHeaderTextHoverColor: $neutralColor500;
 
 /// Background of a tabview header in selected state
 /// @group panel
-$tabviewHeaderActiveBg: #ffffff;
+$tabviewHeaderActiveBg: $grayColor50;
 
 /// Border of a tabview header in selected state
 /// @group panel
-$tabviewHeaderActiveBorderColor: $primaryColor;
+$tabviewHeaderActiveBorderColor: $neutralColor700;
 
 /// Text color of a tabview header in selected state
 /// @group panel
-$tabviewHeaderTextActiveColor: $primaryColor;
+$tabviewHeaderTextActiveColor: $neutralColor700;
 
 /// Border for content section of a tabview tab
 /// @group panel
