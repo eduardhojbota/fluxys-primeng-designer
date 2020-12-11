@@ -9,7 +9,7 @@ import { MenuItem } from 'primeng/api';
       :host {
         display: grid;
         grid-template-columns: [nav] auto [main] 1fr [end];
-        gap: 1rem 1rem;
+        gap: 0 0;
         min-height: 100vh;
       }
       nav {
@@ -24,9 +24,8 @@ import { MenuItem } from 'primeng/api';
         max-height: 100vh;
         overflow: hidden auto;
         padding: 1rem;
-        padding-left: 0;
       }
-      :host ::ng-deep .p-menu {
+      :host ::ng-deep .p-menu.nav-menu {
         border-radius: 0;
       }
     `,
