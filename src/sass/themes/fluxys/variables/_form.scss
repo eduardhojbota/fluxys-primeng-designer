@@ -16,7 +16,7 @@ $inputTextColor: $grayColor900;
 
 /// Color of an icon inside an input field
 /// @group form
-$inputIconColor: $textColor;
+$inputIconColor: $grayColor900;
 
 /// Border of an input field
 /// @group form
@@ -64,11 +64,11 @@ $inputGroupAddOnMinWidth: 2.357rem;
 
 /// Background of an input list such as dropdown, listbox, multiselect
 /// @group form
-$inputListBg: #ffffff;
+$inputListBg: $white;
 
 /// Text color of an input list
 /// @group form
-$inputListTextColor: $textColor;
+$inputListTextColor: $grayColor700;
 
 /// Border of an input list
 /// @group form
@@ -80,7 +80,7 @@ $inputListPadding: .5rem 0;
 
 /// Padding for an individual itrem of an input list
 /// @group form
-$inputListItemPadding: .5rem 1rem;
+$inputListItemPadding: .5rem 0.857rem;
 
 /// Background for an individual itrem of an input list
 /// @group form
@@ -88,15 +88,15 @@ $inputListItemBg: transparent;
 
 /// Text color for an individual itrem of an input list
 /// @group form
-$inputListItemTextColor: $textColor;
+$inputListItemTextColor: $grayColor700;
 
 /// Hover state background for an individual itrem of an input list
 /// @group form
-$inputListItemHoverBg: #e9ecef;
+$inputListItemHoverBg: $grayColor100;
 
 /// Hover state text color for an individual itrem of an input list
 /// @group form
-$inputListItemTextHoverColor: $textColor;
+$inputListItemTextHoverColor: $grayColor700;
 
 /// Border for an individual itrem of an input list
 /// @group form
@@ -116,7 +116,7 @@ $inputListItemFocusShadow: inset 0 0 0 0.15rem $focusOutlineColor;
 
 /// Padding for a header of an input list
 /// @group form
-$inputListHeaderPadding: .5rem 1rem;
+$inputListHeaderPadding: .5rem 0.857rem;
 
 /// Margin for a header of an input list
 /// @group form
@@ -124,11 +124,11 @@ $inputListHeaderMargin: 0;
 
 /// Background for a header of an input list
 /// @group form
-$inputListHeaderBg: #f8f9fa;
+$inputListHeaderBg: $white;
 
 /// Text color for a header of an input list
 /// @group form
-$inputListHeaderTextColor: $textColor;
+$inputListHeaderTextColor: $grayColor900;
 
 /// Border for a header of an input list
 /// @group form
@@ -137,11 +137,11 @@ $inputListHeaderBorder: 0 none;
 
 /// Background for an overlay of an input such as autocomplete or dropdown
 /// @group form
-$inputOverlayBg:$inputListBg;
+$inputOverlayBg: $inputListBg;
 
 /// Background for an overlay header of an input such as autocomplete or dropdown
 /// @group form
-$inputOverlayHeaderBg:$inputListHeaderBg;
+$inputOverlayHeaderBg: $inputListHeaderBg;
 
 /// Border for an overlay of an input such as autocomplete or dropdown
 /// @group form

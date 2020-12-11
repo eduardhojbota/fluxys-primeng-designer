@@ -104,11 +104,11 @@ $submenuHeaderPadding: .75rem 1rem;
 
 /// Background of a submenu header
 /// @group menu
-$submenuHeaderBg: #ffffff;
+$submenuHeaderBg: $grayColor50;
 
 /// Text color of a submenu header
 /// @group menu
-$submenuHeaderTextColor: $textColor;
+$submenuHeaderTextColor: $grayColor900;
 
 /// Border radius of a submenu header
 /// @group menu

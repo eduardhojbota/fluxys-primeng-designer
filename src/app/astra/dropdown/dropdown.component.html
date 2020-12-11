@@ -43,11 +43,14 @@
     <p-panel header="Fluxys Example" [toggleable]="true">
       <h5>Correct dropdown icon</h5>
       <p>In order to match the dropdown icon used in Figma, you need to change the <em>dropdownIcon</em> of the <em>p-dropdown</em> component to <b>fas fa-caret-down</b></p>
-      <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" placeholder="Select a City" optionLabel="name" [showClear]="true" dropdownIcon="fas fa-caret-down"></p-dropdown>
+      <p-dropdown [options]="cities" placeholder="Select a City" optionLabel="name" dropdownIcon="fas fa-caret-down"></p-dropdown>
       <!-- prettier-ignore -->
       <app-code lang="html" ngPreserveWhitespaces>
 &lt;p-dropdown [options]="cities" dropdownIcon="fas fa-caret-down"&gt;&lt;/p-dropdown&gt;
 </app-code>
+
+      <h5>Disabled</h5>
+      <p-dropdown [options]="cities" placeholder="Select a City" optionLabel="name" dropdownIcon="fas fa-caret-down" [disabled]="true"></p-dropdown>
     </p-panel>
   </div>
 </div>
