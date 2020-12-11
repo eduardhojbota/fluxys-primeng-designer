@@ -9,7 +9,7 @@
   }
 }
 
-.p-button.flx-within-day {
+.p-button.flx-button-within-day {
   background: $wdColor500;
   color: $white;
   border-color: $wdColor500;
@@ -37,7 +37,7 @@
   }
 }
 
-.p-button.flx-day-ahead {
+.p-button.flx-button-day-ahead {
   background: $daColor500;
   color: $white;
   border-color: $daColor500;
@@ -93,7 +93,7 @@
   required ???
 }*/
 
-.p-button.p-button-secondary.flx-within-day {
+.p-button.p-button-secondary.flx-button-within-day {
   background: $wdColor50;
   color: $wdColor900;
   border-color: $wdColor100;
@@ -129,7 +129,7 @@
   }
 }
 
-.p-button.p-button-secondary.flx-day-ahead {
+.p-button.p-button-secondary.flx-button-day-ahead {
   background: $daColor50;
   color: $daColor900;
   border-color: $daColor100;
@@ -192,7 +192,7 @@
     border-color: transparent;
   }
 
-  &.flx-within-day {
+  &.flx-button-within-day {
     color: $wdColor700;
 
     &:enabled:hover {
@@ -212,7 +212,7 @@
     }
   }
 
-  &.flx-day-ahead {
+  &.flx-button-day-ahead {
     color: $daColor700;
 
     &:enabled:hover {

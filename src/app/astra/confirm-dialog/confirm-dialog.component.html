@@ -65,13 +65,13 @@ this.confirmationService.confirm(&#123;
 });
 </app-code>
       <h5>Within Day</h5>
-      <button type="button" pButton label="Open" class="flx-within-day p-mr-2 p-mb-2" (click)="confirmWithinDay()"></button>
+      <button type="button" pButton label="Open" class="flx-button-within-day p-mr-2 p-mb-2" (click)="confirmWithinDay()"></button>
       <!-- prettier-ignore -->
       <app-code lang="html" ngPreserveWhitespaces>
-&lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-within-day"&gt;
+&lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-confirm-dialog-within-day"&gt;
   &lt;p-footer&gt;
-    &lt;button type="button" pButton label="Cancel" class="p-button-secondary flx-within-day" (click)="cd.reject()"&gt;&lt;/button&gt;
-    &lt;button type="button" pButton label="Ok" class="flx-within-day" (click)="cd.accept()"&gt;&lt;/button&gt;
+    &lt;button type="button" pButton label="Cancel" class="p-button-secondary flx-button-within-day" (click)="cd.reject()"&gt;&lt;/button&gt;
+    &lt;button type="button" pButton label="Ok" class="flx-button-within-day" (click)="cd.accept()"&gt;&lt;/button&gt;
   &lt;/p-footer&gt;
 &lt;/p-confirmDialog&gt;
 </app-code>
@@ -82,13 +82,13 @@ this.confirmationService.confirm(&#123;
 });
 </app-code>
       <h5>Day Ahead</h5>
-      <button type="button" pButton label="Open" class="flx-day-ahead p-mr-2 p-mb-2" (click)="confirmDayAhead()"></button>
+      <button type="button" pButton label="Open" class="flx-button-day-ahead p-mr-2 p-mb-2" (click)="confirmDayAhead()"></button>
       <!-- prettier-ignore -->
       <app-code lang="html" ngPreserveWhitespaces>
-&lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-day-ahead"&gt;
+&lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-confirm-dialog-day-ahead"&gt;
   &lt;p-footer&gt;
-    &lt;button type="button" pButton label="Cancel" class="p-button-secondary flx-day-ahead" (click)="cd.reject()"&gt;&lt;/button&gt;
-    &lt;button type="button" pButton label="Ok" class="flx-day-ahead" (click)="cd.accept()"&gt;&lt;/button&gt;
+    &lt;button type="button" pButton label="Cancel" class="p-button-secondary flx-button-day-ahead" (click)="cd.reject()"&gt;&lt;/button&gt;
+    &lt;button type="button" pButton label="Ok" class="flx-button-day-ahead" (click)="cd.accept()"&gt;&lt;/button&gt;
   &lt;/p-footer&gt;
 &lt;/p-confirmDialog&gt;
 </app-code>
@@ -102,7 +102,7 @@ this.confirmationService.confirm(&#123;
       <button type="button" pButton label="Open" class="p-button-warning p-mr-2 p-mb-2" (click)="confirmWarning()"></button>
       <!-- prettier-ignore -->
       <app-code lang="html" ngPreserveWhitespaces>
-&lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-warning"&gt;
+&lt;p-confirmDialog #cd header="Confirmation Dialog" styleClass="flx-confirm-dialog-warning"&gt;
   &lt;p-footer&gt;
     &lt;button type="button" pButton label="Cancel" class="p-button-secondary" (click)="cd.reject()"&gt;&lt;/button&gt;
     &lt;button type="button" pButton label="Ok" (click)="cd.accept()"&gt;&lt;/button&gt;
@@ -122,19 +122,19 @@ this.confirmationService.confirm(&#123;
           <button type="button" pButton label="Ok" (click)="cd1.accept()"></button>
         </p-footer>
       </p-confirmDialog>
-      <p-confirmDialog #cd2 key="withinDayCD" styleClass="flx-within-day" header="Confirmation Dialog">
+      <p-confirmDialog #cd2 key="withinDayCD" styleClass="flx-confirm-dialog-within-day" header="Confirmation Dialog">
         <p-footer>
-          <button type="button" pButton label="Cancel" class="p-button-secondary flx-within-day" (click)="cd2.reject()"></button>
-          <button type="button" pButton label="Ok" class="flx-within-day" (click)="cd2.accept()"></button>
+          <button type="button" pButton label="Cancel" class="p-button-secondary flx-button-within-day" (click)="cd2.reject()"></button>
+          <button type="button" pButton label="Ok" class="flx-button-within-day" (click)="cd2.accept()"></button>
         </p-footer>
       </p-confirmDialog>
-      <p-confirmDialog #cd3 key="dayAheadCD" styleClass="flx-day-ahead" header="Confirmation Dialog">
+      <p-confirmDialog #cd3 key="dayAheadCD" styleClass="flx-confirm-dialog-day-ahead" header="Confirmation Dialog">
         <p-footer>
-          <button type="button" pButton label="Cancel" class="p-button-secondary flx-day-ahead" (click)="cd3.reject()"></button>
-          <button type="button" pButton label="Ok" class="flx-day-ahead" (click)="cd3.accept()"></button>
+          <button type="button" pButton label="Cancel" class="p-button-secondary flx-button-day-ahead" (click)="cd3.reject()"></button>
+          <button type="button" pButton label="Ok" class="flx-button-day-ahead" (click)="cd3.accept()"></button>
         </p-footer>
       </p-confirmDialog>
-      <p-confirmDialog #cd4 key="warningCD" styleClass="flx-warning" header="Warning Dialog">
+      <p-confirmDialog #cd4 key="warningCD" styleClass="flx-confirm-dialog-warning" header="Warning Dialog">
         <p-footer>
           <button type="button" pButton label="Cancel" class="p-button-secondary" (click)="cd4.reject()"></button>
           <button type="button" pButton label="Ok" (click)="cd4.accept()"></button>

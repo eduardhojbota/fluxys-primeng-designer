@@ -21,7 +21,7 @@
     background: $grayColor50;
   }
 
-  &.flx-within-day {
+  &.flx-dialog-within-day {
     .p-dialog-header {
       background: $wdColor50;
 
@@ -36,7 +36,7 @@
     }
   }
 
-  &.flx-day-ahead {
+  &.flx-dialog-day-ahead {
     .p-dialog-header {
       background: $daColor50;
 
@@ -64,19 +64,19 @@
       margin-left: 0;
     }
 
-    &.flx-within-day {
+    &.flx-confirm-dialog-within-day {
       .p-dialog-header {
         border-top: 3px solid $wdColor400;
       }
     }
 
-    &.flx-day-ahead {
+    &.flx-confirm-dialog-day-ahead {
       .p-dialog-header {
         border-top: 3px solid $daColor400;
       }
     }
 
-    &.flx-warning {
+    &.flx-confirm-dialog-warning {
       .p-dialog-header {
         color: #870101; // red 900
       }

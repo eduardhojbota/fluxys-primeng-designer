@@ -52,7 +52,7 @@ export class DynamicDialogComponent implements OnDestroy {
       header: 'Pop-up title',
       footer: 'Dynamic Dialog Footer',
       width: '70vw',
-      styleClass: 'flx-within-day',
+      styleClass: 'flx-dialog-within-day',
     });
     this.wdRef.onClose.pipe(take(1)).subscribe((res) => {
       // do something based on res
@@ -65,7 +65,7 @@ export class DynamicDialogComponent implements OnDestroy {
       header: 'Pop-up title',
       footer: 'Dynamic Dialog Footer',
       width: '70vw',
-      styleClass: 'flx-day-ahead',
+      styleClass: 'flx-dialog-day-ahead',
     });
     this.daRef.onClose.pipe(take(1)).subscribe((res) => {
       // do something based on res

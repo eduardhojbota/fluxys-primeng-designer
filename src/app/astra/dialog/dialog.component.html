@@ -197,10 +197,10 @@ performAction(): void &#123;
 }
 </app-code>
       <h5>Within Day</h5>
-      <button type="button" pButton label="Open" class="flx-within-day p-mr-2 p-mb-2" (click)="showWithinDay()"></button>
-      <p-dialog [(visible)]="withinDayDialogVisible" styleClass="flx-within-day">
+      <button type="button" pButton label="Open" class="flx-button-within-day p-mr-2 p-mb-2" (click)="showWithinDay()"></button>
+      <p-dialog [(visible)]="withinDayDialogVisible" styleClass="flx-dialog-within-day">
         <p-header>
-          <span class="p-tag p-tag-rounded flx-within-day">WD</span>
+          <span class="p-tag p-tag-rounded flx-tag-within-day">WD</span>
           Pop-up title
         </p-header>
         <div class="fake-content">PLACE CONTENT HERE</div>
@@ -209,23 +209,23 @@ performAction(): void &#123;
             type="button"
             pButton
             label="Cancel"
-            class="p-button-secondary flx-within-day"
+            class="p-button-secondary flx-button-within-day"
             (click)="withinDayDialogVisible = false"
           ></button>
-          <button type="button" pButton label="Ok" class="flx-within-day" (click)="withinDayDialogVisible = false"></button>
+          <button type="button" pButton label="Ok" class="flx-button-within-day" (click)="withinDayDialogVisible = false"></button>
         </p-footer>
       </p-dialog>
       <!-- prettier-ignore -->
       <app-code lang="html" ngPreserveWhitespaces>
-&lt;p-dialog [(visible)]="visible" styleClass="flx-within-day"&gt;
+&lt;p-dialog [(visible)]="visible" styleClass="flx-dialog-within-day"&gt;
   &lt;p-header&gt;
-    &lt;span class="p-tag p-tag-rounded flx-within-day"&gt;WD&lt;/span&gt;
+    &lt;span class="p-tag p-tag-rounded flx-tag-within-day"&gt;WD&lt;/span&gt;
     Pop-up title
   &lt;/p-header&gt;
   PLACE CONTENT HERE
   &lt;p-footer&gt;
-    &lt;button type="button" pButton label="Cancel" class="p-button-secondary flx-within-day" (click)="cancel()"&gt;&lt;/button&gt;
-    &lt;button type="button" pButton label="Ok" class="flx-within-day" (click)="performAction()"&gt;&lt;/button&gt;
+    &lt;button type="button" pButton label="Cancel" class="p-button-secondary flx-button-within-day" (click)="cancel()"&gt;&lt;/button&gt;
+    &lt;button type="button" pButton label="Ok" class="flx-button-within-day" (click)="performAction()"&gt;&lt;/button&gt;
   &lt;/p-footer&gt;
 &lt;/p-dialog&gt;
 </app-code>
@@ -244,10 +244,10 @@ performAction(): void &#123;
 }
 </app-code>
       <h5>Day Ahead</h5>
-      <button type="button" pButton label="Open" class="flx-day-ahead p-mr-2 p-mb-2" (click)="showDayAhead()"></button>
-      <p-dialog [(visible)]="dayAheadDialogVisible" styleClass="flx-day-ahead">
+      <button type="button" pButton label="Open" class="flx-button-day-ahead p-mr-2 p-mb-2" (click)="showDayAhead()"></button>
+      <p-dialog [(visible)]="dayAheadDialogVisible" styleClass="flx-dialog-day-ahead">
         <p-header>
-          <span class="p-tag p-tag-rounded flx-day-ahead">WD</span>
+          <span class="p-tag p-tag-rounded flx-tag-day-ahead">WD</span>
           Pop-up title
         </p-header>
         <div class="fake-content">PLACE CONTENT HERE</div>
@@ -256,23 +256,23 @@ performAction(): void &#123;
             type="button"
             pButton
             label="Cancel"
-            class="p-button-secondary flx-day-ahead"
+            class="p-button-secondary flx-button-day-ahead"
             (click)="dayAheadDialogVisible = false"
           ></button>
-          <button type="button" pButton label="Ok" class="flx-day-ahead" (click)="dayAheadDialogVisible = false"></button>
+          <button type="button" pButton label="Ok" class="flx-button-day-ahead" (click)="dayAheadDialogVisible = false"></button>
         </p-footer>
       </p-dialog>
       <!-- prettier-ignore -->
       <app-code lang="html" ngPreserveWhitespaces>
-&lt;p-dialog [(visible)]="visible" styleClass="flx-day-ahead"&gt;
+&lt;p-dialog [(visible)]="visible" styleClass="flx-dialog-day-ahead"&gt;
   &lt;p-header&gt;
-    &lt;span class="p-tag p-tag-rounded flx-day-ahead"&gt;WD&lt;/span&gt;
+    &lt;span class="p-tag p-tag-rounded flx-tag-day-ahead"&gt;WD&lt;/span&gt;
     Pop-up title
   &lt;/p-header&gt;
   PLACE CONTENT HERE
   &lt;p-footer&gt;
-    &lt;button type="button" pButton label="Cancel" class="p-button-secondary flx-day-ahead" (click)="cancel()"&gt;&lt;/button&gt;
-    &lt;button type="button" pButton label="Ok" class="flx-day-ahead" (click)="performAction()"&gt;&lt;/button&gt;
+    &lt;button type="button" pButton label="Cancel" class="p-button-secondary flx-button-day-ahead" (click)="cancel()"&gt;&lt;/button&gt;
+    &lt;button type="button" pButton label="Ok" class="flx-button-day-ahead" (click)="performAction()"&gt;&lt;/button&gt;
   &lt;/p-footer&gt;
 &lt;/p-dialog&gt;
 </app-code>

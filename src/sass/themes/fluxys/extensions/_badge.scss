@@ -13,23 +13,23 @@
     background-color: $secondaryButtonBg;
     color: $secondaryButtonTextColor;
 
-    &.flx-within-day {
+    &.flx-tag-within-day {
       background-color: $wdColor50;
       color: $wdColor700;
     }
 
-    &.flx-day-ahead {
+    &.flx-tag-day-ahead {
       background-color: $daColor50;
       color: $daColor700;
     }
   }
 
-  &.flx-within-day {
+  &.flx-tag-within-day {
     background-color: $wdColor400;
     color: $white;
   }
 
-  &.flx-day-ahead {
+  &.flx-tag-day-ahead {
     background-color: $daColor400;
     color: $white;
   }
