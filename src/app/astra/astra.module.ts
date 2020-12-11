@@ -41,6 +41,8 @@ import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { SelectButtonComponent } from './select-button/select-button.component';
 import { SplitButtonComponent } from './split-button/split-button.component';
 import { ToastComponent } from './toast/toast.component';
+import { TabMenuComponent } from './tab-menu/tab-menu.component';
+import {TabMenuModule} from 'primeng/tabmenu';
 
 @NgModule({
   declarations: [
@@ -63,6 +65,7 @@ import { ToastComponent } from './toast/toast.component';
     SelectButtonComponent,
     BadgeComponent,
     CardComponent,
+    TabMenuComponent,
   ],
   imports: [
     CommonModule,
@@ -87,6 +90,7 @@ import { ToastComponent } from './toast/toast.component';
     InputSwitchModule,
     SelectButtonModule,
     CardModule,
+    TabMenuModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })
