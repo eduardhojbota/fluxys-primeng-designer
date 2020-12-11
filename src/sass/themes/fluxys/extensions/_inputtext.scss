@@ -1,0 +1,8 @@
+.p-inputtext {
+  &:disabled {
+    opacity: 1;
+    background: $grayColor50;
+    border-color: $grayColor50;
+    color: $grayColor500;
+  }
+}
