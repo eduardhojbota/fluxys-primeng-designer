@@ -1,27 +1,33 @@
-<div
-  class="layout-wrapper"
-  [ngClass]="{ 'layout-editor-code': codeEditor, 'p-ripple-disabled': !ripple, 'p-input-filled': inputStyle === 'filled' }"
->
-  <app-topbar *ngIf="codeEditor || initialized" (menuButtonClick)="onMenuButtonClick()"></app-topbar>
-  <app-editor
-    *ngIf="!codeEditor && theme"
-    [theme]="theme"
-    [active]="sidebarActive"
-    [(inputStyle)]="inputStyle"
-    [(ripple)]="ripple"
-    (compiled)="onCompile($event)"
-    (restart)="onRestart()"
-  ></app-editor>
-  <div class="layout-content" *ngIf="codeEditor || initialized">
-    <router-outlet></router-outlet>
-  </div>
+<ng-container *ngIf="codeEditor; then astra else designer"></ng-container>
+<ng-template #designer>
   <div
-    class="layout-mask"
-    [ngClass]="{ 'layout-mask-active': sidebarActive }"
-    *ngIf="!codeEditor && initialized"
-    (click)="sidebarActive = false"
-  ></div>
-  <app-footer *ngIf="codeEditor || initialized"></app-footer>
-  <app-intro @intro *ngIf="!codeEditor && !initialized" (themeSelect)="onThemeSelect($event)"></app-intro>
-  <p-toast></p-toast>
-</div>
+    class="layout-wrapper"
+    [ngClass]="{ 'p-ripple-disabled': !ripple, 'p-input-filled': inputStyle === 'filled' }"
+  >
+    <app-topbar *ngIf="initialized" (menuButtonClick)="onMenuButtonClick()"></app-topbar>
+    <app-editor
+      *ngIf="theme"
+      [theme]="theme"
+      [active]="sidebarActive"
+      [(inputStyle)]="inputStyle"
+      [(ripple)]="ripple"
+      (compiled)="onCompile($event)"
+      (restart)="onRestart()"
+    ></app-editor>
+    <div class="layout-content" *ngIf="initialized">
+      <router-outlet></router-outlet>
+    </div>
+    <div
+      class="layout-mask"
+      [ngClass]="{ 'layout-mask-active': sidebarActive }"
+      *ngIf="initialized"
+      (click)="sidebarActive = false"
+    ></div>
+    <app-footer *ngIf="initialized"></app-footer>
+    <app-intro @intro *ngIf="!initialized" (themeSelect)="onThemeSelect($event)"></app-intro>
+    <p-toast></p-toast>
+  </div>
+</ng-template>
+<ng-template #astra>
+  <router-outlet></router-outlet>
+</ng-template>

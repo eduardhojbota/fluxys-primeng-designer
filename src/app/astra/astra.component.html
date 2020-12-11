@@ -1,8 +1,6 @@
-<div class="p-grid">
-  <div class="p-col-fixed" style="width: 200px">
-    <p-menu [model]="menu"></p-menu>
-  </div>
-  <div class="p-col">
-    <router-outlet></router-outlet>
-  </div>
-</div>
+<nav>
+  <p-menu [model]="menu"></p-menu>
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>

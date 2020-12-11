@@ -7,11 +7,27 @@ import { MenuItem } from 'primeng/api';
   styles: [
     `
       :host {
-        display: block;
-        min-height: calc(100vh - 153px);
+        display: grid;
+        grid-template-columns: [nav] auto [main] 1fr [end];
+        gap: 1rem 1rem;
+        min-height: 100vh;
       }
-      .p-grid {
-        flex-wrap: nowrap;
+      nav {
+        grid-column-start: nav;
+        grid-column-end: main;
+        max-height: 100vh;
+        overflow-y: auto;
+      }
+      main {
+        grid-column-start: main;
+        grid-column-end: end;
+        max-height: 100vh;
+        overflow: hidden auto;
+        padding: 1rem;
+        padding-left: 0;
+      }
+      :host ::ng-deep .p-menu {
+        border-radius: 0;
       }
     `,
   ],
