@@ -43,6 +43,7 @@ import { SplitButtonComponent } from './split-button/split-button.component';
 import { ToastComponent } from './toast/toast.component';
 import { TabMenuComponent } from './tab-menu/tab-menu.component';
 import {TabMenuModule} from 'primeng/tabmenu';
+import { InputTextComponent } from './input-text/input-text.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import {TabMenuModule} from 'primeng/tabmenu';
     BadgeComponent,
     CardComponent,
     TabMenuComponent,
+    InputTextComponent,
   ],
   imports: [
     CommonModule,
