@@ -44,6 +44,8 @@ import { ToastComponent } from './toast/toast.component';
 import { TabMenuComponent } from './tab-menu/tab-menu.component';
 import {TabMenuModule} from 'primeng/tabmenu';
 import { InputTextComponent } from './input-text/input-text.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import {DropdownModule} from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
@@ -68,6 +70,7 @@ import { InputTextComponent } from './input-text/input-text.component';
     CardComponent,
     TabMenuComponent,
     InputTextComponent,
+    DropdownComponent,
   ],
   imports: [
     CommonModule,
@@ -93,6 +96,7 @@ import { InputTextComponent } from './input-text/input-text.component';
     SelectButtonModule,
     CardModule,
     TabMenuModule,
+    DropdownModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })

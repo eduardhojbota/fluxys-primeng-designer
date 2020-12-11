@@ -43,6 +43,7 @@ export class AstraComponent {
       items: [
         { label: 'Calendar', routerLink: ['./calendar'] },
         { label: 'Checkbox', routerLink: ['./checkbox'] },
+        { label: 'Dropdown', routerLink: ['./dropdown'] },
         { label: 'InputSwitch', routerLink: ['./inputswitch'] },
         { label: 'InputText', routerLink: ['./inputtext'] },
         { label: 'RadioButton', routerLink: ['./radiobutton'] },

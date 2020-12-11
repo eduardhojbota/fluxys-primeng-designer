@@ -19,6 +19,7 @@ import { SplitButtonComponent } from './split-button/split-button.component';
 import { ToastComponent } from './toast/toast.component';
 import {TabMenuComponent} from './tab-menu/tab-menu.component';
 import {InputTextComponent} from './input-text/input-text.component';
+import {DropdownComponent} from './dropdown/dropdown.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,7 @@ const routes: Routes = [
       { path: 'card', component: CardComponent },
       { path: 'tabmenu', component: TabMenuComponent },
       { path: 'inputtext', component: InputTextComponent },
+      { path: 'dropdown', component: DropdownComponent },
     ],
   },
 ];
