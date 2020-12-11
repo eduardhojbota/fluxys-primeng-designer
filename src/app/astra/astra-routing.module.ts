@@ -9,17 +9,17 @@ import { CardComponent } from './card/card.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
 import { DynamicDialogComponent } from './dynamic-dialog/dynamic-dialog.component';
 import { HomeComponent } from './home/home.component';
 import { InputSwitchComponent } from './input-switch/input-switch.component';
+import { InputTextComponent } from './input-text/input-text.component';
 import { MessagesComponent } from './messages/messages.component';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { SelectButtonComponent } from './select-button/select-button.component';
 import { SplitButtonComponent } from './split-button/split-button.component';
+import { TabMenuComponent } from './tab-menu/tab-menu.component';
 import { ToastComponent } from './toast/toast.component';
-import {TabMenuComponent} from './tab-menu/tab-menu.component';
-import {InputTextComponent} from './input-text/input-text.component';
-import {DropdownComponent} from './dropdown/dropdown.component';
 
 const routes: Routes = [
   {

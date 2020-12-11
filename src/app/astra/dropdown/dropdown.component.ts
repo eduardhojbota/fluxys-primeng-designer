@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {SelectItem, SelectItemGroup} from 'primeng/api';
-import {Country} from '../../domain/model';
+import { SelectItem, SelectItemGroup } from 'primeng/api';
+
+import { Country } from '../../domain/model';
 
 interface City {
   name: string;
@@ -12,24 +13,25 @@ interface City {
   templateUrl: './dropdown.component.html',
   styles: [
     `
-    :host ::ng-deep .p-dropdown {
-      width: 14rem;
-    }
+      :host ::ng-deep .p-dropdown {
+        width: 14rem;
+      }
 
-    .country-item {
-      display: flex;
-      align-items: center;
-    }
+      .country-item {
+        display: flex;
+        align-items: center;
+      }
 
-    .country-item img.flag {
-      width: 18px;
-      margin-right: 0.5rem;
-    }
+      .country-item img.flag {
+        width: 18px;
+        margin-right: 0.5rem;
+      }
 
-    .country-item-value img.flag {
-      width: 17px;
-    }`
-  ]
+      .country-item-value img.flag {
+        width: 17px;
+      }
+    `,
+  ],
 })
 export class DropdownComponent implements OnInit {
   cities: City[];
@@ -45,58 +47,61 @@ export class DropdownComponent implements OnInit {
   ngOnInit(): void {
     this.items = [];
     for (let i = 0; i < 10000; i++) {
-      this.items.push({label: 'Item ' + i, value: 'Item ' + i});
+      this.items.push({ label: 'Item ' + i, value: 'Item ' + i });
     }
 
     this.cities = [
-      {name: 'New York', code: 'NY'},
-      {name: 'Rome', code: 'RM'},
-      {name: 'London', code: 'LDN'},
-      {name: 'Istanbul', code: 'IST'},
-      {name: 'Paris', code: 'PRS'}
+      { name: 'New York', code: 'NY' },
+      { name: 'Rome', code: 'RM' },
+      { name: 'London', code: 'LDN' },
+      { name: 'Istanbul', code: 'IST' },
+      { name: 'Paris', code: 'PRS' },
     ];
 
     this.groupedCities = [
       {
-        label: 'Germany', value: 'de',
+        label: 'Germany',
+        value: 'de',
         items: [
-          {label: 'Berlin', value: 'Berlin'},
-          {label: 'Frankfurt', value: 'Frankfurt'},
-          {label: 'Hamburg', value: 'Hamburg'},
-          {label: 'Munich', value: 'Munich'}
-        ]
+          { label: 'Berlin', value: 'Berlin' },
+          { label: 'Frankfurt', value: 'Frankfurt' },
+          { label: 'Hamburg', value: 'Hamburg' },
+          { label: 'Munich', value: 'Munich' },
+        ],
       },
       {
-        label: 'USA', value: 'us',
+        label: 'USA',
+        value: 'us',
         items: [
-          {label: 'Chicago', value: 'Chicago'},
-          {label: 'Los Angeles', value: 'Los Angeles'},
-          {label: 'New York', value: 'New York'},
-          {label: 'San Francisco', value: 'San Francisco'}
-        ]
+          { label: 'Chicago', value: 'Chicago' },
+          { label: 'Los Angeles', value: 'Los Angeles' },
+          { label: 'New York', value: 'New York' },
+          { label: 'San Francisco', value: 'San Francisco' },
+        ],
       },
       {
-        label: 'Japan', value: 'jp',
+        label: 'Japan',
+        value: 'jp',
         items: [
-          {label: 'Kyoto', value: 'Kyoto'},
-          {label: 'Osaka', value: 'Osaka'},
-          {label: 'Tokyo', value: 'Tokyo'},
-          {label: 'Yokohama', value: 'Yokohama'}
-        ]
-      }
+          { label: 'Kyoto', value: 'Kyoto' },
+          { label: 'Osaka', value: 'Osaka' },
+          { label: 'Tokyo', value: 'Tokyo' },
+          { label: 'Yokohama', value: 'Yokohama' },
+        ],
+      },
     ];
 
     this.countries = [
-      {name: 'Australia', code: 'AU'},
-      {name: 'Brazil', code: 'BR'},
-      {name: 'China', code: 'CN'},
-      {name: 'Egypt', code: 'EG'},
-      {name: 'France', code: 'FR'},
-      {name: 'Germany', code: 'DE'},
-      {name: 'India', code: 'IN'},
-      {name: 'Japan', code: 'JP'},
-      {name: 'Spain', code: 'ES'},
-      {name: 'United States', code: 'US'}
+      { name: 'Australia', code: 'AU' },
+      { name: 'Brazil', code: 'BR' },
+      { name: 'China', code: 'CN' },
+      { name: 'Egypt', code: 'EG' },
+      { name: 'France', code: 'FR' },
+      { name: 'Germany', code: 'DE' },
+      { name: 'India', code: 'IN' },
+      { name: 'Japan', code: 'JP' },
+      { name: 'Spain', code: 'ES' },
+      { name: 'United States', code: 'US' },
     ];
   }
 }

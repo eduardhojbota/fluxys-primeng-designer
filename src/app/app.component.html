@@ -1,9 +1,6 @@
-<ng-container *ngIf="codeEditor; then astra else designer"></ng-container>
+<ng-container *ngIf="codeEditor; then astra; else designer"></ng-container>
 <ng-template #designer>
-  <div
-    class="layout-wrapper"
-    [ngClass]="{ 'p-ripple-disabled': !ripple, 'p-input-filled': inputStyle === 'filled' }"
-  >
+  <div class="layout-wrapper" [ngClass]="{ 'p-ripple-disabled': !ripple, 'p-input-filled': inputStyle === 'filled' }">
     <app-topbar *ngIf="initialized" (menuButtonClick)="onMenuButtonClick()"></app-topbar>
     <app-editor
       *ngIf="theme"
@@ -17,12 +14,7 @@
     <div class="layout-content" *ngIf="initialized">
       <router-outlet></router-outlet>
     </div>
-    <div
-      class="layout-mask"
-      [ngClass]="{ 'layout-mask-active': sidebarActive }"
-      *ngIf="initialized"
-      (click)="sidebarActive = false"
-    ></div>
+    <div class="layout-mask" [ngClass]="{ 'layout-mask-active': sidebarActive }" *ngIf="initialized" (click)="sidebarActive = false"></div>
     <app-footer *ngIf="initialized"></app-footer>
     <app-intro @intro *ngIf="!initialized" (themeSelect)="onThemeSelect($event)"></app-intro>
     <p-toast></p-toast>

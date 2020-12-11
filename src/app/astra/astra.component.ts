@@ -75,9 +75,7 @@ export class AstraComponent {
     { separator: true },
     {
       label: 'Menu',
-      items: [
-        { label: 'TabMenu', routerLink: ['./tabmenu'] },
-      ],
+      items: [{ label: 'TabMenu', routerLink: ['./tabmenu'] }],
     },
     { separator: true },
     {

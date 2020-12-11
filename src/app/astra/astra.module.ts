@@ -7,6 +7,7 @@ import { CardModule } from 'primeng/card';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { DialogModule } from 'primeng/dialog';
+import { DropdownModule } from 'primeng/dropdown';
 import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { InputTextModule } from 'primeng/inputtext';
@@ -19,6 +20,7 @@ import { RippleModule } from 'primeng/ripple';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { TableModule } from 'primeng/table';
+import { TabMenuModule } from 'primeng/tabmenu';
 import { ToastModule } from 'primeng/toast';
 
 import { AstraRoutingModule } from './astra-routing.module';
@@ -31,21 +33,19 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import { CodeComponent } from './code.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
 import { DynamicDialogContentComponent } from './dynamic-dialog/dynamic-dialog-content/dynamic-dialog-content.component';
 import { DynamicDialogComponent } from './dynamic-dialog/dynamic-dialog.component';
 import { ProductListDemoComponent } from './dynamic-dialog/product-list-demo/product-list-demo.component';
 import { HomeComponent } from './home/home.component';
 import { InputSwitchComponent } from './input-switch/input-switch.component';
+import { InputTextComponent } from './input-text/input-text.component';
 import { MessagesComponent } from './messages/messages.component';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { SelectButtonComponent } from './select-button/select-button.component';
 import { SplitButtonComponent } from './split-button/split-button.component';
-import { ToastComponent } from './toast/toast.component';
 import { TabMenuComponent } from './tab-menu/tab-menu.component';
-import {TabMenuModule} from 'primeng/tabmenu';
-import { InputTextComponent } from './input-text/input-text.component';
-import { DropdownComponent } from './dropdown/dropdown.component';
-import {DropdownModule} from 'primeng/dropdown';
+import { ToastComponent } from './toast/toast.component';
 
 @NgModule({
   declarations: [

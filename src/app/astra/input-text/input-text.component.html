@@ -1,29 +1,32 @@
 <h1>InputText</h1>
-<p>InputText renders a text field to enter data. See <a href="https://www.primefaces.org/primeng/showcase/#/inputtext" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<p>
+  InputText renders a text field to enter data. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/inputtext" target="_blank" rel="noreferrer noopener">official documentation</a>.
+</p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
       <h5>Basic</h5>
-      <input type="text" pInputText [(ngModel)]="value1">
-      <span class="p-ml-2">{{value1}}</span>
+      <input type="text" pInputText [(ngModel)]="value1" />
+      <span class="p-ml-2">{{ value1 }}</span>
 
       <h5 class="p-mb-5">Float Label</h5>
       <span class="p-float-label">
-    <input id="float-input" type="text" pInputText [(ngModel)]="value2">
-    <label for="float-input">Username</label>
-</span>
+        <input id="float-input" type="text" pInputText [(ngModel)]="value2" />
+        <label for="float-input">Username</label>
+      </span>
 
       <h5>Left Icon</h5>
       <span class="p-input-icon-left">
-    <i class="pi pi-search"></i>
-    <input type="text" pInputText placeholder="Search" [(ngModel)]="value3" />
-</span>
+        <i class="pi pi-search"></i>
+        <input type="text" pInputText placeholder="Search" [(ngModel)]="value3" />
+      </span>
 
       <h5>Right Icon</h5>
       <span class="p-input-icon-right">
-    <i class="pi pi-spin pi-spinner"></i>
-    <input type="text" pInputText />
-</span>
+        <i class="pi pi-spin pi-spinner"></i>
+        <input type="text" pInputText />
+      </span>
 
       <h5>Help Text</h5>
       <div class="p-field">
@@ -46,7 +49,7 @@
       <div class="sizes">
         <input type="text" class="p-inputtext-sm" placeholder="Small" pInputText />
         <input type="text" placeholder="Normal" pInputText />
-        <input type="text" class="p-inputtext-lg" placeholder="Large"  pInputText />
+        <input type="text" class="p-inputtext-lg" placeholder="Large" pInputText />
       </div>
     </p-panel>
   </div>

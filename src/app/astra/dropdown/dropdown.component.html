@@ -1,26 +1,43 @@
 <h1>Dropdown</h1>
-<p>Dropdown is used to select an item from a list of options. See <a href="https://www.primefaces.org/primeng/showcase/#/dropdown" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<p>
+  Dropdown is used to select an item from a list of options. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/dropdown" target="_blank" rel="noreferrer noopener">official documentation</a>.
+</p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
       <h5>Single</h5>
-      <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" placeholder="Select a City" optionLabel="name" [showClear]="true"></p-dropdown>
+      <p-dropdown
+        [options]="cities"
+        [(ngModel)]="selectedCity1"
+        placeholder="Select a City"
+        optionLabel="name"
+        [showClear]="true"
+      ></p-dropdown>
 
       <h5>Editable</h5>
       <p-dropdown [options]="cities" [(ngModel)]="selectedCity2" editable="true" optionLabel="name"></p-dropdown>
 
       <h5>Content with Filters</h5>
-      <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [filter]="true" filterBy="name" [showClear]="true" placeholder="Select a Country">
+      <p-dropdown
+        [options]="countries"
+        [(ngModel)]="selectedCountry"
+        optionLabel="name"
+        [filter]="true"
+        filterBy="name"
+        [showClear]="true"
+        placeholder="Select a Country"
+      >
         <ng-template pTemplate="selectedItem">
-          <div class="country-item country-item-value"  *ngIf="selectedCountry">
+          <div class="country-item country-item-value" *ngIf="selectedCountry">
             <img src="assets/demo/images/flag/flag_placeholder.png" [class]="'flag flag-' + selectedCountry.code.toLowerCase()" />
-            <div>{{selectedCountry.name}}</div>
+            <div>{{ selectedCountry.name }}</div>
           </div>
         </ng-template>
         <ng-template let-country pTemplate="item">
           <div class="country-item">
             <img src="assets/demo/images/flag/flag_placeholder.png" [class]="'flag flag-' + country.code.toLowerCase()" />
-            <div>{{country.name}}</div>
+            <div>{{ country.name }}</div>
           </div>
         </ng-template>
       </p-dropdown>
@@ -29,20 +46,30 @@
       <p-dropdown [options]="groupedCities" [(ngModel)]="selectedCity3" placeholder="Select a City" [group]="true">
         <ng-template let-group pTemplate="group">
           <div class="p-d-flex p-ai-center">
-            <img src="assets/demo/images/flag/flag_placeholder.png" [class]="'p-mr-2 flag flag-' + group.value" style="width: 20px"/>
-            <span>{{group.label}}</span>
+            <img src="assets/demo/images/flag/flag_placeholder.png" [class]="'p-mr-2 flag flag-' + group.value" style="width: 20px" />
+            <span>{{ group.label }}</span>
           </div>
         </ng-template>
       </p-dropdown>
 
       <h5>Virtual Scroll (10000 Items)</h5>
-      <p-dropdown [options]="items" [(ngModel)]="item" placeholder="Select Item" [virtualScroll]="true" [itemSize]="31" [filter]="false"></p-dropdown>
+      <p-dropdown
+        [options]="items"
+        [(ngModel)]="item"
+        placeholder="Select Item"
+        [virtualScroll]="true"
+        [itemSize]="31"
+        [filter]="false"
+      ></p-dropdown>
     </p-panel>
   </div>
   <div class="p-col">
     <p-panel header="Fluxys Example" [toggleable]="true">
       <h5>Correct dropdown icon</h5>
-      <p>In order to match the dropdown icon used in Figma, you need to change the <em>dropdownIcon</em> of the <em>p-dropdown</em> component to <b>fas fa-caret-down</b></p>
+      <p>
+        In order to match the dropdown icon used in Figma, you need to change the <em>dropdownIcon</em> of the <em>p-dropdown</em> component
+        to <b>fas fa-caret-down</b>
+      </p>
       <p-dropdown [options]="cities" placeholder="Select a City" optionLabel="name" dropdownIcon="fas fa-caret-down"></p-dropdown>
       <!-- prettier-ignore -->
       <app-code lang="html" ngPreserveWhitespaces>
@@ -50,7 +77,13 @@
 </app-code>
 
       <h5>Disabled</h5>
-      <p-dropdown [options]="cities" placeholder="Select a City" optionLabel="name" dropdownIcon="fas fa-caret-down" [disabled]="true"></p-dropdown>
+      <p-dropdown
+        [options]="cities"
+        placeholder="Select a City"
+        optionLabel="name"
+        dropdownIcon="fas fa-caret-down"
+        [disabled]="true"
+      ></p-dropdown>
     </p-panel>
   </div>
 </div>
