@@ -63,6 +63,8 @@ import { InputNumberComponent } from './input-number/input-number.component';
 import {InputNumberModule} from 'primeng/inputnumber';
 import { FloatLabelComponent } from './float-label/float-label.component';
 import {MultiSelectModule} from 'primeng/multiselect';
+import { KeyFilterComponent } from './key-filter/key-filter.component';
+import {KeyFilterModule} from 'primeng/keyfilter';
 
 @NgModule({
   declarations: [
@@ -97,6 +99,7 @@ import {MultiSelectModule} from 'primeng/multiselect';
     InputTextareaComponent,
     InputNumberComponent,
     FloatLabelComponent,
+    KeyFilterComponent,
   ],
   imports: [
     CommonModule,
@@ -131,6 +134,7 @@ import {MultiSelectModule} from 'primeng/multiselect';
     InputTextareaModule,
     InputNumberModule,
     MultiSelectModule,
+    KeyFilterModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })
