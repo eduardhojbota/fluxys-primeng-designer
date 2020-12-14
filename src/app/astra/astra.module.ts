@@ -74,6 +74,8 @@ import { RatingComponent } from './rating/rating.component';
 import {RatingModule} from 'primeng/rating';
 import { SliderComponent } from './slider/slider.component';
 import {SliderModule} from 'primeng/slider';
+import { ToggleButtonComponent } from './toggle-button/toggle-button.component';
+import {ToggleButtonModule} from 'primeng/togglebutton';
 
 @NgModule({
   declarations: [
@@ -114,6 +116,7 @@ import {SliderModule} from 'primeng/slider';
     PasswordComponent,
     RatingComponent,
     SliderComponent,
+    ToggleButtonComponent,
   ],
   imports: [
     CommonModule,
@@ -153,6 +156,7 @@ import {SliderModule} from 'primeng/slider';
     PasswordModule,
     RatingModule,
     SliderModule,
+    ToggleButtonModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })

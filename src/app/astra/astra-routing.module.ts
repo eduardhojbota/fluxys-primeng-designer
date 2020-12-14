@@ -35,6 +35,7 @@ import {MultiSelectComponent} from './multi-select/multi-select.component';
 import {PasswordComponent} from './password/password.component';
 import {RatingComponent} from './rating/rating.component';
 import {SliderComponent} from './slider/slider.component';
+import {ToggleButtonComponent} from './toggle-button/toggle-button.component';
 
 const routes: Routes = [
   {
@@ -74,6 +75,7 @@ const routes: Routes = [
       { path: 'password', component: PasswordComponent },
       { path: 'rating', component: RatingComponent },
       { path: 'slider', component: SliderComponent },
+      { path: 'togglebutton', component: ToggleButtonComponent },
     ],
   },
 ];

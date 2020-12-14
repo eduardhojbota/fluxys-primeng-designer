@@ -65,6 +65,7 @@ export class AstraComponent {
         { label: 'Rating', routerLink: ['./rating'] },
         { label: 'Slider', routerLink: ['./slider'] },
         { label: 'SelectButton', routerLink: ['./selectbutton'] },
+        { label: 'ToggleButton', routerLink: ['./togglebutton'] },
       ],
     },
     { separator: true },
