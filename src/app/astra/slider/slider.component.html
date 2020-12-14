@@ -1,22 +1,25 @@
 <h1>Slider</h1>
-<p>Slider is an input component to provide a numerical input. See <a href="https://www.primefaces.org/primeng/showcase/#/slider" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<p>
+  Slider is an input component to provide a numerical input. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/slider" target="_blank" rel="noreferrer noopener">official documentation</a>.
+</p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
-      <h5>Basic: {{val1}}</h5>
+      <h5>Basic: {{ val1 }}</h5>
       <p-slider [(ngModel)]="val1"></p-slider>
 
-      <h5>Input: {{val2}}</h5>
-      <input type="text" pInputText [(ngModel)]="val2" readonly/>
+      <h5>Input: {{ val2 }}</h5>
+      <input type="text" pInputText [(ngModel)]="val2" readonly />
       <p-slider [(ngModel)]="val2"></p-slider>
 
-      <h5>Step: {{val3}}</h5>
+      <h5>Step: {{ val3 }}</h5>
       <p-slider [(ngModel)]="val3" [step]="20"></p-slider>
 
-      <h5>Range: {{rangeValues[0] + ' - ' + rangeValues[1]}}</h5>
+      <h5>Range: {{ rangeValues[0] + ' - ' + rangeValues[1] }}</h5>
       <p-slider [(ngModel)]="rangeValues" [range]="true"></p-slider>
 
-      <h5>Vertical: {{val4}}</h5>
+      <h5>Vertical: {{ val4 }}</h5>
       <p-slider [(ngModel)]="val4" orientation="vertical"></p-slider>
     </p-panel>
   </div>

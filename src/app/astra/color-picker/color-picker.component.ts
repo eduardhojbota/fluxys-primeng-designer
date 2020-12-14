@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
 })
 export class ColorPickerComponent {
   color1: string;
-  color2: string = '#1976d2';
+  color2 = '#1976d2';
 }

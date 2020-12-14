@@ -1,26 +1,47 @@
 <h1>AutoComplete</h1>
-<p>AutoComplete is an input component that provides real-time suggestions when being typed. See <a href="https://www.primefaces.org/primeng/showcase/#/autocomplete" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<p>
+  AutoComplete is an input component that provides real-time suggestions when being typed. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/autocomplete" target="_blank" rel="noreferrer noopener">official documentation</a>.
+</p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
       <h5>Basic</h5>
-      <p-autoComplete [(ngModel)]="selectedCountry" [suggestions]="filteredCountries" (completeMethod)="filterCountry($event)" field="name" [minLength]="1"></p-autoComplete>
+      <p-autoComplete
+        [(ngModel)]="selectedCountry"
+        [suggestions]="filteredCountries"
+        (completeMethod)="filterCountry($event)"
+        field="name"
+        [minLength]="1"
+      ></p-autoComplete>
 
       <h5>Dropdown and Templating</h5>
-      <p-autoComplete [(ngModel)]="selectedCountryAdvanced" [suggestions]="filteredCountries" (completeMethod)="filterCountry($event)" field="name" [dropdown]="true">
+      <p-autoComplete
+        [(ngModel)]="selectedCountryAdvanced"
+        [suggestions]="filteredCountries"
+        (completeMethod)="filterCountry($event)"
+        field="name"
+        [dropdown]="true"
+      >
         <ng-template let-country pTemplate="item">
           <div class="country-item">
             <img src="assets/demo/images/flag/flag_placeholder.png" [class]="'flag flag-' + country.code.toLowerCase()" />
-            <div>{{country.name}}</div>
+            <div>{{ country.name }}</div>
           </div>
         </ng-template>
       </p-autoComplete>
 
       <h5>Multiple</h5>
       <span class="p-fluid">
-    <p-autoComplete [(ngModel)]="selectedCountries" [suggestions]="filteredCountries" (completeMethod)="filterCountry($event)" field="name" [multiple]="true">
-    </p-autoComplete>
-</span>
+        <p-autoComplete
+          [(ngModel)]="selectedCountries"
+          [suggestions]="filteredCountries"
+          (completeMethod)="filterCountry($event)"
+          field="name"
+          [multiple]="true"
+        >
+        </p-autoComplete>
+      </span>
     </p-panel>
   </div>
 </div>

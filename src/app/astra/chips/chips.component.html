@@ -1,19 +1,20 @@
 <h1>Chips</h1>
-<p>Chips is used to enter multiple values on an input field. See <a href="https://www.primefaces.org/primeng/showcase/#/chips" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<p>
+  Chips is used to enter multiple values on an input field. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/chips" target="_blank" rel="noreferrer noopener">official documentation</a>.
+</p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
       <h5>Basic</h5>
-      <p-chips [(ngModel)]="values1" ></p-chips>
+      <p-chips [(ngModel)]="values1"></p-chips>
 
       <h5>Comma Separator</h5>
       <p-chips [(ngModel)]="values2" separator=","></p-chips>
 
       <h5>ng-template</h5>
       <p-chips [(ngModel)]="values3">
-        <ng-template let-item pTemplate="item">
-          {{item}} - (active) <i class="pi pi-user p-ml-2"></i>
-        </ng-template>
+        <ng-template let-item pTemplate="item"> {{ item }} - (active) <i class="pi pi-user p-ml-2"></i> </ng-template>
       </p-chips>
     </p-panel>
   </div>

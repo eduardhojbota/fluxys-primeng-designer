@@ -1,5 +1,8 @@
 <h1>MultiSelect</h1>
-<p>MultiSelect is used to multiple values from a list of options. See <a href="https://www.primefaces.org/primeng/showcase/#/multiselect" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<p>
+  MultiSelect is used to multiple values from a list of options. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/multiselect" target="_blank" rel="noreferrer noopener">official documentation</a>.
+</p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
@@ -7,33 +10,52 @@
       <p-multiSelect [options]="cities" [(ngModel)]="selectedCities1" defaultLabel="Select a City" optionLabel="name"></p-multiSelect>
 
       <h5>Chips</h5>
-      <p-multiSelect [options]="cities" [(ngModel)]="selectedCities2" defaultLabel="Select a City" optionLabel="name" display="chip"></p-multiSelect>
+      <p-multiSelect
+        [options]="cities"
+        [(ngModel)]="selectedCities2"
+        defaultLabel="Select a City"
+        optionLabel="name"
+        display="chip"
+      ></p-multiSelect>
 
       <h5>Templating</h5>
-      <p-multiSelect [options]="countries" [(ngModel)]="selectedCountries1" defaultLabel="Select a Country" optionLabel="name" class="multiselect-custom">
+      <p-multiSelect
+        [options]="countries"
+        [(ngModel)]="selectedCountries1"
+        defaultLabel="Select a Country"
+        optionLabel="name"
+        class="multiselect-custom"
+      >
         <ng-template let-value pTemplate="selectedItems">
           <div class="country-item country-item-value" *ngFor="let option of selectedCountries1">
             <img src="assets/demo/images/flag/flag_placeholder.png" [class]="'flag flag-' + option.code.toLowerCase()" />
-            <div>{{option.name}}</div>
+            <div>{{ option.name }}</div>
           </div>
-          <div *ngIf="!selectedCountries1 || selectedCountries1.length === 0" class="country-placeholder">
-            Select Countries
-          </div>
+          <div *ngIf="!selectedCountries1 || selectedCountries1.length === 0" class="country-placeholder">Select Countries</div>
         </ng-template>
         <ng-template let-country pTemplate="item">
           <div class="country-item">
             <img src="assets/demo/images/flag/flag_placeholder.png" [class]="'flag flag-' + country.code.toLowerCase()" />
-            <div>{{country.name}}</div>
+            <div>{{ country.name }}</div>
           </div>
         </ng-template>
       </p-multiSelect>
 
       <h5>Virtual Scroll (10000 Items)</h5>
-      <p-multiSelect [options]="virtualCountries" [showToggleAll]="false" [(ngModel)]="selectedCountries2" optionLabel="name" [virtualScroll]="true" [filter]="true" [itemSize]="34" class="multiselect-custom-virtual-scroll">
+      <p-multiSelect
+        [options]="virtualCountries"
+        [showToggleAll]="false"
+        [(ngModel)]="selectedCountries2"
+        optionLabel="name"
+        [virtualScroll]="true"
+        [filter]="true"
+        [itemSize]="34"
+        class="multiselect-custom-virtual-scroll"
+      >
         <ng-template let-country pTemplate="item">
           <div class="country-item">
             <img src="assets/demo/images/flag/flag_placeholder.png" [class]="'flag flag-' + country.code.toLowerCase()" />
-            <div>{{country.name}}</div>
+            <div>{{ country.name }}</div>
           </div>
         </ng-template>
       </p-multiSelect>
@@ -53,7 +75,13 @@
 </app-code>
 
       <h5>Disabled</h5>
-      <p-multiSelect [options]="cities" defaultLabel="Select a City" optionLabel="name" dropdownIcon="fas fa-caret-down" [disabled]="true"></p-multiSelect>
+      <p-multiSelect
+        [options]="cities"
+        defaultLabel="Select a City"
+        optionLabel="name"
+        dropdownIcon="fas fa-caret-down"
+        [disabled]="true"
+      ></p-multiSelect>
     </p-panel>
   </div>
 </div>

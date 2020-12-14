@@ -1,5 +1,8 @@
 <h1>ToggleButton</h1>
-<p>ToggleButton is used to select a boolean value using a button. See <a href="https://www.primefaces.org/primeng/showcase/#/togglebutton" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<p>
+  ToggleButton is used to select a boolean value using a button. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/togglebutton" target="_blank" rel="noreferrer noopener">official documentation</a>.
+</p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
@@ -7,7 +10,14 @@
       <p-toggleButton [(ngModel)]="checked1" onIcon="pi pi-check" offIcon="pi pi-times"></p-toggleButton>
 
       <h5>Customized</h5>
-      <p-toggleButton [(ngModel)]="checked2" onLabel="I confirm" offLabel="I reject" onIcon="pi pi-check" offIcon="pi pi-times" [style]="{'width': '10em'}"></p-toggleButton>
+      <p-toggleButton
+        [(ngModel)]="checked2"
+        onLabel="I confirm"
+        offLabel="I reject"
+        onIcon="pi pi-check"
+        offIcon="pi pi-times"
+        [style]="{ width: '10em' }"
+      ></p-toggleButton>
     </p-panel>
   </div>
 </div>

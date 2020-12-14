@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './toggle-button.component.html',
 })
 export class ToggleButtonComponent {
-  checked1: boolean = false;
-  checked2: boolean = true;
+  checked1 = false;
+  checked2 = true;
 }

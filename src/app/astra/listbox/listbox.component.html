@@ -1,17 +1,30 @@
 <h1>Listbox</h1>
-<p>Listbox is used to select one or more values from a list of items. See <a href="https://www.primefaces.org/primeng/showcase/#/listbox" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<p>
+  Listbox is used to select one or more values from a list of items. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/listbox" target="_blank" rel="noreferrer noopener">official documentation</a>.
+</p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
       <h5>Single</h5>
-      <p-listbox [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [style]="{'width':'15rem'}"></p-listbox>
+      <p-listbox [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [style]="{ width: '15rem' }"></p-listbox>
 
       <h5>Advanced with Templating, Filtering and Multiple Selection</h5>
-      <p-listbox [options]="countries" [(ngModel)]="selectedCountries" [metaKeySelection]="false" [checkbox]="true" [filter]="true" [multiple]="true" optionLabel="name" [listStyle]="{'max-height':'250px'}" [style]="{'width':'15rem'}">
+      <p-listbox
+        [options]="countries"
+        [(ngModel)]="selectedCountries"
+        [metaKeySelection]="false"
+        [checkbox]="true"
+        [filter]="true"
+        [multiple]="true"
+        optionLabel="name"
+        [listStyle]="{ 'max-height': '250px' }"
+        [style]="{ width: '15rem' }"
+      >
         <ng-template let-country pTemplate="item">
           <div class="country-item">
             <img src="assets/demo/images/flag/flag_placeholder.png" [class]="'flag flag-' + country.code.toLowerCase()" />
-            <div>{{country.name}}</div>
+            <div>{{ country.name }}</div>
           </div>
         </ng-template>
       </p-listbox>
