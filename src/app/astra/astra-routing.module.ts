@@ -22,6 +22,7 @@ import { TabMenuComponent } from './tab-menu/tab-menu.component';
 import { ToastComponent } from './toast/toast.component';
 import {TooltipComponent} from './tooltip/tooltip.component';
 import {AutoCompleteComponent} from './auto-complete/auto-complete.component';
+import {ChipsComponent} from './chips/chips.component';
 
 const routes: Routes = [
   {
@@ -48,6 +49,7 @@ const routes: Routes = [
       { path: 'dropdown', component: DropdownComponent },
       { path: 'tooltip', component: TooltipComponent },
       { path: 'autocomplete', component: AutoCompleteComponent },
+      { path: 'chips', component: ChipsComponent },
     ],
   },
 ];

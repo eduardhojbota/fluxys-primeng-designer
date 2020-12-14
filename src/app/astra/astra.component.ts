@@ -44,6 +44,7 @@ export class AstraComponent {
         { label: 'AutoComplete', routerLink: ['./autocomplete'] },
         { label: 'Calendar', routerLink: ['./calendar'] },
         { label: 'Checkbox', routerLink: ['./checkbox'] },
+        { label: 'Chips', routerLink: ['./chips'] },
         { label: 'Dropdown', routerLink: ['./dropdown'] },
         { label: 'InputSwitch', routerLink: ['./inputswitch'] },
         { label: 'InputText', routerLink: ['./inputtext'] },

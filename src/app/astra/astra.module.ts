@@ -50,6 +50,8 @@ import { TooltipComponent } from './tooltip/tooltip.component';
 import {TooltipModule} from 'primeng/tooltip';
 import { AutoCompleteComponent } from './auto-complete/auto-complete.component';
 import {AutoCompleteModule} from 'primeng/autocomplete';
+import { ChipsComponent } from './chips/chips.component';
+import {ChipsModule} from 'primeng/chips';
 
 @NgModule({
   declarations: [
@@ -77,6 +79,7 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
     DropdownComponent,
     TooltipComponent,
     AutoCompleteComponent,
+    ChipsComponent,
   ],
   imports: [
     CommonModule,
@@ -105,6 +108,7 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
     DropdownModule,
     TooltipModule,
     AutoCompleteModule,
+    ChipsModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })
