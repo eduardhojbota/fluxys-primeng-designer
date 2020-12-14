@@ -52,6 +52,8 @@ import { AutoCompleteComponent } from './auto-complete/auto-complete.component';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import { ChipsComponent } from './chips/chips.component';
 import {ChipsModule} from 'primeng/chips';
+import { ColorPickerComponent } from './color-picker/color-picker.component';
+import {ColorPickerModule} from 'primeng/colorpicker';
 
 @NgModule({
   declarations: [
@@ -80,6 +82,7 @@ import {ChipsModule} from 'primeng/chips';
     TooltipComponent,
     AutoCompleteComponent,
     ChipsComponent,
+    ColorPickerComponent,
   ],
   imports: [
     CommonModule,
@@ -109,6 +112,7 @@ import {ChipsModule} from 'primeng/chips';
     TooltipModule,
     AutoCompleteModule,
     ChipsModule,
+    ColorPickerModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })

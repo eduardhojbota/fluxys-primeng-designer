@@ -23,6 +23,7 @@ import { ToastComponent } from './toast/toast.component';
 import {TooltipComponent} from './tooltip/tooltip.component';
 import {AutoCompleteComponent} from './auto-complete/auto-complete.component';
 import {ChipsComponent} from './chips/chips.component';
+import {ColorPickerComponent} from './color-picker/color-picker.component';
 
 const routes: Routes = [
   {
@@ -50,6 +51,7 @@ const routes: Routes = [
       { path: 'tooltip', component: TooltipComponent },
       { path: 'autocomplete', component: AutoCompleteComponent },
       { path: 'chips', component: ChipsComponent },
+      { path: 'colorpicker', component: ColorPickerComponent },
     ],
   },
 ];
