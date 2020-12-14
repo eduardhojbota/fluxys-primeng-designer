@@ -28,6 +28,7 @@ import {InputGroupComponent} from './input-group/input-group.component';
 import {InputMaskComponent} from './input-mask/input-mask.component';
 import {InputTextareaComponent} from './input-textarea/input-textarea.component';
 import {InputNumberComponent} from './input-number/input-number.component';
+import {FloatLabelComponent} from './float-label/float-label.component';
 
 const routes: Routes = [
   {
@@ -60,6 +61,7 @@ const routes: Routes = [
       { path: 'inputmask', component: InputMaskComponent },
       { path: 'inputtextarea', component: InputTextareaComponent },
       { path: 'inputnumber', component: InputNumberComponent },
+      { path: 'floatlabel', component: FloatLabelComponent },
     ],
   },
 ];

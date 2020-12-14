@@ -1,0 +1,11 @@
+.p-float-label {
+  input:focus ~ label,
+  input.p-filled ~ label,
+  textarea:focus ~ label,
+  textarea.p-filled ~ label,
+  .p-inputwrapper-focus ~ label,
+  .p-inputwrapper-filled ~ label {
+    left: 0;
+    color: $grayColor400;
+  }
+}

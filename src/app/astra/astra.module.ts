@@ -61,6 +61,8 @@ import { InputTextareaComponent } from './input-textarea/input-textarea.componen
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import { InputNumberComponent } from './input-number/input-number.component';
 import {InputNumberModule} from 'primeng/inputnumber';
+import { FloatLabelComponent } from './float-label/float-label.component';
+import {MultiSelectModule} from 'primeng/multiselect';
 
 @NgModule({
   declarations: [
@@ -94,6 +96,7 @@ import {InputNumberModule} from 'primeng/inputnumber';
     InputMaskComponent,
     InputTextareaComponent,
     InputNumberComponent,
+    FloatLabelComponent,
   ],
   imports: [
     CommonModule,
@@ -127,6 +130,7 @@ import {InputNumberModule} from 'primeng/inputnumber';
     InputMaskModule,
     InputTextareaModule,
     InputNumberModule,
+    MultiSelectModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })

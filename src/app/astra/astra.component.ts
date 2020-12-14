@@ -56,6 +56,7 @@ export class AstraComponent {
         { label: 'InputText', routerLink: ['./inputtext'] },
         { label: 'InputTextArea', routerLink: ['./inputtextarea'] },
         { label: 'InputNumber', routerLink: ['./inputnumber'] },
+        { label: 'FloatLabel', routerLink: ['./floatlabel'] },
         { label: 'RadioButton', routerLink: ['./radiobutton'] },
         { label: 'SelectButton', routerLink: ['./selectbutton'] },
       ],
