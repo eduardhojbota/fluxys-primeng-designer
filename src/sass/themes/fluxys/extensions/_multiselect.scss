@@ -1,0 +1,54 @@
+.p-multiselect {
+  &.p-disabled {
+    opacity: 1;
+    background-color: $grayColor50;
+    border-color: $grayColor50;
+
+    .p-multiselect-label {
+      color: $grayColor500;
+    }
+
+    // not sure if it is really needed...
+    &.p-multiselect-chip {
+      .p-multiselect-token {
+        background: $neutralColor300;
+        color: $grayColor400;
+      }
+    }
+
+    .p-multiselect-trigger {
+      display: none;
+    }
+  }
+}
+
+.p-multiselect-panel {
+  .p-multiselect-header {
+    .p-multiselect-filter-container {
+      .p-inputtext {
+        border-color: $neutralColor400;
+        border-width: 0 0 2px 0;
+        border-radius: 0;
+        padding-left: 0.1rem;
+
+        &:enabled:hover {
+          border-color: $neutralColor400;
+        }
+
+        &:enabled:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .p-multiselect-items {
+    .p-multiselect-item {
+      // TODO: why this needs to be overriden (default highlight is color white and background neutral 900)
+      &.p-highlight {
+        color: $grayColor700;
+        background: $grayColor100;
+      }
+    }
+  }
+}
