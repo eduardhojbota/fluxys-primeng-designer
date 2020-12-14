@@ -60,6 +60,7 @@ export class AstraComponent {
         { label: 'KeyFilter', routerLink: ['./keyfilter'] },
         { label: 'Listbox', routerLink: ['./listbox'] },
         { label: 'MultiSelect', routerLink: ['./multiselect'] },
+        { label: 'Password', routerLink: ['./password'] },
         { label: 'RadioButton', routerLink: ['./radiobutton'] },
         { label: 'SelectButton', routerLink: ['./selectbutton'] },
       ],

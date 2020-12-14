@@ -68,6 +68,8 @@ import {KeyFilterModule} from 'primeng/keyfilter';
 import { ListboxComponent } from './listbox/listbox.component';
 import {ListboxModule} from 'primeng/listbox';
 import { MultiSelectComponent } from './multi-select/multi-select.component';
+import { PasswordComponent } from './password/password.component';
+import {PasswordModule} from 'primeng/password';
 
 @NgModule({
   declarations: [
@@ -105,6 +107,7 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
     KeyFilterComponent,
     ListboxComponent,
     MultiSelectComponent,
+    PasswordComponent,
   ],
   imports: [
     CommonModule,
@@ -141,6 +144,7 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
     MultiSelectModule,
     KeyFilterModule,
     ListboxModule,
+    PasswordModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })

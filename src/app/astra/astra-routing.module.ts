@@ -32,6 +32,7 @@ import {FloatLabelComponent} from './float-label/float-label.component';
 import {KeyFilterComponent} from './key-filter/key-filter.component';
 import {ListboxComponent} from './listbox/listbox.component';
 import {MultiSelectComponent} from './multi-select/multi-select.component';
+import {PasswordComponent} from './password/password.component';
 
 const routes: Routes = [
   {
@@ -68,6 +69,7 @@ const routes: Routes = [
       { path: 'keyfilter', component: KeyFilterComponent },
       { path: 'listbox', component: ListboxComponent },
       { path: 'multiselect', component: MultiSelectComponent },
+      { path: 'password', component: PasswordComponent },
     ],
   },
 ];
