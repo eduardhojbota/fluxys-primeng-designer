@@ -21,6 +21,7 @@ import { SplitButtonComponent } from './split-button/split-button.component';
 import { TabMenuComponent } from './tab-menu/tab-menu.component';
 import { ToastComponent } from './toast/toast.component';
 import {TooltipComponent} from './tooltip/tooltip.component';
+import {AutoCompleteComponent} from './auto-complete/auto-complete.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,7 @@ const routes: Routes = [
       { path: 'inputtext', component: InputTextComponent },
       { path: 'dropdown', component: DropdownComponent },
       { path: 'tooltip', component: TooltipComponent },
+      { path: 'autocomplete', component: AutoCompleteComponent },
     ],
   },
 ];

@@ -48,6 +48,8 @@ import { TabMenuComponent } from './tab-menu/tab-menu.component';
 import { ToastComponent } from './toast/toast.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import {TooltipModule} from 'primeng/tooltip';
+import { AutoCompleteComponent } from './auto-complete/auto-complete.component';
+import {AutoCompleteModule} from 'primeng/autocomplete';
 
 @NgModule({
   declarations: [
@@ -74,6 +76,7 @@ import {TooltipModule} from 'primeng/tooltip';
     InputTextComponent,
     DropdownComponent,
     TooltipComponent,
+    AutoCompleteComponent,
   ],
   imports: [
     CommonModule,
@@ -101,6 +104,7 @@ import {TooltipModule} from 'primeng/tooltip';
     TabMenuModule,
     DropdownModule,
     TooltipModule,
+    AutoCompleteModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })
