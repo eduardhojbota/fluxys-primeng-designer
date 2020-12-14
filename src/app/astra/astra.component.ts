@@ -59,6 +59,7 @@ export class AstraComponent {
         { label: 'FloatLabel', routerLink: ['./floatlabel'] },
         { label: 'KeyFilter', routerLink: ['./keyfilter'] },
         { label: 'Listbox', routerLink: ['./listbox'] },
+        { label: 'MultiSelect', routerLink: ['./multiselect'] },
         { label: 'RadioButton', routerLink: ['./radiobutton'] },
         { label: 'SelectButton', routerLink: ['./selectbutton'] },
       ],

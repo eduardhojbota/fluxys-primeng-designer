@@ -67,6 +67,7 @@ import { KeyFilterComponent } from './key-filter/key-filter.component';
 import {KeyFilterModule} from 'primeng/keyfilter';
 import { ListboxComponent } from './listbox/listbox.component';
 import {ListboxModule} from 'primeng/listbox';
+import { MultiSelectComponent } from './multi-select/multi-select.component';
 
 @NgModule({
   declarations: [
@@ -103,6 +104,7 @@ import {ListboxModule} from 'primeng/listbox';
     FloatLabelComponent,
     KeyFilterComponent,
     ListboxComponent,
+    MultiSelectComponent,
   ],
   imports: [
     CommonModule,
