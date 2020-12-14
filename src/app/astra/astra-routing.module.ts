@@ -34,6 +34,7 @@ import {ListboxComponent} from './listbox/listbox.component';
 import {MultiSelectComponent} from './multi-select/multi-select.component';
 import {PasswordComponent} from './password/password.component';
 import {RatingComponent} from './rating/rating.component';
+import {SliderComponent} from './slider/slider.component';
 
 const routes: Routes = [
   {
@@ -72,6 +73,7 @@ const routes: Routes = [
       { path: 'multiselect', component: MultiSelectComponent },
       { path: 'password', component: PasswordComponent },
       { path: 'rating', component: RatingComponent },
+      { path: 'slider', component: SliderComponent },
     ],
   },
 ];

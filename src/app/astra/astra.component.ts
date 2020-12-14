@@ -63,6 +63,7 @@ export class AstraComponent {
         { label: 'Password', routerLink: ['./password'] },
         { label: 'RadioButton', routerLink: ['./radiobutton'] },
         { label: 'Rating', routerLink: ['./rating'] },
+        { label: 'Slider', routerLink: ['./slider'] },
         { label: 'SelectButton', routerLink: ['./selectbutton'] },
       ],
     },

@@ -72,6 +72,8 @@ import { PasswordComponent } from './password/password.component';
 import {PasswordModule} from 'primeng/password';
 import { RatingComponent } from './rating/rating.component';
 import {RatingModule} from 'primeng/rating';
+import { SliderComponent } from './slider/slider.component';
+import {SliderModule} from 'primeng/slider';
 
 @NgModule({
   declarations: [
@@ -111,6 +113,7 @@ import {RatingModule} from 'primeng/rating';
     MultiSelectComponent,
     PasswordComponent,
     RatingComponent,
+    SliderComponent,
   ],
   imports: [
     CommonModule,
@@ -149,6 +152,7 @@ import {RatingModule} from 'primeng/rating';
     ListboxModule,
     PasswordModule,
     RatingModule,
+    SliderModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })
