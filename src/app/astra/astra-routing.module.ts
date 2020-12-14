@@ -26,6 +26,7 @@ import {ChipsComponent} from './chips/chips.component';
 import {ColorPickerComponent} from './color-picker/color-picker.component';
 import {InputGroupComponent} from './input-group/input-group.component';
 import {InputMaskComponent} from './input-mask/input-mask.component';
+import {InputTextareaComponent} from './input-textarea/input-textarea.component';
 
 const routes: Routes = [
   {
@@ -56,6 +57,7 @@ const routes: Routes = [
       { path: 'colorpicker', component: ColorPickerComponent },
       { path: 'inputgroup', component: InputGroupComponent },
       { path: 'inputmask', component: InputMaskComponent },
+      { path: 'inputtextarea', component: InputTextareaComponent },
     ],
   },
 ];

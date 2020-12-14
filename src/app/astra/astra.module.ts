@@ -57,6 +57,8 @@ import {ColorPickerModule} from 'primeng/colorpicker';
 import { InputGroupComponent } from './input-group/input-group.component';
 import { InputMaskComponent } from './input-mask/input-mask.component';
 import {InputMaskModule} from 'primeng/inputmask';
+import { InputTextareaComponent } from './input-textarea/input-textarea.component';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 
 @NgModule({
   declarations: [
@@ -88,6 +90,7 @@ import {InputMaskModule} from 'primeng/inputmask';
     ColorPickerComponent,
     InputGroupComponent,
     InputMaskComponent,
+    InputTextareaComponent,
   ],
   imports: [
     CommonModule,
@@ -119,6 +122,7 @@ import {InputMaskModule} from 'primeng/inputmask';
     ChipsModule,
     ColorPickerModule,
     InputMaskModule,
+    InputTextareaModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })

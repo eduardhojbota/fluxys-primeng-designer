@@ -51,6 +51,7 @@ export class AstraComponent {
         { label: 'InputMask', routerLink: ['./inputmask'] },
         { label: 'InputSwitch', routerLink: ['./inputswitch'] },
         { label: 'InputText', routerLink: ['./inputtext'] },
+        { label: 'InputTextArea', routerLink: ['./inputtextarea'] },
         { label: 'RadioButton', routerLink: ['./radiobutton'] },
         { label: 'SelectButton', routerLink: ['./selectbutton'] },
       ],
