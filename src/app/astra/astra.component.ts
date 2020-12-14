@@ -62,6 +62,7 @@ export class AstraComponent {
         { label: 'MultiSelect', routerLink: ['./multiselect'] },
         { label: 'Password', routerLink: ['./password'] },
         { label: 'RadioButton', routerLink: ['./radiobutton'] },
+        { label: 'Rating', routerLink: ['./rating'] },
         { label: 'SelectButton', routerLink: ['./selectbutton'] },
       ],
     },

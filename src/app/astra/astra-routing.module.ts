@@ -33,6 +33,7 @@ import {KeyFilterComponent} from './key-filter/key-filter.component';
 import {ListboxComponent} from './listbox/listbox.component';
 import {MultiSelectComponent} from './multi-select/multi-select.component';
 import {PasswordComponent} from './password/password.component';
+import {RatingComponent} from './rating/rating.component';
 
 const routes: Routes = [
   {
@@ -70,6 +71,7 @@ const routes: Routes = [
       { path: 'listbox', component: ListboxComponent },
       { path: 'multiselect', component: MultiSelectComponent },
       { path: 'password', component: PasswordComponent },
+      { path: 'rating', component: RatingComponent },
     ],
   },
 ];
