@@ -30,6 +30,7 @@ import {InputTextareaComponent} from './input-textarea/input-textarea.component'
 import {InputNumberComponent} from './input-number/input-number.component';
 import {FloatLabelComponent} from './float-label/float-label.component';
 import {KeyFilterComponent} from './key-filter/key-filter.component';
+import {ListboxComponent} from './listbox/listbox.component';
 
 const routes: Routes = [
   {
@@ -64,6 +65,7 @@ const routes: Routes = [
       { path: 'inputnumber', component: InputNumberComponent },
       { path: 'floatlabel', component: FloatLabelComponent },
       { path: 'keyfilter', component: KeyFilterComponent },
+      { path: 'listbox', component: ListboxComponent },
     ],
   },
 ];

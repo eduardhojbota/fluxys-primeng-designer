@@ -65,6 +65,8 @@ import { FloatLabelComponent } from './float-label/float-label.component';
 import {MultiSelectModule} from 'primeng/multiselect';
 import { KeyFilterComponent } from './key-filter/key-filter.component';
 import {KeyFilterModule} from 'primeng/keyfilter';
+import { ListboxComponent } from './listbox/listbox.component';
+import {ListboxModule} from 'primeng/listbox';
 
 @NgModule({
   declarations: [
@@ -100,6 +102,7 @@ import {KeyFilterModule} from 'primeng/keyfilter';
     InputNumberComponent,
     FloatLabelComponent,
     KeyFilterComponent,
+    ListboxComponent,
   ],
   imports: [
     CommonModule,
@@ -135,6 +138,7 @@ import {KeyFilterModule} from 'primeng/keyfilter';
     InputNumberModule,
     MultiSelectModule,
     KeyFilterModule,
+    ListboxModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })
