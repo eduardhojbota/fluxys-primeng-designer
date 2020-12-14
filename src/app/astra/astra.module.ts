@@ -54,6 +54,7 @@ import { ChipsComponent } from './chips/chips.component';
 import {ChipsModule} from 'primeng/chips';
 import { ColorPickerComponent } from './color-picker/color-picker.component';
 import {ColorPickerModule} from 'primeng/colorpicker';
+import { InputGroupComponent } from './input-group/input-group.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +84,7 @@ import {ColorPickerModule} from 'primeng/colorpicker';
     AutoCompleteComponent,
     ChipsComponent,
     ColorPickerComponent,
+    InputGroupComponent,
   ],
   imports: [
     CommonModule,

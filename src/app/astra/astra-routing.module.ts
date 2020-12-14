@@ -24,6 +24,7 @@ import {TooltipComponent} from './tooltip/tooltip.component';
 import {AutoCompleteComponent} from './auto-complete/auto-complete.component';
 import {ChipsComponent} from './chips/chips.component';
 import {ColorPickerComponent} from './color-picker/color-picker.component';
+import {InputGroupComponent} from './input-group/input-group.component';
 
 const routes: Routes = [
   {
@@ -52,6 +53,7 @@ const routes: Routes = [
       { path: 'autocomplete', component: AutoCompleteComponent },
       { path: 'chips', component: ChipsComponent },
       { path: 'colorpicker', component: ColorPickerComponent },
+      { path: 'inputgroup', component: InputGroupComponent },
     ],
   },
 ];
