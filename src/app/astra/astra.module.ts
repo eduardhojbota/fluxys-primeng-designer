@@ -46,6 +46,8 @@ import { SelectButtonComponent } from './select-button/select-button.component';
 import { SplitButtonComponent } from './split-button/split-button.component';
 import { TabMenuComponent } from './tab-menu/tab-menu.component';
 import { ToastComponent } from './toast/toast.component';
+import { TooltipComponent } from './tooltip/tooltip.component';
+import {TooltipModule} from 'primeng/tooltip';
 
 @NgModule({
   declarations: [
@@ -71,6 +73,7 @@ import { ToastComponent } from './toast/toast.component';
     TabMenuComponent,
     InputTextComponent,
     DropdownComponent,
+    TooltipComponent,
   ],
   imports: [
     CommonModule,
@@ -97,6 +100,7 @@ import { ToastComponent } from './toast/toast.component';
     CardModule,
     TabMenuModule,
     DropdownModule,
+    TooltipModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })

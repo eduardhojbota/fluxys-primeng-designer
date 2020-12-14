@@ -1,0 +1,29 @@
+<h1>Tooltip</h1>
+<p>Tooltip directive provides advisory information for a component. See <a href="https://www.primefaces.org/primeng/showcase/#/tooltip" target="_blank" rel="noreferrer noopener">official documentation</a>.</p>
+<div class="p-grid p-flex-column">
+  <div class="p-col">
+    <p-panel header="PrimeNG Example" [toggleable]="true">
+      <h5>Positions</h5>
+      <div class="p-grid p-fluid">
+        <div class="p-col-12 p-md-3">
+          <input type="text" pInputText pTooltip="Enter your username" placeholder="Right">
+        </div>
+        <div class="p-col-12 p-md-3">
+          <input type="text" pInputText pTooltip="Enter your username" tooltipPosition="top" placeholder="Top">
+        </div>
+        <div class="p-col-12 p-md-3">
+          <input type="text" pInputText pTooltip="Enter your username" tooltipPosition="bottom" placeholder="Bottom">
+        </div>
+        <div class="p-col-12 p-md-3">
+          <input type="text" pInputText pTooltip="Enter your username" tooltipPosition="left" placeholder="Left">
+        </div>
+      </div>
+
+      <h5>Focus and Blur</h5>
+      <input type="text" pInputText pTooltip="Enter your username" placeholder="Right" tooltipEvent="focus">
+
+      <h5>Button</h5>
+      <button pButton type="button" label="Save" icon="pi pi-check" pTooltip="Click to proceed"></button>
+    </p-panel>
+  </div>
+</div>

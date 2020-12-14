@@ -70,6 +70,7 @@ export class AstraComponent {
         { label: 'ConfirmDialog', routerLink: ['./confirmdialog'] },
         { label: 'Dialog', routerLink: ['./dialog'] },
         { label: 'DynamicDialog', routerLink: ['./dynamicdialog'] },
+        { label: 'Tooltip', routerLink: ['./tooltip'] },
       ],
     },
     { separator: true },

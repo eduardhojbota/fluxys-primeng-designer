@@ -20,6 +20,7 @@ import { SelectButtonComponent } from './select-button/select-button.component';
 import { SplitButtonComponent } from './split-button/split-button.component';
 import { TabMenuComponent } from './tab-menu/tab-menu.component';
 import { ToastComponent } from './toast/toast.component';
+import {TooltipComponent} from './tooltip/tooltip.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,7 @@ const routes: Routes = [
       { path: 'tabmenu', component: TabMenuComponent },
       { path: 'inputtext', component: InputTextComponent },
       { path: 'dropdown', component: DropdownComponent },
+      { path: 'tooltip', component: TooltipComponent },
     ],
   },
 ];
