@@ -48,6 +48,7 @@ export class AstraComponent {
         { label: 'ColorPicker', routerLink: ['./colorpicker'] },
         { label: 'Dropdown', routerLink: ['./dropdown'] },
         { label: 'InputGroup', routerLink: ['./inputgroup'] },
+        { label: 'InputMask', routerLink: ['./inputmask'] },
         { label: 'InputSwitch', routerLink: ['./inputswitch'] },
         { label: 'InputText', routerLink: ['./inputtext'] },
         { label: 'RadioButton', routerLink: ['./radiobutton'] },
