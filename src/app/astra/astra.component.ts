@@ -28,6 +28,9 @@ import { MenuItem } from 'primeng/api';
       :host ::ng-deep .p-menu.nav-menu {
         border-radius: 0;
       }
+      :host ::ng-deep .p-menu.nav-menu .p-menuitem-link.p-menuitem-link-active {
+        text-decoration: underline;
+      }
     `,
   ],
 })
@@ -52,6 +55,7 @@ export class AstraComponent {
         { label: 'InputSwitch', routerLink: ['./inputswitch'] },
         { label: 'InputText', routerLink: ['./inputtext'] },
         { label: 'InputTextArea', routerLink: ['./inputtextarea'] },
+        { label: 'InputNumber', routerLink: ['./inputnumber'] },
         { label: 'RadioButton', routerLink: ['./radiobutton'] },
         { label: 'SelectButton', routerLink: ['./selectbutton'] },
       ],
