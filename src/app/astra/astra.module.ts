@@ -76,6 +76,8 @@ import { SliderComponent } from './slider/slider.component';
 import {SliderModule} from 'primeng/slider';
 import { ToggleButtonComponent } from './toggle-button/toggle-button.component';
 import {ToggleButtonModule} from 'primeng/togglebutton';
+import { TriStateCheckboxComponent } from './tri-state-checkbox/tri-state-checkbox.component';
+import {TriStateCheckboxModule} from 'primeng/tristatecheckbox';
 
 @NgModule({
   declarations: [
@@ -117,6 +119,7 @@ import {ToggleButtonModule} from 'primeng/togglebutton';
     RatingComponent,
     SliderComponent,
     ToggleButtonComponent,
+    TriStateCheckboxComponent,
   ],
   imports: [
     CommonModule,
@@ -157,6 +160,7 @@ import {ToggleButtonModule} from 'primeng/togglebutton';
     RatingModule,
     SliderModule,
     ToggleButtonModule,
+    TriStateCheckboxModule,
   ],
   entryComponents: [DynamicDialogContentComponent, ProductListDemoComponent],
 })

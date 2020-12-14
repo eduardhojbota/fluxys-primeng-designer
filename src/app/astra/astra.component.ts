@@ -66,6 +66,7 @@ export class AstraComponent {
         { label: 'Slider', routerLink: ['./slider'] },
         { label: 'SelectButton', routerLink: ['./selectbutton'] },
         { label: 'ToggleButton', routerLink: ['./togglebutton'] },
+        { label: 'TriStateCheckbox', routerLink: ['./tristatecheckbox'] },
       ],
     },
     { separator: true },

@@ -36,6 +36,7 @@ import {PasswordComponent} from './password/password.component';
 import {RatingComponent} from './rating/rating.component';
 import {SliderComponent} from './slider/slider.component';
 import {ToggleButtonComponent} from './toggle-button/toggle-button.component';
+import {TriStateCheckboxComponent} from './tri-state-checkbox/tri-state-checkbox.component';
 
 const routes: Routes = [
   {
@@ -76,6 +77,7 @@ const routes: Routes = [
       { path: 'rating', component: RatingComponent },
       { path: 'slider', component: SliderComponent },
       { path: 'togglebutton', component: ToggleButtonComponent },
+      { path: 'tristatecheckbox', component: TriStateCheckboxComponent },
     ],
   },
 ];
