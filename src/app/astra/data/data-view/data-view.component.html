@@ -1,37 +1,51 @@
 <h1>DataView</h1>
 <p>
-  DataView displays data in grid or list layout with pagination and sorting features.
-  See <a href="https://www.primefaces.org/primeng/showcase/#/dataview" target="_blank" rel="noreferrer noopener">official documentation</a>.
+  DataView displays data in grid or list layout with pagination and sorting features. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/dataview" target="_blank" rel="noreferrer noopener">official documentation</a>.
 </p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
-      <p-dataView #dv [value]="products" [paginator]="true" [rows]="9" filterBy="name"
-                  [sortField]="sortField" [sortOrder]="sortOrder" layout="grid">
+      <p-dataView
+        #dv
+        [value]="products"
+        [paginator]="true"
+        [rows]="9"
+        filterBy="name"
+        [sortField]="sortField"
+        [sortOrder]="sortOrder"
+        layout="grid"
+      >
         <ng-template pTemplate="header">
           <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
-            <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Price" (onChange)="onSortChange($event)" styleClass="p-mb-2 p-mb-md-0"></p-dropdown>
+            <p-dropdown
+              [options]="sortOptions"
+              [(ngModel)]="sortKey"
+              placeholder="Sort By Price"
+              (onChange)="onSortChange($event)"
+              styleClass="p-mb-2 p-mb-md-0"
+            ></p-dropdown>
             <span class="p-input-icon-left p-mb-2 p-mb-md-0">
-                    <i class="pi pi-search"></i>
-                    <input type="search" pInputText placeholder="Search by Name" (input)="dv.filter($event.target.value)">
-                </span>
+              <i class="pi pi-search"></i>
+              <input type="search" pInputText placeholder="Search by Name" (input)="dv.filter($event.target.value)" />
+            </span>
             <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
           </div>
         </ng-template>
         <ng-template let-product pTemplate="listItem">
           <div class="p-col-12">
             <div class="product-list-item">
-              <img [src]="'assets/demo/images/product/' + product.image" [alt]="product.name"/>
+              <img [src]="'assets/demo/images/product/' + product.image" [alt]="product.name" />
               <div class="product-list-detail">
-                <div class="product-name">{{product.name}}</div>
-                <div class="product-description">{{product.description}}</div>
+                <div class="product-name">{{ product.name }}</div>
+                <div class="product-description">{{ product.description }}</div>
                 <p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating>
-                <i class="pi pi-tag product-category-icon"></i><span class="product-category">{{product.category}}</span>
+                <i class="pi pi-tag product-category-icon"></i><span class="product-category">{{ product.category }}</span>
               </div>
               <div class="product-list-action">
-                <span class="product-price">${{product.price}}</span>
+                <span class="product-price">${{ product.price }}</span>
                 <p-button icon="pi pi-shopping-cart" label="Add to Cart" [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"></p-button>
-                <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
+                <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{ product.inventoryStatus }}</span>
               </div>
             </div>
           </div>
@@ -42,18 +56,18 @@
               <div class="product-grid-item-top">
                 <div>
                   <i class="pi pi-tag product-category-icon"></i>
-                  <span class="product-category">{{product.category}}</span>
+                  <span class="product-category">{{ product.category }}</span>
                 </div>
-                <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
+                <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{ product.inventoryStatus }}</span>
               </div>
               <div class="product-grid-item-content">
-                <img [src]="'assets/demo/images/product/' + product.image" [alt]="product.name"/>
-                <div class="product-name">{{product.name}}</div>
-                <div class="product-description">{{product.description}}</div>
+                <img [src]="'assets/demo/images/product/' + product.image" [alt]="product.name" />
+                <div class="product-name">{{ product.name }}</div>
+                <div class="product-description">{{ product.description }}</div>
                 <p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating>
               </div>
               <div class="product-grid-item-bottom">
-                <span class="product-price">${{product.price}}</span>
+                <span class="product-price">${{ product.price }}</span>
                 <p-button icon="pi pi-shopping-cart" [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"></p-button>
               </div>
             </div>

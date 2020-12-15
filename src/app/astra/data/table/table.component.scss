@@ -6,11 +6,11 @@
   }
 
   .p-progressbar {
-    height: .5rem;
-    background-color: #D8DADC;
+    height: 0.5rem;
+    background-color: #d8dadc;
 
     .p-progressbar-value {
-      background-color: #607D8B;
+      background-color: #607d8b;
     }
   }
 
@@ -82,22 +82,21 @@
             border: 0 none;
 
             .p-column-title {
-              padding: .4rem;
+              padding: 0.4rem;
               min-width: 30%;
               display: inline-block;
-              margin: -.4rem 1rem -.4rem -.4rem;
+              margin: -0.4rem 1rem -0.4rem -0.4rem;
               font-weight: bold;
             }
 
             .p-progressbar {
-              margin-top: .5rem;
+              margin-top: 0.5rem;
             }
           }
         }
       }
     }
   }
-
 }
 
 .image-text {

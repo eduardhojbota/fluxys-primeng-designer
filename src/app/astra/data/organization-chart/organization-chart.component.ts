@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MessageService, TreeNode} from 'primeng/api';
+import { MessageService, TreeNode } from 'primeng/api';
 
 @Component({
   selector: 'app-organization-chart',
@@ -15,107 +15,119 @@ export class OrganizationChartComponent implements OnInit {
   constructor(private readonly messageService: MessageService) {}
 
   ngOnInit() {
-    this.data1 = [{
-      label: 'CEO',
-      type: 'person',
-      styleClass: 'p-person',
-      expanded: true,
-      data: {name:'Walter White', 'avatar': 'walter.jpg'},
-      children: [
-        {
-          label: 'CFO',
-          type: 'person',
-          styleClass: 'p-person',
-          expanded: true,
-          data: {name:'Saul Goodman', 'avatar': 'saul.jpg'},
-          children:[{
-            label: 'Tax',
-            styleClass: 'department-cfo'
-          },
-            {
-              label: 'Legal',
-              styleClass: 'department-cfo'
-            }],
-        },
-        {
-          label: 'COO',
-          type: 'person',
-          styleClass: 'p-person',
-          expanded: true,
-          data: {name:'Mike E.', 'avatar': 'mike.jpg'},
-          children:[{
-            label: 'Operations',
-            styleClass: 'department-coo'
-          }]
-        },
-        {
-          label: 'CTO',
-          type: 'person',
-          styleClass: 'p-person',
-          expanded: true,
-          data: {name:'Jesse Pinkman', 'avatar': 'jesse.jpg'},
-          children:[{
-            label: 'Development',
-            styleClass: 'department-cto',
+    this.data1 = [
+      {
+        label: 'CEO',
+        type: 'person',
+        styleClass: 'p-person',
+        expanded: true,
+        data: { name: 'Walter White', avatar: 'walter.jpg' },
+        children: [
+          {
+            label: 'CFO',
+            type: 'person',
+            styleClass: 'p-person',
             expanded: true,
-            children:[{
-              label: 'Analysis',
-              styleClass: 'department-cto'
-            },
+            data: { name: 'Saul Goodman', avatar: 'saul.jpg' },
+            children: [
               {
-                label: 'Front End',
-                styleClass: 'department-cto'
+                label: 'Tax',
+                styleClass: 'department-cfo',
               },
               {
-                label: 'Back End',
-                styleClass: 'department-cto'
-              }]
+                label: 'Legal',
+                styleClass: 'department-cfo',
+              },
+            ],
           },
-            {
-              label: 'QA',
-              styleClass: 'department-cto'
-            },
-            {
-              label: 'R&D',
-              styleClass: 'department-cto'
-            }]
-        }
-      ]
-    }];
+          {
+            label: 'COO',
+            type: 'person',
+            styleClass: 'p-person',
+            expanded: true,
+            data: { name: 'Mike E.', avatar: 'mike.jpg' },
+            children: [
+              {
+                label: 'Operations',
+                styleClass: 'department-coo',
+              },
+            ],
+          },
+          {
+            label: 'CTO',
+            type: 'person',
+            styleClass: 'p-person',
+            expanded: true,
+            data: { name: 'Jesse Pinkman', avatar: 'jesse.jpg' },
+            children: [
+              {
+                label: 'Development',
+                styleClass: 'department-cto',
+                expanded: true,
+                children: [
+                  {
+                    label: 'Analysis',
+                    styleClass: 'department-cto',
+                  },
+                  {
+                    label: 'Front End',
+                    styleClass: 'department-cto',
+                  },
+                  {
+                    label: 'Back End',
+                    styleClass: 'department-cto',
+                  },
+                ],
+              },
+              {
+                label: 'QA',
+                styleClass: 'department-cto',
+              },
+              {
+                label: 'R&D',
+                styleClass: 'department-cto',
+              },
+            ],
+          },
+        ],
+      },
+    ];
 
-    this.data2 = [{
-      label: 'F.C Barcelona',
-      expanded: true,
-      children: [
-        {
-          label: 'F.C Barcelona',
-          expanded: true,
-          children: [
-            {
-              label: 'Chelsea FC'
-            },
-            {
-              label: 'F.C. Barcelona'
-            }
-          ]
-        },
-        {
-          label: 'Real Madrid',
-          expanded: true,
-          children: [
-            {
-              label: 'Bayern Munich'
-            },
-            {
-              label: 'Real Madrid'
-            }
-          ]
-        }
-      ]
-    }];
+    this.data2 = [
+      {
+        label: 'F.C Barcelona',
+        expanded: true,
+        children: [
+          {
+            label: 'F.C Barcelona',
+            expanded: true,
+            children: [
+              {
+                label: 'Chelsea FC',
+              },
+              {
+                label: 'F.C. Barcelona',
+              },
+            ],
+          },
+          {
+            label: 'Real Madrid',
+            expanded: true,
+            children: [
+              {
+                label: 'Bayern Munich',
+              },
+              {
+                label: 'Real Madrid',
+              },
+            ],
+          },
+        ],
+      },
+    ];
   }
 
   onNodeSelect(event) {
-    this.messageService.add({severity: 'success', summary: 'Node Selected', detail: event.node.label});
+    this.messageService.add({ severity: 'success', summary: 'Node Selected', detail: event.node.label });
   }
 }

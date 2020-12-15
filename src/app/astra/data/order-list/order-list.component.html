@@ -1,25 +1,32 @@
 <h1>OrderList</h1>
 <p>
-  OrderList is used to managed the order of a collection.
-  See <a href="https://www.primefaces.org/primeng/showcase/#/orderlist" target="_blank" rel="noreferrer noopener">official documentation</a>.
+  OrderList is used to managed the order of a collection. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/orderlist" target="_blank" rel="noreferrer noopener">official documentation</a>.
 </p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
-      <p-orderList [value]="products" [listStyle]="{'height':'auto'}" header="List of Products" filterBy="name" filterPlaceholder="Filter by name" [dragdrop]="true">
+      <p-orderList
+        [value]="products"
+        [listStyle]="{ height: 'auto' }"
+        header="List of Products"
+        filterBy="name"
+        filterPlaceholder="Filter by name"
+        [dragdrop]="true"
+      >
         <ng-template let-product pTemplate="item">
           <div class="product-item">
             <div class="image-container">
-              <img src="assets/demo/images/product/{{product.image}}" [alt]="product.name" class="product-image" />
+              <img src="assets/demo/images/product/{{ product.image }}" [alt]="product.name" class="product-image" />
             </div>
             <div class="product-list-detail">
-              <h5 class="p-mb-2">{{product.name}}</h5>
+              <h5 class="p-mb-2">{{ product.name }}</h5>
               <i class="pi pi-tag product-category-icon"></i>
-              <span class="product-category">{{product.category}}</span>
+              <span class="product-category">{{ product.category }}</span>
             </div>
             <div class="product-list-action">
-              <h6 class="p-mb-2">${{product.price}}</h6>
-              <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
+              <h6 class="p-mb-2">${{ product.price }}</h6>
+              <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{ product.inventoryStatus }}</span>
             </div>
           </div>
         </ng-template>

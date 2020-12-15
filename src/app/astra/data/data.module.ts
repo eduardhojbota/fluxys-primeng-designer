@@ -1,39 +1,47 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { DataViewModule } from 'primeng/dataview';
+import { DropdownModule } from 'primeng/dropdown';
+import { InputTextModule } from 'primeng/inputtext';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { OrderListModule } from 'primeng/orderlist';
+import { OrganizationChartModule } from 'primeng/organizationchart';
+import { PaginatorModule } from 'primeng/paginator';
+import { PanelModule } from 'primeng/panel';
+import { PickListModule } from 'primeng/picklist';
+import { ProgressBarModule } from 'primeng/progressbar';
+import { RatingModule } from 'primeng/rating';
+import { SliderModule } from 'primeng/slider';
+import { TableModule } from 'primeng/table';
+import { TimelineModule } from 'primeng/timeline';
+import { ToastModule } from 'primeng/toast';
+import { TreeModule } from 'primeng/tree';
 
+import { SharedModule } from '../shared/shared.module';
 import { DataRoutingModule } from './data-routing.module';
-import { TableComponent } from './table/table.component';
-import {TableModule} from 'primeng/table';
-import {PanelModule} from 'primeng/panel';
-import {ProgressBarModule} from 'primeng/progressbar';
-import {SliderModule} from 'primeng/slider';
-import {DropdownModule} from 'primeng/dropdown';
-import {MultiSelectModule} from 'primeng/multiselect';
-import {FormsModule} from '@angular/forms';
-import {ButtonModule} from 'primeng/button';
-import {InputTextModule} from 'primeng/inputtext';
-import { OrderListComponent } from './order-list/order-list.component';
-import { PickListComponent } from './pick-list/pick-list.component';
-import {OrderListModule} from 'primeng/orderlist';
-import {PickListModule} from 'primeng/picklist';
 import { DataViewComponent } from './data-view/data-view.component';
-import {DataViewModule} from 'primeng/dataview';
-import {RatingModule} from 'primeng/rating';
+import { OrderListComponent } from './order-list/order-list.component';
 import { OrganizationChartComponent } from './organization-chart/organization-chart.component';
-import {OrganizationChartModule} from 'primeng/organizationchart';
-import {ToastModule} from 'primeng/toast';
 import { PaginatorComponent } from './paginator/paginator.component';
-import {PaginatorModule} from 'primeng/paginator';
+import { PickListComponent } from './pick-list/pick-list.component';
+import { TableComponent } from './table/table.component';
 import { TimelineComponent } from './timeline/timeline.component';
-import {TimelineModule} from 'primeng/timeline';
-import {CardModule} from 'primeng/card';
 import { TreeComponent } from './tree/tree.component';
-import {TreeModule} from 'primeng/tree';
-import {SharedModule} from '../shared/shared.module';
-
 
 @NgModule({
-  declarations: [TableComponent, OrderListComponent, PickListComponent, DataViewComponent, OrganizationChartComponent, PaginatorComponent, TimelineComponent, TreeComponent],
+  declarations: [
+    TableComponent,
+    OrderListComponent,
+    PickListComponent,
+    DataViewComponent,
+    OrganizationChartComponent,
+    PaginatorComponent,
+    TimelineComponent,
+    TreeComponent,
+  ],
   imports: [
     CommonModule,
     DataRoutingModule,
@@ -57,6 +65,6 @@ import {SharedModule} from '../shared/shared.module';
     CardModule,
     TreeModule,
     SharedModule,
-  ]
+  ],
 })
-export class DataModule { }
+export class DataModule {}

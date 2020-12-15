@@ -1,7 +1,7 @@
 <h1>Timeline</h1>
 <p>
-  Timeline visualizes a series of chained events.
-  See <a href="https://www.primefaces.org/primeng/showcase/#/timeline" target="_blank" rel="noreferrer noopener">official documentation</a>.
+  Timeline visualizes a series of chained events. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/timeline" target="_blank" rel="noreferrer noopener">official documentation</a>.
 </p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
@@ -9,46 +9,54 @@
       <h5>Left Align</h5>
       <p-timeline [value]="events1">
         <ng-template pTemplate="content" let-event>
-          {{event.status}}
+          {{ event.status }}
         </ng-template>
       </p-timeline>
 
       <h5>Right Align</h5>
       <p-timeline [value]="events1" align="right">
         <ng-template pTemplate="content" let-event>
-          {{event.status}}
+          {{ event.status }}
         </ng-template>
       </p-timeline>
 
       <h5>Alternate Align</h5>
       <p-timeline [value]="events1" align="alternate">
         <ng-template pTemplate="content" let-event>
-          {{event.status}}
+          {{ event.status }}
         </ng-template>
       </p-timeline>
 
       <h5>Opposite Content</h5>
       <p-timeline [value]="events1">
         <ng-template pTemplate="content" let-event>
-          <small class="p-text-secondary">{{event.date}}</small>
+          <small class="p-text-secondary">{{ event.date }}</small>
         </ng-template>
         <ng-template pTemplate="opposite" let-event>
-          {{event.status}}
+          {{ event.status }}
         </ng-template>
       </p-timeline>
 
       <h5>Customized</h5>
       <p-timeline [value]="events1" align="alternate" styleClass="customized-timeline">
         <ng-template pTemplate="marker" let-event>
-            <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
-                <i [ngClass]="event.icon"></i>
-            </span>
+          <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
+            <i [ngClass]="event.icon"></i>
+          </span>
         </ng-template>
         <ng-template pTemplate="content" let-event>
           <p-card [header]="event.status" [subheader]="event.date">
-            <img *ngIf="event.image" [src]="'assets/demo/images/product/' + event.image" [alt]="event.name" width="200" class="p-shadow-2" />
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-              quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+            <img
+              *ngIf="event.image"
+              [src]="'assets/demo/images/product/' + event.image"
+              [alt]="event.name"
+              width="200"
+              class="p-shadow-2"
+            />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+              quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
+            </p>
             <button pButton label="Read more" class="p-button-text"></button>
           </p-card>
         </ng-template>
@@ -58,18 +66,18 @@
       <h6>Top Align</h6>
       <p-timeline [value]="events2" layout="horizontal" align="top">
         <ng-template pTemplate="content" let-event>
-          {{event}}
+          {{ event }}
         </ng-template>
       </p-timeline>
 
       <h6>Bottom Align</h6>
       <p-timeline [value]="events2" layout="horizontal" align="bottom">
         <ng-template pTemplate="content" let-event>
-          {{event}}
+          {{ event }}
         </ng-template>
       </p-timeline>
 
-     <!-- <h6>Alternate Align</h6>
+      <!-- <h6>Alternate Align</h6>
       <p-timeline [value]="events2" layout="horizontal" align="alternate">
         <ng-template pTemplate="content" let-event>
           {{event}}

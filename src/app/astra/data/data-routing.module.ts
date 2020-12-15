@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {TableComponent} from './table/table.component';
-import {OrderListComponent} from './order-list/order-list.component';
-import {PickListComponent} from './pick-list/pick-list.component';
-import {DataViewComponent} from './data-view/data-view.component';
-import {OrganizationChartComponent} from './organization-chart/organization-chart.component';
-import {PaginatorComponent} from './paginator/paginator.component';
-import {TimelineComponent} from './timeline/timeline.component';
-import {TreeComponent} from './tree/tree.component';
+
+import { DataViewComponent } from './data-view/data-view.component';
+import { OrderListComponent } from './order-list/order-list.component';
+import { OrganizationChartComponent } from './organization-chart/organization-chart.component';
+import { PaginatorComponent } from './paginator/paginator.component';
+import { PickListComponent } from './pick-list/pick-list.component';
+import { TableComponent } from './table/table.component';
+import { TimelineComponent } from './timeline/timeline.component';
+import { TreeComponent } from './tree/tree.component';
 
 const routes: Routes = [
   { path: 'table', component: TableComponent },
@@ -22,6 +23,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class DataRoutingModule { }
+export class DataRoutingModule {}

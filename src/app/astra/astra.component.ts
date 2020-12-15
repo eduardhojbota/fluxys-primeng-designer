@@ -81,15 +81,15 @@ export class AstraComponent {
     {
       label: 'Data',
       items: [
-        { label: 'DataView', routerLink: ['./data/dataview' ] },
-        { label: 'OrderList', routerLink: ['./data/orderlist' ] },
-        { label: 'Org Chart', routerLink: ['./data/organizationchart' ] },
-        { label: 'Paginator', routerLink: ['./data/paginator' ] },
-        { label: 'PickList', routerLink: ['./data/picklist' ] },
-        { label: 'Table', routerLink: ['./data/table' ] },
-        { label: 'Timeline', routerLink: ['./data/timeline' ] },
-        { label: 'Tree', routerLink: ['./data/tree' ] },
-      ]
+        { label: 'DataView', routerLink: ['./data/dataview'] },
+        { label: 'OrderList', routerLink: ['./data/orderlist'] },
+        { label: 'Org Chart', routerLink: ['./data/organizationchart'] },
+        { label: 'Paginator', routerLink: ['./data/paginator'] },
+        { label: 'PickList', routerLink: ['./data/picklist'] },
+        { label: 'Table', routerLink: ['./data/table'] },
+        { label: 'Timeline', routerLink: ['./data/timeline'] },
+        { label: 'Tree', routerLink: ['./data/tree'] },
+      ],
     },
     { separator: true },
     {

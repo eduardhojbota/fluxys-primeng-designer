@@ -1,24 +1,31 @@
 <h1>OrganizationChart</h1>
 <p>
-  OrganizationChart visualizes hierarchical organization data.
-  See <a href="https://www.primefaces.org/primeng/showcase/#/organizationchart" target="_blank" rel="noreferrer noopener">official documentation</a>.
+  OrganizationChart visualizes hierarchical organization data. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/organizationchart" target="_blank" rel="noreferrer noopener"
+    >official documentation</a
+  >.
 </p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
       <h5>Advanced</h5>
       <p>Organization with advanced customization.</p>
-      <p-organizationChart [value]="data1" selectionMode="single" [(selection)]="selectedNode" (onNodeSelect)="onNodeSelect($event)"
-                           styleClass="company">
+      <p-organizationChart
+        [value]="data1"
+        selectionMode="single"
+        [(selection)]="selectedNode"
+        (onNodeSelect)="onNodeSelect($event)"
+        styleClass="company"
+      >
         <ng-template let-node pTemplate="person">
-          <div class="node-header p-corner-top">{{node.label}}</div>
+          <div class="node-header p-corner-top">{{ node.label }}</div>
           <div class="node-content">
-            <img src="assets/demo/images/organization/{{node.data.avatar}}" width="32">
-            <div>{{node.data.name}}</div>
+            <img src="assets/demo/images/organization/{{ node.data.avatar }}" width="32" />
+            <div>{{ node.data.name }}</div>
           </div>
         </ng-template>
         <ng-template let-node pTemplate="department">
-          {{node.label}}
+          {{ node.label }}
         </ng-template>
       </p-organizationChart>
 
@@ -28,4 +35,4 @@
     </p-panel>
   </div>
 </div>
-<p-toast [style]="{marginTop: '80px'}"></p-toast>
+<p-toast [style]="{ marginTop: '80px' }"></p-toast>

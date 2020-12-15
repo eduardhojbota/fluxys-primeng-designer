@@ -1,13 +1,13 @@
 <h1>Paginator</h1>
 <p>
-  Paginator is a generic component to display content in paged format.
-  See <a href="https://www.primefaces.org/primeng/showcase/#/paginator" target="_blank" rel="noreferrer noopener">official documentation</a>.
+  Paginator is a generic component to display content in paged format. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/paginator" target="_blank" rel="noreferrer noopener">official documentation</a>.
 </p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
     <p-panel header="PrimeNG Example" [toggleable]="true">
       <h5>Basic</h5>
-      <p-paginator [rows]="10" [totalRecords]="totalRecords" [rowsPerPageOptions]="[10,20,30]"></p-paginator>
+      <p-paginator [rows]="10" [totalRecords]="totalRecords" [rowsPerPageOptions]="[10, 20, 30]"></p-paginator>
 
       <h5>Custom</h5>
       <div class="p-grid p-align-center">
@@ -15,15 +15,21 @@
           <p-button icon="pi pi-refresh" (onClick)="refresh()"></p-button>
         </div>
         <div class="p-col-10">
-          <p-paginator [first]="first" [rows]="1" [totalRecords]="totalRecords2" (onPageChange)="onPageChange($event)"
-                       [showJumpToPageDropdown]="true" [showPageLinks]="false"></p-paginator>
+          <p-paginator
+            [first]="first"
+            [rows]="1"
+            [totalRecords]="totalRecords2"
+            (onPageChange)="onPageChange($event)"
+            [showJumpToPageDropdown]="true"
+            [showPageLinks]="false"
+          ></p-paginator>
         </div>
         <div class="p-col-1 p-grid p-justify-end">
           <p-button icon="pi pi-search"></p-button>
         </div>
       </div>
       <div class="image-gallery">
-        <img src="assets/demo/images/nature/nature{{first + 1}}.jpg" />
+        <img src="assets/demo/images/nature/nature{{ first + 1 }}.jpg" />
       </div>
     </p-panel>
   </div>
