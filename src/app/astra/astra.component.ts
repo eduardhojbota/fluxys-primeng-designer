@@ -87,6 +87,7 @@ export class AstraComponent {
         { label: 'Paginator', routerLink: ['./data/paginator' ] },
         { label: 'PickList', routerLink: ['./data/picklist' ] },
         { label: 'Table', routerLink: ['./data/table' ] },
+        { label: 'Timeline', routerLink: ['./data/timeline' ] },
       ]
     },
     { separator: true },

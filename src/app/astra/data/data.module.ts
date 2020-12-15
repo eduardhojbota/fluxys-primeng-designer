@@ -24,10 +24,13 @@ import {OrganizationChartModule} from 'primeng/organizationchart';
 import {ToastModule} from 'primeng/toast';
 import { PaginatorComponent } from './paginator/paginator.component';
 import {PaginatorModule} from 'primeng/paginator';
+import { TimelineComponent } from './timeline/timeline.component';
+import {TimelineModule} from 'primeng/timeline';
+import {CardModule} from 'primeng/card';
 
 
 @NgModule({
-  declarations: [TableComponent, OrderListComponent, PickListComponent, DataViewComponent, OrganizationChartComponent, PaginatorComponent],
+  declarations: [TableComponent, OrderListComponent, PickListComponent, DataViewComponent, OrganizationChartComponent, PaginatorComponent, TimelineComponent],
   imports: [
     CommonModule,
     DataRoutingModule,
@@ -47,6 +50,8 @@ import {PaginatorModule} from 'primeng/paginator';
     OrganizationChartModule,
     ToastModule,
     PaginatorModule,
+    TimelineModule,
+    CardModule,
   ]
 })
 export class DataModule { }
