@@ -83,6 +83,7 @@ export class AstraComponent {
       items: [
         { label: 'DataView', routerLink: ['./data/dataview' ] },
         { label: 'OrderList', routerLink: ['./data/orderlist' ] },
+        { label: 'Org Chart', routerLink: ['./data/organizationchart' ] },
         { label: 'PickList', routerLink: ['./data/picklist' ] },
         { label: 'Table', routerLink: ['./data/table' ] },
       ]

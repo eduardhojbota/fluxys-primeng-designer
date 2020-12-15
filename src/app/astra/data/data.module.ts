@@ -19,10 +19,13 @@ import {PickListModule} from 'primeng/picklist';
 import { DataViewComponent } from './data-view/data-view.component';
 import {DataViewModule} from 'primeng/dataview';
 import {RatingModule} from 'primeng/rating';
+import { OrganizationChartComponent } from './organization-chart/organization-chart.component';
+import {OrganizationChartModule} from 'primeng/organizationchart';
+import {ToastModule} from 'primeng/toast';
 
 
 @NgModule({
-  declarations: [TableComponent, OrderListComponent, PickListComponent, DataViewComponent],
+  declarations: [TableComponent, OrderListComponent, PickListComponent, DataViewComponent, OrganizationChartComponent],
   imports: [
     CommonModule,
     DataRoutingModule,
@@ -39,6 +42,8 @@ import {RatingModule} from 'primeng/rating';
     PickListModule,
     DataViewModule,
     RatingModule,
+    OrganizationChartModule,
+    ToastModule,
   ]
 })
 export class DataModule { }
