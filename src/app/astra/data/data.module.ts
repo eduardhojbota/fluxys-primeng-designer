@@ -16,10 +16,13 @@ import { OrderListComponent } from './order-list/order-list.component';
 import { PickListComponent } from './pick-list/pick-list.component';
 import {OrderListModule} from 'primeng/orderlist';
 import {PickListModule} from 'primeng/picklist';
+import { DataViewComponent } from './data-view/data-view.component';
+import {DataViewModule} from 'primeng/dataview';
+import {RatingModule} from 'primeng/rating';
 
 
 @NgModule({
-  declarations: [TableComponent, OrderListComponent, PickListComponent],
+  declarations: [TableComponent, OrderListComponent, PickListComponent, DataViewComponent],
   imports: [
     CommonModule,
     DataRoutingModule,
@@ -34,6 +37,8 @@ import {PickListModule} from 'primeng/picklist';
     InputTextModule,
     OrderListModule,
     PickListModule,
+    DataViewModule,
+    RatingModule,
   ]
 })
 export class DataModule { }
