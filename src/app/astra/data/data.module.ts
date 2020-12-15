@@ -22,10 +22,12 @@ import {RatingModule} from 'primeng/rating';
 import { OrganizationChartComponent } from './organization-chart/organization-chart.component';
 import {OrganizationChartModule} from 'primeng/organizationchart';
 import {ToastModule} from 'primeng/toast';
+import { PaginatorComponent } from './paginator/paginator.component';
+import {PaginatorModule} from 'primeng/paginator';
 
 
 @NgModule({
-  declarations: [TableComponent, OrderListComponent, PickListComponent, DataViewComponent, OrganizationChartComponent],
+  declarations: [TableComponent, OrderListComponent, PickListComponent, DataViewComponent, OrganizationChartComponent, PaginatorComponent],
   imports: [
     CommonModule,
     DataRoutingModule,
@@ -44,6 +46,7 @@ import {ToastModule} from 'primeng/toast';
     RatingModule,
     OrganizationChartModule,
     ToastModule,
+    PaginatorModule,
   ]
 })
 export class DataModule { }
