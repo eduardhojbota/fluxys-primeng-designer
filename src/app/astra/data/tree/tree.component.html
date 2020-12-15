@@ -1,0 +1,20 @@
+<h1>Tree</h1>
+<p>
+  Tree is used to display hierarchical data.
+  See <a href="https://www.primefaces.org/primeng/showcase/#/" target="_blank" rel="noreferrer noopener">official documentation</a>.
+</p>
+<div class="p-grid p-flex-column">
+  <div class="p-col">
+    <p-panel header="PrimeNG Example" [toggleable]="true">
+      <h5>Basic</h5>
+      <p-tree [value]="files1"></p-tree>
+
+      <h5>Programmatic</h5>
+      <div style="margin-bottom: 1rem">
+        <button pButton type="button" label="Expand all" (click)="expandAll()" style="margin-right: .5rem"></button>
+        <button pButton type="button" label="Collapse all" (click)="collapseAll()"></button>
+      </div>
+      <p-tree [value]="files2"></p-tree>
+    </p-panel>
+  </div>
+</div>

@@ -27,10 +27,13 @@ import {PaginatorModule} from 'primeng/paginator';
 import { TimelineComponent } from './timeline/timeline.component';
 import {TimelineModule} from 'primeng/timeline';
 import {CardModule} from 'primeng/card';
+import { TreeComponent } from './tree/tree.component';
+import {TreeModule} from 'primeng/tree';
+import {SharedModule} from '../shared/shared.module';
 
 
 @NgModule({
-  declarations: [TableComponent, OrderListComponent, PickListComponent, DataViewComponent, OrganizationChartComponent, PaginatorComponent, TimelineComponent],
+  declarations: [TableComponent, OrderListComponent, PickListComponent, DataViewComponent, OrganizationChartComponent, PaginatorComponent, TimelineComponent, TreeComponent],
   imports: [
     CommonModule,
     DataRoutingModule,
@@ -52,6 +55,8 @@ import {CardModule} from 'primeng/card';
     PaginatorModule,
     TimelineModule,
     CardModule,
+    TreeModule,
+    SharedModule,
   ]
 })
 export class DataModule { }

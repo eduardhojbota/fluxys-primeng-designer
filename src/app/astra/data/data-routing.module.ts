@@ -7,6 +7,7 @@ import {DataViewComponent} from './data-view/data-view.component';
 import {OrganizationChartComponent} from './organization-chart/organization-chart.component';
 import {PaginatorComponent} from './paginator/paginator.component';
 import {TimelineComponent} from './timeline/timeline.component';
+import {TreeComponent} from './tree/tree.component';
 
 const routes: Routes = [
   { path: 'table', component: TableComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'organizationchart', component: OrganizationChartComponent },
   { path: 'paginator', component: PaginatorComponent },
   { path: 'timeline', component: TimelineComponent },
+  { path: 'tree', component: TreeComponent },
 ];
 
 @NgModule({

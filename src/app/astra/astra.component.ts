@@ -88,6 +88,7 @@ export class AstraComponent {
         { label: 'PickList', routerLink: ['./data/picklist' ] },
         { label: 'Table', routerLink: ['./data/table' ] },
         { label: 'Timeline', routerLink: ['./data/timeline' ] },
+        { label: 'Tree', routerLink: ['./data/tree' ] },
       ]
     },
     { separator: true },
