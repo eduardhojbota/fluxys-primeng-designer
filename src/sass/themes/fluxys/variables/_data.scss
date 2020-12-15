@@ -112,11 +112,11 @@ $tableHeaderCellBorderWidth: 0 0 1px 0;
 
 /// Background of a table header cell in hover state
 /// @group data
-$tableHeaderCellHoverBg: #e9ecef;
+$tableHeaderCellHoverBg: $grayColor50;
 
 /// Text color of a table header cell in hover state
 /// @group data
-$tableHeaderCellTextHoverColor: $textColor;
+$tableHeaderCellTextHoverColor: $grayColor900;
 
 /// Icon color of a table header cell
 /// @group data
@@ -128,15 +128,15 @@ $tableHeaderCellIconHoverColor: $textSecondaryColor;
 
 /// Background of a table header cell in sorted state
 /// @group data
-$tableHeaderCellHighlightBg:#f8f9fa;
+$tableHeaderCellHighlightBg: $grayColor100;
 
 /// Text color of a table header cell in sorted state
 /// @group data
-$tableHeaderCellHighlightTextColor:$primaryColor;
+$tableHeaderCellHighlightTextColor: $grayColor900;
 
 /// Hover background of a table header cell in sorted state
 /// @group data
-$tableHeaderCellHighlightHoverBg:#e9ecef;
+$tableHeaderCellHighlightHoverBg: $grayColor50;
 
 /// Hover text color of a table header cell in sorted state
 /// @group data
