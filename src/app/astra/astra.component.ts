@@ -81,6 +81,8 @@ export class AstraComponent {
     {
       label: 'Data',
       items: [
+        { label: 'OrderList', routerLink: ['./data/orderlist' ] },
+        { label: 'PickList', routerLink: ['./data/picklist' ] },
         { label: 'Table', routerLink: ['./data/table' ] },
       ]
     },

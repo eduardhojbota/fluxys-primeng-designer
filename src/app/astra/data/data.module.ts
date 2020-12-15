@@ -12,10 +12,14 @@ import {MultiSelectModule} from 'primeng/multiselect';
 import {FormsModule} from '@angular/forms';
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
+import { OrderListComponent } from './order-list/order-list.component';
+import { PickListComponent } from './pick-list/pick-list.component';
+import {OrderListModule} from 'primeng/orderlist';
+import {PickListModule} from 'primeng/picklist';
 
 
 @NgModule({
-  declarations: [TableComponent],
+  declarations: [TableComponent, OrderListComponent, PickListComponent],
   imports: [
     CommonModule,
     DataRoutingModule,
@@ -28,6 +32,8 @@ import {InputTextModule} from 'primeng/inputtext';
     FormsModule,
     ButtonModule,
     InputTextModule,
+    OrderListModule,
+    PickListModule,
   ]
 })
 export class DataModule { }
