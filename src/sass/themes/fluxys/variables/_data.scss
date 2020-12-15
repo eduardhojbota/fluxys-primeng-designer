@@ -92,11 +92,11 @@ $tableHeaderCellPadding: 1rem 1rem;
 
 /// Background of a table header cell
 /// @group data
-$tableHeaderCellBg: #f8f9fa;
+$tableHeaderCellBg: $grayColor100;
 
 /// Text color of a table header cell
 /// @group data
-$tableHeaderCellTextColor: $textColor;
+$tableHeaderCellTextColor: $grayColor900;
 
 /// Font weight of a table header cell
 /// @group data
@@ -343,7 +343,7 @@ $timelineEventConnectorSize:2px;
 
 /// Color of a timeline event
 /// @group data
-$timelineEventColor:#dee2e6; 
+$timelineEventColor:#dee2e6;
 
 /// Color of a line to connect to organization chart nodes
 /// @group data

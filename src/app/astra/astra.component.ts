@@ -79,6 +79,13 @@ export class AstraComponent {
     },
     { separator: true },
     {
+      label: 'Data',
+      items: [
+        { label: 'Table', routerLink: ['./data/table' ] },
+      ]
+    },
+    { separator: true },
+    {
       label: 'Panel',
       items: [{ label: 'Card', routerLink: ['./panel/card'] }],
     },
