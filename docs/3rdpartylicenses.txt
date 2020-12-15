@@ -175,6 +175,8 @@ primeng/colorpicker
 
 primeng/confirmdialog
 
+primeng/dataview
+
 primeng/dialog
 
 primeng/dropdown
@@ -197,9 +199,17 @@ primeng/messages
 
 primeng/multiselect
 
+primeng/orderlist
+
+primeng/organizationchart
+
 primeng/paginator
 
 primeng/panel
+
+primeng/picklist
+
+primeng/progressbar
 
 primeng/radiobutton
 
@@ -215,9 +225,13 @@ primeng/table
 
 primeng/tabmenu
 
+primeng/timeline
+
 primeng/toast
 
 primeng/togglebutton
+
+primeng/tree
 
 primeng/tristatecheckbox
 
