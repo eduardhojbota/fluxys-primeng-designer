@@ -99,6 +99,8 @@ export class AstraComponent {
       items: [
         { label: 'Accordion', routerLink: ['./panel/accordion'] },
         { label: 'Card', routerLink: ['./panel/card'] },
+        { label: 'Fieldset', routerLink: ['./panel/fieldset'] },
+        { label: 'Panel', routerLink: ['./panel/panel'] },
       ],
     },
     { separator: true },
