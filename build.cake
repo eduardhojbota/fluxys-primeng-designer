@@ -1,6 +1,6 @@
 #tool nuget:?package=GitVersion.CommandLine&version=5.3.7
 #tool "nuget:?package=NUnit.ConsoleRunner&version=3.8.0"
-#addin Fluxys.Cake.BuildSupport&loaddependencies&prerelease&version=1.2.22-pre0466
+#addin Fluxys.Cake.BuildSupport&loaddependencies&prerelease&version=2.0.0
 
 //////////////////////////////////////////////////////////////////////
 // ARGUMENTS
