@@ -103,6 +103,7 @@ export class AstraComponent {
         { label: 'Panel', routerLink: ['./panel/panel'] },
         { label: 'ScrollPanel', routerLink: ['./panel/scrollpanel'] },
         { label: 'TabView', routerLink: ['./panel/tabview'] },
+        { label: 'Toolbar', routerLink: ['./panel/toolbar'] },
       ],
     },
     { separator: true },

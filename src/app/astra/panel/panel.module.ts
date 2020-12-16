@@ -18,9 +18,12 @@ import { ScrollPanelComponent } from './scroll-panel/scroll-panel.component';
 import {ScrollPanelModule} from 'primeng/scrollpanel';
 import { TabViewComponent } from './tab-view/tab-view.component';
 import {TabViewModule} from 'primeng/tabview';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import {ToolbarModule} from 'primeng/toolbar';
+import {SplitButtonModule} from 'primeng/splitbutton';
 
 @NgModule({
-  declarations: [CardComponent, AccordionComponent, FieldsetComponent, PanelComponent, ScrollPanelComponent, TabViewComponent],
-  imports: [CommonModule, PanelRoutingModule, CardModule, PrimengPanelModule, ButtonModule, SharedModule, AccordionModule, FieldsetModule, ToastModule, MenuModule, ScrollPanelModule, TabViewModule],
+  declarations: [CardComponent, AccordionComponent, FieldsetComponent, PanelComponent, ScrollPanelComponent, TabViewComponent, ToolbarComponent],
+  imports: [CommonModule, PanelRoutingModule, CardModule, PrimengPanelModule, ButtonModule, SharedModule, AccordionModule, FieldsetModule, ToastModule, MenuModule, ScrollPanelModule, TabViewModule, ToolbarModule, SplitButtonModule],
 })
 export class PanelModule {}
