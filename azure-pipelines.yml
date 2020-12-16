@@ -6,7 +6,7 @@
 trigger:
   - main
 
-pool: Default
+pool: FluxysBuild
 
 steps:
   - task: PowerShell@2
