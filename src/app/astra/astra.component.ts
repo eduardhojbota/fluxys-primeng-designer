@@ -90,6 +90,7 @@ export class AstraComponent {
         { label: 'Timeline', routerLink: ['./data/timeline'] },
         { label: 'Tree', routerLink: ['./data/tree'] },
         { label: 'TreeTable', routerLink: ['./data/treetable'] },
+        { label: 'VirtualScroller', routerLink: ['./data/virtualscroller'] },
       ],
     },
     { separator: true },

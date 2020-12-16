@@ -10,6 +10,7 @@ import { TableComponent } from './table/table.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { TreeComponent } from './tree/tree.component';
 import {TreeTableComponent} from './tree-table/tree-table.component';
+import {VirtualScrollerComponent} from './virtual-scroller/virtual-scroller.component';
 
 const routes: Routes = [
   { path: 'table', component: TableComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'timeline', component: TimelineComponent },
   { path: 'tree', component: TreeComponent },
   { path: 'treetable', component: TreeTableComponent },
+  { path: 'virtualscroller', component: VirtualScrollerComponent },
 ];
 
 @NgModule({

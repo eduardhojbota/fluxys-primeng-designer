@@ -32,6 +32,8 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { TreeComponent } from './tree/tree.component';
 import { TreeTableComponent } from './tree-table/tree-table.component';
 import {TreeTableModule} from 'primeng/treetable';
+import { VirtualScrollerComponent } from './virtual-scroller/virtual-scroller.component';
+import {VirtualScrollerModule} from 'primeng/virtualscroller';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,7 @@ import {TreeTableModule} from 'primeng/treetable';
     TimelineComponent,
     TreeComponent,
     TreeTableComponent,
+    VirtualScrollerComponent,
   ],
   imports: [
     CommonModule,
@@ -69,6 +72,7 @@ import {TreeTableModule} from 'primeng/treetable';
     TreeModule,
     SharedModule,
     TreeTableModule,
+    VirtualScrollerModule,
   ],
 })
 export class DataModule {}
