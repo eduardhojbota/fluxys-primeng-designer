@@ -89,6 +89,7 @@ export class AstraComponent {
         { label: 'Table', routerLink: ['./data/table'] },
         { label: 'Timeline', routerLink: ['./data/timeline'] },
         { label: 'Tree', routerLink: ['./data/tree'] },
+        { label: 'TreeTable', routerLink: ['./data/treetable'] },
       ],
     },
     { separator: true },

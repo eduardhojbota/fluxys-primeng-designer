@@ -9,6 +9,7 @@ import { PickListComponent } from './pick-list/pick-list.component';
 import { TableComponent } from './table/table.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { TreeComponent } from './tree/tree.component';
+import {TreeTableComponent} from './tree-table/tree-table.component';
 
 const routes: Routes = [
   { path: 'table', component: TableComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'paginator', component: PaginatorComponent },
   { path: 'timeline', component: TimelineComponent },
   { path: 'tree', component: TreeComponent },
+  { path: 'treetable', component: TreeTableComponent },
 ];
 
 @NgModule({

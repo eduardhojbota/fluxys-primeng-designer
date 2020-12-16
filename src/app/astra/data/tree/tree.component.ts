@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { TreeNode } from 'primeng/api';
 
-import { NodeService } from './node.service';
+import { NodeService } from '../node.service';
 
 @Component({
   selector: 'app-tree',
   templateUrl: './tree.component.html',
-  styles: [],
   providers: [NodeService],
 })
 export class TreeComponent implements OnInit {

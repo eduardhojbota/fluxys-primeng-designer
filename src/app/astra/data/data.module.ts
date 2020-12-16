@@ -30,6 +30,8 @@ import { PickListComponent } from './pick-list/pick-list.component';
 import { TableComponent } from './table/table.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { TreeComponent } from './tree/tree.component';
+import { TreeTableComponent } from './tree-table/tree-table.component';
+import {TreeTableModule} from 'primeng/treetable';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { TreeComponent } from './tree/tree.component';
     PaginatorComponent,
     TimelineComponent,
     TreeComponent,
+    TreeTableComponent,
   ],
   imports: [
     CommonModule,
@@ -65,6 +68,7 @@ import { TreeComponent } from './tree/tree.component';
     CardModule,
     TreeModule,
     SharedModule,
+    TreeTableModule,
   ],
 })
 export class DataModule {}
