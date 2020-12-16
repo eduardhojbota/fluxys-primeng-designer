@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./tab-view.component.scss'],
 })
 export class TabViewComponent {
-  activeIndex: number = 0;
+  activeIndex = 0;
 }

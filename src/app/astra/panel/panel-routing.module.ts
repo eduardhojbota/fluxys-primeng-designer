@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AccordionComponent } from './accordion/accordion.component';
 import { CardComponent } from './card/card.component';
-import {AccordionComponent} from './accordion/accordion.component';
-import {FieldsetComponent} from './fieldset/fieldset.component';
-import {PanelComponent} from './panel/panel.component';
-import {ScrollPanelComponent} from './scroll-panel/scroll-panel.component';
-import {TabViewComponent} from './tab-view/tab-view.component';
-import {ToolbarComponent} from './toolbar/toolbar.component';
+import { FieldsetComponent } from './fieldset/fieldset.component';
+import { PanelComponent } from './panel/panel.component';
+import { ScrollPanelComponent } from './scroll-panel/scroll-panel.component';
+import { TabViewComponent } from './tab-view/tab-view.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 const routes: Routes = [
   { path: 'accordion', component: AccordionComponent },

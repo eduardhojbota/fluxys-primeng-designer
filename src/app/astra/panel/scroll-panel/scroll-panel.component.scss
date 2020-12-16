@@ -1,6 +1,6 @@
 :host ::ng-deep .p-scrollpanel {
   p {
-    padding: .5rem;
+    padding: 0.5rem;
     line-height: 1.5;
     margin: 0;
   }
@@ -13,7 +13,7 @@
     .p-scrollpanel-bar {
       background-color: var(--primary-color);
       opacity: 1;
-      transition: background-color .2s;
+      transition: background-color 0.2s;
 
       &:hover {
         background-color: #007ad9;
@@ -31,7 +31,7 @@
       background-color: var(--layer-2);
       border-radius: 0;
       opacity: 1;
-      transition: background-color .2s;
+      transition: background-color 0.2s;
     }
   }
 }

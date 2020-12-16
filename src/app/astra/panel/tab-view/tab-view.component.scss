@@ -1,15 +1,16 @@
 :host ::ng-deep .tabview-custom {
-  i, span {
+  i,
+  span {
     vertical-align: middle;
   }
 
   span {
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
   }
 }
 
 :host ::ng-deep .p-button {
-  margin-right: .25rem;
+  margin-right: 0.25rem;
 }
 
 :host ::ng-deep .p-tabview p {
