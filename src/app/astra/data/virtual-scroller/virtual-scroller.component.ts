@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {LazyLoadEvent, SelectItem} from 'primeng/api';
-import {ProductService} from '../../../service/product.service';
-import {Product} from '../../../domain/model';
+import { LazyLoadEvent, SelectItem } from 'primeng/api';
+
+import { Product } from '../../../domain/model';
+import { ProductService } from '../../../service/product.service';
 
 @Component({
   selector: 'app-virtual-scroller',
   templateUrl: './virtual-scroller.component.html',
-  styleUrls: ['./virtual-scroller.component.scss']
+  styleUrls: ['./virtual-scroller.component.scss'],
 })
 export class VirtualScrollerComponent implements OnInit {
   products: Product[];
@@ -17,12 +18,12 @@ export class VirtualScrollerComponent implements OnInit {
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    this.products = Array.from({length: 10000}).map(() => this.productService.generatePrduct());
-    this.virtualProducts = Array.from({length: 10000});
+    this.products = Array.from({ length: 10000 }).map(() => this.productService.generatePrduct());
+    this.virtualProducts = Array.from({ length: 10000 });
 
     this.sortOptions = [
-      {label: 'Cheapest First', value: 'price'},
-      {label: 'Expensive First', value: '!price'}
+      { label: 'Cheapest First', value: 'price' },
+      { label: 'Expensive First', value: '!price' },
     ];
   }
 
@@ -30,7 +31,7 @@ export class VirtualScrollerComponent implements OnInit {
     // simulate remote connection with a timeout
     setTimeout(() => {
       //load data of required page
-      let loadedProducts = this.products.slice(event.first, (event.first + event.rows));
+      const loadedProducts = this.products.slice(event.first, event.first + event.rows);
 
       //populate page of virtual cars
       Array.prototype.splice.apply(this.virtualProducts, [...[event.first, event.rows], ...loadedProducts]);
@@ -41,20 +42,18 @@ export class VirtualScrollerComponent implements OnInit {
   }
 
   onSortChange(): void {
-    if (this.sortKey.indexOf('!') === 0)
-      this.sort(-1);
-    else
-      this.sort(1);
+    if (this.sortKey.indexOf('!') === 0) this.sort(-1);
+    else this.sort(1);
   }
 
   sort(order: number): void {
-    let products = [...this.products];
+    const products = [...this.products];
     products.sort((data1, data2) => {
-      let value1 = data1.price;
-      let value2 = data2.price;
-      let result = (value1 < value2) ? -1 : (value1 > value2) ? 1 : 0;
+      const value1 = data1.price;
+      const value2 = data2.price;
+      const result = value1 < value2 ? -1 : value1 > value2 ? 1 : 0;
 
-      return (order * result);
+      return order * result;
     });
 
     this.products = products;

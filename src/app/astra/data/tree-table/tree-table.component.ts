@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {NodeService} from '../node.service';
-import {TreeNode} from 'primeng/api';
+import { TreeNode } from 'primeng/api';
+
+import { NodeService } from '../node.service';
 
 @Component({
   selector: 'app-tree-table',
@@ -12,10 +13,10 @@ export class TreeTableComponent implements OnInit {
   files2: TreeNode[];
   cols: any[];
 
-  constructor(private nodeService: NodeService) { }
+  constructor(private nodeService: NodeService) {}
 
   ngOnInit(): void {
-    this.nodeService.getFilesystem().then(files => {
+    this.nodeService.getFilesystem().then((files) => {
       this.files1 = files;
       this.files2 = files;
     });
@@ -23,7 +24,7 @@ export class TreeTableComponent implements OnInit {
     this.cols = [
       { field: 'name', header: 'Name' },
       { field: 'size', header: 'Size' },
-      { field: 'type', header: 'Type' }
+      { field: 'type', header: 'Type' },
     ];
   }
 }

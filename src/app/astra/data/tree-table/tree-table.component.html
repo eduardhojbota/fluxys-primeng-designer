@@ -1,7 +1,7 @@
 <h1>TreeTable</h1>
 <p>
-  TreeTable is used to display hierarchical data in tabular format.
-  See <a href="https://www.primefaces.org/primeng/showcase/#/treetable" target="_blank" rel="noreferrer noopener">official documentation</a>.
+  TreeTable is used to display hierarchical data in tabular format. See
+  <a href="https://www.primefaces.org/primeng/showcase/#/treetable" target="_blank" rel="noreferrer noopener">official documentation</a>.
 </p>
 <div class="p-grid p-flex-column">
   <div class="p-col">
@@ -19,10 +19,10 @@
           <tr [ttRow]="rowNode">
             <td>
               <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>
-              {{rowData.name}}
+              {{ rowData.name }}
             </td>
-            <td>{{rowData.size}}</td>
-            <td>{{rowData.type}}</td>
+            <td>{{ rowData.size }}</td>
+            <td>{{ rowData.type }}</td>
           </tr>
         </ng-template>
       </p-treeTable>
@@ -32,7 +32,7 @@
         <ng-template pTemplate="header" let-columns>
           <tr [ttRow]="rowNode">
             <th *ngFor="let col of columns">
-              {{col.header}}
+              {{ col.header }}
             </th>
           </tr>
         </ng-template>
@@ -40,7 +40,7 @@
           <tr>
             <td *ngFor="let col of columns; let i = index">
               <p-treeTableToggler [rowNode]="rowNode" *ngIf="i == 0"></p-treeTableToggler>
-              {{rowData[col.field]}}
+              {{ rowData[col.field] }}
             </td>
           </tr>
         </ng-template>

@@ -8,9 +8,9 @@ import { PaginatorComponent } from './paginator/paginator.component';
 import { PickListComponent } from './pick-list/pick-list.component';
 import { TableComponent } from './table/table.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { TreeTableComponent } from './tree-table/tree-table.component';
 import { TreeComponent } from './tree/tree.component';
-import {TreeTableComponent} from './tree-table/tree-table.component';
-import {VirtualScrollerComponent} from './virtual-scroller/virtual-scroller.component';
+import { VirtualScrollerComponent } from './virtual-scroller/virtual-scroller.component';
 
 const routes: Routes = [
   { path: 'table', component: TableComponent },

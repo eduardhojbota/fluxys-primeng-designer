@@ -19,6 +19,8 @@ import { TableModule } from 'primeng/table';
 import { TimelineModule } from 'primeng/timeline';
 import { ToastModule } from 'primeng/toast';
 import { TreeModule } from 'primeng/tree';
+import { TreeTableModule } from 'primeng/treetable';
+import { VirtualScrollerModule } from 'primeng/virtualscroller';
 
 import { SharedModule } from '../shared/shared.module';
 import { DataRoutingModule } from './data-routing.module';
@@ -29,11 +31,9 @@ import { PaginatorComponent } from './paginator/paginator.component';
 import { PickListComponent } from './pick-list/pick-list.component';
 import { TableComponent } from './table/table.component';
 import { TimelineComponent } from './timeline/timeline.component';
-import { TreeComponent } from './tree/tree.component';
 import { TreeTableComponent } from './tree-table/tree-table.component';
-import {TreeTableModule} from 'primeng/treetable';
+import { TreeComponent } from './tree/tree.component';
 import { VirtualScrollerComponent } from './virtual-scroller/virtual-scroller.component';
-import {VirtualScrollerModule} from 'primeng/virtualscroller';
 
 @NgModule({
   declarations: [
