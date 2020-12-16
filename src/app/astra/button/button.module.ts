@@ -9,9 +9,10 @@ import { SharedModule } from '../shared/shared.module';
 import { ButtonRoutingModule } from './button-routing.module';
 import { ButtonComponent } from './button/button.component';
 import { SplitButtonComponent } from './split-button/split-button.component';
+import {RippleModule} from 'primeng/ripple';
 
 @NgModule({
   declarations: [ButtonComponent, SplitButtonComponent],
-  imports: [CommonModule, ButtonRoutingModule, PrimengButtonModule, SplitButtonModule, PanelModule, SharedModule, ToastModule],
+    imports: [CommonModule, ButtonRoutingModule, PrimengButtonModule, SplitButtonModule, PanelModule, SharedModule, ToastModule, RippleModule],
 })
 export class ButtonModule {}
