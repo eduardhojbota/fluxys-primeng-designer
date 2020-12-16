@@ -9,11 +9,9 @@ trigger:
 pool: Default
 
 steps:
-  - task: Cake@2
+  - task: PowerShell@2
     inputs:
-      script: 'build.cake'
-      target: 'Default'
-      verbosity: 'Verbose'
+      filePath: 'build.ps1'
   - task: CopyFiles@2
     inputs:
       SourceFolder: 'Output/install/'
