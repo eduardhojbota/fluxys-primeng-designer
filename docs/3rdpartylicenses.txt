@@ -157,6 +157,8 @@ SOFTWARE.
 primeng
 MIT
 
+primeng/accordion
+
 primeng/api
 
 primeng/autocomplete
@@ -182,6 +184,8 @@ primeng/dialog
 primeng/dropdown
 
 primeng/dynamicdialog
+
+primeng/fieldset
 
 primeng/inputmask
 
@@ -215,6 +219,8 @@ primeng/radiobutton
 
 primeng/rating
 
+primeng/scrollpanel
+
 primeng/selectbutton
 
 primeng/slider
@@ -225,11 +231,15 @@ primeng/table
 
 primeng/tabmenu
 
+primeng/tabview
+
 primeng/timeline
 
 primeng/toast
 
 primeng/togglebutton
+
+primeng/toolbar
 
 primeng/tree
 
