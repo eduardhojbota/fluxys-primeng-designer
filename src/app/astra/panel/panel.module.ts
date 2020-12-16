@@ -16,9 +16,11 @@ import {ToastModule} from 'primeng/toast';
 import {MenuModule} from 'primeng/menu';
 import { ScrollPanelComponent } from './scroll-panel/scroll-panel.component';
 import {ScrollPanelModule} from 'primeng/scrollpanel';
+import { TabViewComponent } from './tab-view/tab-view.component';
+import {TabViewModule} from 'primeng/tabview';
 
 @NgModule({
-  declarations: [CardComponent, AccordionComponent, FieldsetComponent, PanelComponent, ScrollPanelComponent],
-  imports: [CommonModule, PanelRoutingModule, CardModule, PrimengPanelModule, ButtonModule, SharedModule, AccordionModule, FieldsetModule, ToastModule, MenuModule, ScrollPanelModule],
+  declarations: [CardComponent, AccordionComponent, FieldsetComponent, PanelComponent, ScrollPanelComponent, TabViewComponent],
+  imports: [CommonModule, PanelRoutingModule, CardModule, PrimengPanelModule, ButtonModule, SharedModule, AccordionModule, FieldsetModule, ToastModule, MenuModule, ScrollPanelModule, TabViewModule],
 })
 export class PanelModule {}

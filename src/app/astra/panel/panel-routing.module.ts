@@ -6,6 +6,7 @@ import {AccordionComponent} from './accordion/accordion.component';
 import {FieldsetComponent} from './fieldset/fieldset.component';
 import {PanelComponent} from './panel/panel.component';
 import {ScrollPanelComponent} from './scroll-panel/scroll-panel.component';
+import {TabViewComponent} from './tab-view/tab-view.component';
 
 const routes: Routes = [
   { path: 'accordion', component: AccordionComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'fieldset', component: FieldsetComponent },
   { path: 'panel', component: PanelComponent },
   { path: 'scrollpanel', component: ScrollPanelComponent },
+  { path: 'tabview', component: TabViewComponent },
 ];
 
 @NgModule({

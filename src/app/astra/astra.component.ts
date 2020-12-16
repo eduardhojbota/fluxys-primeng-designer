@@ -102,6 +102,7 @@ export class AstraComponent {
         { label: 'Fieldset', routerLink: ['./panel/fieldset'] },
         { label: 'Panel', routerLink: ['./panel/panel'] },
         { label: 'ScrollPanel', routerLink: ['./panel/scrollpanel'] },
+        { label: 'TabView', routerLink: ['./panel/tabview'] },
       ],
     },
     { separator: true },
